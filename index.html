@@ -5,97 +5,1180 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Periodic Table of Agile &amp; Lean Concepts</title>
 <style>
- * {margin:0;padding:0;box-sizing:border-box;}
- body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','Helvetica Neue',sans-serif;background:linear-gradient(135deg,#f5f7fa 0%,#e8ecf1 100%);color:#1a1a1a;padding:2rem 1rem;min-height:100vh;}
- .container{max-width:1500px;margin:0 auto;}
- header{text-align:center;margin-bottom:2.5rem;}
- h1{font-size:2.25rem;font-weight:300;letter-spacing:1.5px;margin-bottom:.5rem;color:#0a0a0a;}
- .subtitle{font-size:.95rem;color:#666;font-weight:300;}
- .controls{display:flex;gap:1rem;margin-bottom:1.5rem;flex-wrap:wrap;align-items:center;}
- .search-box{flex:1;min-width:250px;padding:.7rem 1rem;border:1px solid #ccc;border-radius:4px;font-size:.95rem;background:white;}
- .search-box:focus{outline:none;border-color:#2c3e50;box-shadow:0 0 0 3px rgba(44,62,80,.1);}
- .filter-buttons{display:flex;gap:.4rem;flex-wrap:wrap;}
- .filter-btn{padding:.5rem 1rem;border:1px solid #ccc;background:white;border-radius:4px;cursor:pointer;font-size:.85rem;font-weight:500;transition:all .15s;white-space:nowrap;color:#333;}
- .filter-btn:hover{border-color:#999;background:#fafafa;}
- .filter-btn.active{background:#2c3e50;color:white;border-color:#2c3e50;}
- .legend{display:flex;gap:1.25rem;margin-bottom:2rem;flex-wrap:wrap;padding:1.25rem;background:white;border-radius:6px;border:1px solid #e0e0e0;}
- .legend-item{display:flex;align-items:center;gap:.5rem;font-size:.85rem;}
- .legend-color{width:22px;height:22px;border-radius:4px;border:1.5px solid;}
- .table-wrapper{background:white;padding:1.5rem;border-radius:8px;border:1px solid #e0e0e0;box-shadow:0 2px 8px rgba(0,0,0,.06);overflow-x:auto;}
- .periodic-table{display:grid;grid-template-columns:repeat(18,minmax(68px,1fr));gap:4px;min-width:1300px;}
- .element{aspect-ratio:1;border:1.5px solid;border-radius:4px;display:flex;flex-direction:column;justify-content:space-between;text-align:center;padding:4px;cursor:pointer;transition:transform .15s ease,box-shadow .15s ease,opacity .2s ease;font-size:.7rem;line-height:1.15;position:relative;overflow:hidden;}
- .element:hover{transform:scale(1.1);box-shadow:0 4px 12px rgba(0,0,0,.18);z-index:10;}
- .element.dim{opacity:.15;pointer-events:none;}
- .element-number{font-size:.6rem;opacity:.7;font-weight:500;text-align:left;padding-left:2px;}
- .element-symbol{font-size:1.35rem;font-weight:600;line-height:1;}
- .element-name{font-size:.6rem;font-weight:500;opacity:.9;word-break:break-word;hyphens:auto;}
- .element.empty{border:none;background:transparent!important;cursor:default;pointer-events:none;}
- .modal{display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,.5);z-index:1000;align-items:center;justify-content:center;padding:1rem;}
- .modal.active{display:flex;}
- .modal-content{background:white;border-radius:8px;max-width:640px;width:100%;max-height:88vh;overflow-y:auto;padding:2rem;position:relative;box-shadow:0 10px 40px rgba(0,0,0,.2);animation:slideUp .25s ease;}
- @keyframes slideUp{from{transform:translateY(20px);opacity:0}to{transform:translateY(0);opacity:1}}
- .modal-close{position:absolute;top:1rem;right:1rem;width:36px;height:36px;background:none;border:none;font-size:1.5rem;cursor:pointer;color:#666;border-radius:4px;transition:background .15s,color .15s;}
- .modal-close:hover{background:#f0f0f0;color:#000;}
- .modal-header{display:flex;gap:1.25rem;align-items:center;margin-bottom:1.25rem;padding-right:2.5rem;}
- .modal-symbol-box{width:80px;height:80px;border-radius:6px;border:2px solid;display:flex;flex-direction:column;justify-content:center;align-items:center;font-weight:600;flex-shrink:0;}
- .modal-symbol-box .modal-num{font-size:.7rem;opacity:.7;align-self:flex-start;padding-left:6px;margin-bottom:-4px;}
- .modal-symbol-box .modal-sym{font-size:2rem;line-height:1;}
- .modal-title h2{font-size:1.6rem;margin-bottom:.4rem;font-weight:500;color:#0a0a0a;}
- .category-badge{display:inline-block;padding:.25rem .75rem;border-radius:12px;font-size:.75rem;font-weight:600;text-transform:uppercase;letter-spacing:.5px;border:1px solid;}
- .modal-body{line-height:1.7;color:#333;font-size:.95rem;padding-top:1rem;border-top:1px solid #eee;}
- .modal-refs{margin-top:1.5rem;padding-top:1.25rem;border-top:1px solid #eee;}
- .modal-refs h3{font-size:.8rem;font-weight:600;text-transform:uppercase;letter-spacing:.5px;color:#666;margin-bottom:.75rem;}
- .modal-refs ul{list-style:none;display:flex;flex-direction:column;gap:.5rem;}
- .modal-refs li{font-size:.9rem;line-height:1.5;}
- .modal-refs a{color:#2c3e50;text-decoration:none;border-bottom:1px solid #cbd2d8;transition:border-color .15s,color .15s;}
- .modal-refs a:hover{color:#1a252f;border-bottom-color:#2c3e50;}
- .ref-type{display:inline-block;font-size:.7rem;font-weight:600;text-transform:uppercase;letter-spacing:.5px;color:#888;margin-right:.4rem;padding:1px 6px;background:#f0f0f0;border-radius:3px;}
- .footer{text-align:center;margin-top:2.5rem;padding:1.5rem;color:#888;font-size:.85rem;}
- @media(max-width:768px){h1{font-size:1.6rem;}.periodic-table{min-width:1100px;}.controls{flex-direction:column;align-items:stretch;}.search-box{min-width:100%;}}
- @media print{body{background:white;padding:.5rem;}.controls,.footer{display:none;}.table-wrapper{box-shadow:none;border:none;padding:0;}.modal{display:none!important;}}
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', sans-serif;
+    background: linear-gradient(135deg, #f5f7fa 0%, #e8ecf1 100%);
+    color: #1a1a1a;
+    padding: 2rem 1rem;
+    min-height: 100vh;
+  }
+
+  .container { max-width: 1500px; margin: 0 auto; }
+
+  header { text-align: center; margin-bottom: 2.5rem; }
+
+  h1 {
+    font-size: 2.25rem;
+    font-weight: 300;
+    letter-spacing: 1.5px;
+    margin-bottom: 0.5rem;
+    color: #0a0a0a;
+  }
+
+  .subtitle {
+    font-size: 0.95rem;
+    color: #666;
+    font-weight: 300;
+    letter-spacing: 0.5px;
+  }
+
+  .controls {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  .search-box {
+    flex: 1;
+    min-width: 250px;
+    padding: 0.7rem 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 0.95rem;
+    background: white;
+    transition: border-color 0.2s, box-shadow 0.2s;
+  }
+
+  .search-box:focus {
+    outline: none;
+    border-color: #2c3e50;
+    box-shadow: 0 0 0 3px rgba(44, 62, 80, 0.1);
+  }
+
+  .filter-buttons { display: flex; gap: 0.4rem; flex-wrap: wrap; }
+
+  .filter-btn {
+    padding: 0.5rem 1rem;
+    border: 1px solid #ccc;
+    background: white;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.85rem;
+    font-weight: 500;
+    transition: all 0.15s;
+    white-space: nowrap;
+    color: #333;
+  }
+
+  .filter-btn:hover { border-color: #999; background: #fafafa; }
+
+  .filter-btn.active {
+    background: #2c3e50;
+    color: white;
+    border-color: #2c3e50;
+  }
+
+  .legend {
+    display: flex;
+    gap: 1.25rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+    padding: 1.25rem;
+    background: white;
+    border-radius: 6px;
+    border: 1px solid #e0e0e0;
+  }
+
+  .legend-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.85rem;
+  }
+
+  .legend-color {
+    width: 22px;
+    height: 22px;
+    border-radius: 4px;
+    border: 1.5px solid;
+  }
+
+  .table-wrapper {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    border: 1px solid #e0e0e0;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+    overflow-x: auto;
+  }
+
+  .periodic-table {
+    display: grid;
+    grid-template-columns: repeat(18, minmax(68px, 1fr));
+    gap: 4px;
+    min-width: 1300px;
+  }
+
+  .element {
+    aspect-ratio: 1;
+    border: 1.5px solid;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    padding: 4px;
+    cursor: pointer;
+    transition: transform 0.15s ease, box-shadow 0.15s ease, opacity 0.2s ease;
+    font-size: 0.7rem;
+    line-height: 1.15;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .element:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.18);
+    z-index: 10;
+  }
+
+  .element.dim { opacity: 0.15; pointer-events: none; }
+
+  .element-number {
+    font-size: 0.6rem;
+    opacity: 0.7;
+    font-weight: 500;
+    text-align: left;
+    padding-left: 2px;
+  }
+
+  .element-symbol {
+    font-size: 1.35rem;
+    font-weight: 600;
+    line-height: 1;
+  }
+
+  .element-name {
+    font-size: 0.6rem;
+    font-weight: 500;
+    opacity: 0.9;
+    word-break: break-word;
+    hyphens: auto;
+  }
+
+  .element.empty {
+    border: none;
+    background: transparent !important;
+    cursor: default;
+    pointer-events: none;
+  }
+
+  .element.empty:hover { transform: none; box-shadow: none; }
+
+  .modal {
+    display: none;
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+  }
+
+  .modal.active { display: flex; }
+
+  .modal-content {
+    background: white;
+    border-radius: 8px;
+    max-width: 640px;
+    width: 100%;
+    max-height: 88vh;
+    overflow-y: auto;
+    padding: 2rem;
+    position: relative;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+    animation: slideUp 0.25s ease;
+  }
+
+  @keyframes slideUp {
+    from { transform: translateY(20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+  }
+
+  .modal-close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    width: 36px;
+    height: 36px;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #666;
+    border-radius: 4px;
+    transition: background 0.15s, color 0.15s;
+  }
+
+  .modal-close:hover { background: #f0f0f0; color: #000; }
+
+  .modal-header {
+    display: flex;
+    gap: 1.25rem;
+    align-items: center;
+    margin-bottom: 1.25rem;
+    padding-right: 2.5rem;
+  }
+
+  .modal-symbol-box {
+    width: 80px;
+    height: 80px;
+    border-radius: 6px;
+    border: 2px solid;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+    flex-shrink: 0;
+  }
+
+  .modal-symbol-box .modal-num {
+    font-size: 0.7rem;
+    opacity: 0.7;
+    align-self: flex-start;
+    padding-left: 6px;
+    margin-bottom: -4px;
+  }
+
+  .modal-symbol-box .modal-sym {
+    font-size: 2rem;
+    line-height: 1;
+  }
+
+  .modal-title h2 {
+    font-size: 1.6rem;
+    margin-bottom: 0.4rem;
+    font-weight: 500;
+    color: #0a0a0a;
+  }
+
+  .category-badge {
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    border-radius: 12px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border: 1px solid;
+  }
+
+  .modal-body {
+    line-height: 1.7;
+    color: #333;
+    font-size: 0.95rem;
+    padding-top: 1rem;
+    border-top: 1px solid #eee;
+  }
+
+  .modal-refs {
+    margin-top: 1.5rem;
+    padding-top: 1.25rem;
+    border-top: 1px solid #eee;
+  }
+
+  .modal-refs h3 {
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: #666;
+    margin-bottom: 0.75rem;
+  }
+
+  .modal-refs ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .modal-refs li {
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+
+  .modal-refs a {
+    color: #2c3e50;
+    text-decoration: none;
+    border-bottom: 1px solid #cbd2d8;
+    transition: border-color 0.15s, color 0.15s;
+  }
+
+  .modal-refs a:hover {
+    color: #1a252f;
+    border-bottom-color: #2c3e50;
+  }
+
+  .ref-type {
+    display: inline-block;
+    font-size: 0.7rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: #888;
+    margin-right: 0.4rem;
+    padding: 1px 6px;
+    background: #f0f0f0;
+    border-radius: 3px;
+  }
+
+  .footer {
+    text-align: center;
+    margin-top: 2.5rem;
+    padding: 1.5rem;
+    color: #888;
+    font-size: 0.85rem;
+  }
+
+  @media (max-width: 768px) {
+    h1 { font-size: 1.6rem; }
+    .periodic-table { min-width: 1100px; }
+    .controls { flex-direction: column; align-items: stretch; }
+    .search-box { min-width: 100%; }
+  }
+
+  @media print {
+    body { background: white; padding: 0.5rem; }
+    .controls, .footer { display: none; }
+    .table-wrapper { box-shadow: none; border: none; padding: 0; }
+    .modal { display: none !important; }
+  }
 </style>
 </head>
 <body>
 <div class="container">
-<header>
-<h1>Periodic Table of Agile &amp; Lean</h1>
-<p class="subtitle">100 essential concepts organized by category and function</p>
-</header>
-<div class="controls">
-<input type="text" id="search" class="search-box" placeholder="Search by term, symbol, or definition...">
-<div class="filter-buttons">
-<button class="filter-btn active" data-filter="all">All</button>
-<button class="filter-btn" data-filter="agile">Agile</button>
-<button class="filter-btn" data-filter="scrum">Scrum</button>
-<button class="filter-btn" data-filter="kanban">Kanban</button>
-<button class="filter-btn" data-filter="lean">Lean</button>
-<button class="filter-btn" data-filter="xp">XP</button>
-<button class="filter-btn" data-filter="scaling">Scaling</button>
-<button class="filter-btn" data-filter="metrics">Metrics</button>
+  <header>
+    <h1>Periodic Table of Agile &amp; Lean</h1>
+    <p class="subtitle">100 essential concepts organized by category and function</p>
+  </header>
+
+  <div class="controls">
+    <input type="text" id="search" class="search-box" placeholder="Search by term, symbol, or definition...">
+    <div class="filter-buttons">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="agile">Agile</button>
+      <button class="filter-btn" data-filter="scrum">Scrum</button>
+      <button class="filter-btn" data-filter="kanban">Kanban</button>
+      <button class="filter-btn" data-filter="lean">Lean</button>
+      <button class="filter-btn" data-filter="xp">XP</button>
+      <button class="filter-btn" data-filter="scaling">Scaling</button>
+      <button class="filter-btn" data-filter="metrics">Metrics</button>
+    </div>
+  </div>
+
+  <div class="legend">
+    <div class="legend-item"><div class="legend-color" style="background:#EEEDFE; border-color:#7F77DD;"></div><span>Agile core</span></div>
+    <div class="legend-item"><div class="legend-color" style="background:#E1F5EE; border-color:#1D9E75;"></div><span>Scrum</span></div>
+    <div class="legend-item"><div class="legend-color" style="background:#E6F1FB; border-color:#378ADD;"></div><span>Kanban</span></div>
+    <div class="legend-item"><div class="legend-color" style="background:#FAECE7; border-color:#D85A30;"></div><span>Lean</span></div>
+    <div class="legend-item"><div class="legend-color" style="background:#FBEAF0; border-color:#D4537E;"></div><span>XP / Engineering</span></div>
+    <div class="legend-item"><div class="legend-color" style="background:#FAEEDA; border-color:#BA7517;"></div><span>Scaling</span></div>
+    <div class="legend-item"><div class="legend-color" style="background:#F1EFE8; border-color:#888780;"></div><span>Metrics / Flow</span></div>
+  </div>
+
+  <div class="table-wrapper">
+    <div class="periodic-table" id="table"></div>
+  </div>
+
+  <div class="footer">
+    <p>Click any element for definition and curated references · Inspired by Jérôme Kehrli (2017) and the original periodic table format · 100 concepts</p>
+  </div>
 </div>
-</div>
-<div class="legend">
-<div class="legend-item"><div class="legend-color" style="background:#EEEDFE;border-color:#7F77DD;"></div><span>Agile core</span></div>
-<div class="legend-item"><div class="legend-color" style="background:#E1F5EE;border-color:#1D9E75;"></div><span>Scrum</span></div>
-<div class="legend-item"><div class="legend-color" style="background:#E6F1FB;border-color:#378ADD;"></div><span>Kanban</span></div>
-<div class="legend-item"><div class="legend-color" style="background:#FAECE7;border-color:#D85A30;"></div><span>Lean</span></div>
-<div class="legend-item"><div class="legend-color" style="background:#FBEAF0;border-color:#D4537E;"></div><span>XP / Engineering</span></div>
-<div class="legend-item"><div class="legend-color" style="background:#FAEEDA;border-color:#BA7517;"></div><span>Scaling</span></div>
-<div class="legend-item"><div class="legend-color" style="background:#F1EFE8;border-color:#888780;"></div><span>Metrics / Flow</span></div>
-</div>
-<div class="table-wrapper"><div class="periodic-table" id="table"></div></div>
-<div class="footer"><p>Click any element for definition and curated references &middot; 100 Agile &amp; Lean concepts</p></div>
-</div>
+
 <div class="modal" id="modal" role="dialog" aria-modal="true">
-<div class="modal-content">
-<button class="modal-close" id="modal-close" aria-label="Close">&times;</button>
-<div id="modal-body"></div>
+  <div class="modal-content">
+    <button class="modal-close" id="modal-close" aria-label="Close">&times;</button>
+    <div id="modal-body"></div>
+  </div>
 </div>
-</div>
+
 <script>
-// Full data and logic — see repository for complete source
-// This is a condensed placeholder; the full file is in the repo
-alert('Full version loading — please use the complete index.html from the repository');
+const colors = {
+  agile:   { bg: '#EEEDFE', border: '#7F77DD', text: '#3C3489', label: 'Agile core' },
+  scrum:   { bg: '#E1F5EE', border: '#1D9E75', text: '#085041', label: 'Scrum' },
+  kanban:  { bg: '#E6F1FB', border: '#378ADD', text: '#0C447C', label: 'Kanban' },
+  lean:    { bg: '#FAECE7', border: '#D85A30', text: '#712B13', label: 'Lean' },
+  xp:      { bg: '#FBEAF0', border: '#D4537E', text: '#72243E', label: 'XP / Engineering' },
+  scaling: { bg: '#FAEEDA', border: '#BA7517', text: '#633806', label: 'Scaling' },
+  metrics: { bg: '#F1EFE8', border: '#888780', text: '#444441', label: 'Metrics / Flow' }
+};
+
+const SCRUM_GUIDE = { type: 'Guide', title: 'Scrum Guide 2020 (Schwaber & Sutherland)', url: 'https://scrumguides.org/scrum-guide.html' };
+const MANIFESTO = { type: 'Source', title: 'agilemanifesto.org', url: 'https://agilemanifesto.org/' };
+const PRINCIPLES = { type: 'Source', title: '12 Principles behind the Manifesto', url: 'https://agilemanifesto.org/principles.html' };
+
+const elements = [
+  [1,  'Ag', 'Agile',             1, 1,  'agile',
+    'A mindset for delivering value through iterative, incremental work, continuous feedback, and responding to change over following a fixed plan. Codified in the 2001 Agile Manifesto.',
+    [MANIFESTO, PRINCIPLES,
+     { type: 'Book', title: 'Agile Software Development with Scrum — Schwaber & Beedle', url: 'https://www.goodreads.com/book/show/903.Agile_Software_Development_with_Scrum' },
+     { type: 'History', title: 'A Brief History of the Agile Movement (Atlassian)', url: 'https://www.atlassian.com/agile/manifesto' },
+     { type: 'Article', title: 'The State of Agile — Martin Fowler', url: 'https://martinfowler.com/articles/agile-aus-2018.html' }]],
+
+  [2,  'Mn', 'Manifesto',         1, 18, 'agile',
+    'The Agile Manifesto: four values and twelve principles signed by 17 practitioners in 2001. Prioritizes individuals, working software, customer collaboration, and responsiveness to change.',
+    [MANIFESTO, PRINCIPLES,
+     { type: 'Authors', title: 'The 17 signatories', url: 'https://agilemanifesto.org/authors.html' },
+     { type: 'Reflection', title: 'History: The Agile Manifesto — Jim Highsmith', url: 'https://agilemanifesto.org/history.html' },
+     { type: 'Book', title: 'Agile Software Development: The Cooperative Game — Alistair Cockburn', url: 'https://www.amazon.com/Agile-Software-Development-Cooperative-2nd/dp/0321482751' }]],
+
+  [3,  'Sc', 'Scrum',             2, 1,  'scrum',
+    'A lightweight framework for delivering complex products via short, time-boxed Sprints. Defines three accountabilities, three artifacts, and five events.',
+    [SCRUM_GUIDE,
+     { type: 'Book', title: 'Scrum: The Art of Doing Twice the Work in Half the Time — Jeff Sutherland', url: 'https://www.scruminc.com/scrum-art-doing-twice-work-half-time/' },
+     { type: 'Org', title: 'Scrum.org — What is Scrum?', url: 'https://www.scrum.org/resources/what-is-scrum' },
+     { type: 'Org', title: 'Scrum Alliance — Learn About Scrum', url: 'https://www.scrumalliance.org/about-scrum' }]],
+
+  [4,  'Kb', 'Kanban',            2, 2,  'kanban',
+    'A flow-based method that visualizes work, limits work in progress (WIP), and improves continuously. Originated from Toyota and adapted to knowledge work by David Anderson.',
+    [{ type: 'Book', title: 'Kanban — David J. Anderson (the "Blue Book")', url: 'https://leankanban.com/kanban-the-book/' },
+     { type: 'Guide', title: 'Kanban Guide — Kanban University', url: 'https://kanban.university/kanban-guide/' },
+     { type: 'Guide', title: 'The Kanban Guide — Scrum.org / ProKanban', url: 'https://kanbanguides.org/' },
+     { type: 'Article', title: 'What is Kanban? — Atlassian', url: 'https://www.atlassian.com/agile/kanban' }]],
+
+  [5,  'Em', 'Empiricism',        2, 13, 'agile',
+    'The pillar of Scrum: knowledge comes from experience and decisions are based on what is observed. Built on transparency, inspection, and adaptation.',
+    [SCRUM_GUIDE,
+     { type: 'Article', title: 'Empiricism: The Foundation of Scrum — Scrum.org', url: 'https://www.scrum.org/resources/blog/three-pillars-empiricism-scrum' },
+     { type: 'Book', title: 'Software in 30 Days — Schwaber & Sutherland', url: 'https://www.scrum.org/resources/software-in-30-days' },
+     { type: 'Article', title: 'Empirical Process Control — Schwaber', url: 'https://kenschwaber.wordpress.com/2011/05/14/empirical-process-control/' }]],
+
+  [6,  'Tr', 'Transparency',      2, 14, 'agile',
+    'Making work, progress, and impediments visible to everyone involved so decisions can be based on shared, accurate information.',
+    [SCRUM_GUIDE,
+     { type: 'Article', title: 'Transparency in Scrum — Scrum.org', url: 'https://www.scrum.org/resources/blog/scrums-three-pillars-transparency-inspection-and-adaptation' },
+     { type: 'Book', title: 'Software in 30 Days — Schwaber & Sutherland', url: 'https://www.scrum.org/resources/software-in-30-days' },
+     { type: 'Article', title: 'Why Transparency Matters — Scrum.org', url: 'https://www.scrum.org/resources/blog/why-transparency-matters-scrum' }]],
+
+  [7,  'Ip', 'Inspection',        2, 15, 'agile',
+    'Frequently examining artifacts and progress toward goals to detect undesirable variances or problems early.',
+    [SCRUM_GUIDE,
+     { type: 'Article', title: 'Inspection in Scrum — Scrum.org', url: 'https://www.scrum.org/resources/blog/scrums-three-pillars-transparency-inspection-and-adaptation' },
+     { type: 'Article', title: 'Inspect & Adapt — Mike Cohn', url: 'https://www.mountaingoatsoftware.com/blog/the-three-pillars-of-empirical-process-control' },
+     { type: 'Book', title: 'Software in 30 Days — Schwaber & Sutherland', url: 'https://www.scrum.org/resources/software-in-30-days' }]],
+
+  [8,  'Ad', 'Adaptation',        2, 16, 'agile',
+    'Adjusting process or product as soon as inspection reveals deviation. Makes change cheap rather than catastrophic.',
+    [SCRUM_GUIDE,
+     { type: 'Article', title: 'Adaptation in Scrum — Scrum.org', url: 'https://www.scrum.org/resources/blog/scrums-three-pillars-transparency-inspection-and-adaptation' },
+     { type: 'Article', title: 'Adapting in Scrum — Mike Cohn', url: 'https://www.mountaingoatsoftware.com/blog/the-three-pillars-of-empirical-process-control' },
+     { type: 'Book', title: 'Scrum: The Art of Doing Twice the Work — Sutherland', url: 'https://www.scruminc.com/scrum-art-doing-twice-work-half-time/' }]],
+
+  [9,  'Vl', 'Value',             2, 17, 'lean',
+    'Anything the customer is willing to pay for. In Lean, everything else is waste and a candidate for elimination.',
+    [{ type: 'Book', title: 'Lean Thinking — Womack & Jones', url: 'https://www.lean.org/store/book/lean-thinking-2nd-edition/' },
+     { type: 'Article', title: 'The Five Principles of Lean — Lean Enterprise Institute', url: 'https://www.lean.org/explore-lean/what-is-lean/' },
+     { type: 'Wiki', title: 'Lean manufacturing', url: 'https://en.wikipedia.org/wiki/Lean_manufacturing' },
+     { type: 'Book', title: 'The Toyota Way — Jeffrey Liker', url: 'https://www.lean.org/store/book/toyota-way-2nd-edition/' }]],
+
+  [10, 'Ws', 'Waste',             2, 18, 'lean',
+    'Muda: any activity that consumes resources without creating customer value. Lean identifies seven (or eight) classic forms including overproduction, waiting, and defects.',
+    [{ type: 'Book', title: 'Lean Software Development — Mary & Tom Poppendieck', url: 'https://www.poppendieck.com/' },
+     { type: 'Reference', title: 'The 7 Wastes of Lean — Lean Enterprise Institute', url: 'https://www.lean.org/lexicon-terms/seven-wastes/' },
+     { type: 'Wiki', title: 'Muda (Japanese term)', url: 'https://en.wikipedia.org/wiki/Muda_(Japanese_term)' }]],
+
+  [11, 'Po', 'Product owner',     3, 1,  'scrum',
+    'The Scrum accountability for maximizing product value. Owns the Product Backlog, decides priority, and is the single voice of stakeholders to the team.',
+    [SCRUM_GUIDE,
+     { type: 'Book', title: 'EMPOWERED & INSPIRED — Marty Cagan (SVPG)', url: 'https://www.svpg.com/books/' },
+     { type: 'Article', title: 'What is a Product Owner? — Scrum.org', url: 'https://www.scrum.org/resources/what-is-a-product-owner' },
+     { type: 'Book', title: 'The Professional Product Owner — Don McGreal & Ralph Jocham', url: 'https://www.scrum.org/resources/professional-product-owner-leveraging-scrum-business-results' }]],
+
+  [12, 'Sm', 'Scrum master',      3, 2,  'scrum',
+    'A servant-leader accountable for the team\'s effectiveness. Coaches, removes impediments, and ensures Scrum is understood and enacted.',
+    [SCRUM_GUIDE,
+     { type: 'Book', title: 'Scrum Mastery — Geoff Watts', url: 'https://www.amazon.com/Scrum-Mastery-Good-Great-Servant-Leader/dp/0957587406' },
+     { type: 'Book', title: 'The Great ScrumMaster — Zuzana Šochová', url: 'https://soch.cz/great-scrummaster/' },
+     { type: 'Article', title: 'What is a Scrum Master? — Scrum.org', url: 'https://www.scrum.org/resources/what-is-a-scrum-master' }]],
+
+  [13, 'Dv', 'Developers',        3, 3,  'scrum',
+    'The cross-functional people who create the Increment each Sprint. Self-managing and collectively accountable for the Sprint Goal.',
+    [SCRUM_GUIDE,
+     { type: 'Article', title: 'The Scrum Team — Scrum.org', url: 'https://www.scrum.org/resources/what-is-a-scrum-team' },
+     { type: 'Article', title: 'Self-Managing Teams — Mike Cohn', url: 'https://www.mountaingoatsoftware.com/blog/what-do-developers-do-during-sprint-planning' },
+     { type: 'Book', title: 'Scrum: A Pocket Guide — Gunther Verheyen', url: 'https://www.amazon.com/Scrum-Pocket-Companion-Scrum/dp/9401800731' }]],
+
+  [14, 'Sp', 'Sprint',            3, 4,  'scrum',
+    'A fixed time-box of one month or less during which a usable, valuable Increment is produced. The container event for all other Scrum events.',
+    [SCRUM_GUIDE,
+     { type: 'Article', title: 'The Sprint — Scrum.org', url: 'https://www.scrum.org/resources/what-is-a-sprint-in-scrum' },
+     { type: 'Article', title: 'What is a Sprint in Scrum? — Atlassian', url: 'https://www.atlassian.com/agile/scrum/sprints' },
+     { type: 'Book', title: 'Scrum: A Pocket Guide — Gunther Verheyen', url: 'https://www.amazon.com/Scrum-Pocket-Companion-Scrum/dp/9401800731' }]],
+
+  [15, 'Pl', 'Planning',          3, 5,  'scrum',
+    'The Sprint event where the team forecasts what to deliver, defines the Sprint Goal, and creates the Sprint Backlog.',
+    [SCRUM_GUIDE,
+     { type: 'Article', title: 'Sprint Planning — Scrum.org', url: 'https://www.scrum.org/resources/what-is-sprint-planning' },
+     { type: 'Book', title: 'Agile Estimating and Planning — Mike Cohn', url: 'https://www.mountaingoatsoftware.com/books/agile-estimating-and-planning' },
+     { type: 'Article', title: 'Sprint Planning Meeting — Mike Cohn', url: 'https://www.mountaingoatsoftware.com/agile/scrum/scrum-meetings/sprint-planning-meeting' }]],
+
+  [16, 'Ds', 'Daily scrum',       3, 6,  'scrum',
+    'A 15-minute event for Developers to inspect progress toward the Sprint Goal and adapt the plan for the next 24 hours.',
+    [SCRUM_GUIDE,
+     { type: 'Article', title: 'The Daily Scrum — Scrum.org', url: 'https://www.scrum.org/resources/what-is-a-daily-scrum' },
+     { type: 'Article', title: "It's Not Just Standing Up — Jason Yip", url: 'https://martinfowler.com/articles/itsNotJustStandingUp.html' },
+     { type: 'Article', title: 'Daily Standup Patterns — Atlassian', url: 'https://www.atlassian.com/agile/scrum/standups' }]],
+
+  [17, 'Rv', 'Review',            3, 7,  'scrum',
+    'The Sprint event where the team and stakeholders inspect the Increment, gather feedback, and adapt the Product Backlog.',
+    [SCRUM_GUIDE,
+     { type: 'Article', title: 'Sprint Review — Scrum.org', url: 'https://www.scrum.org/resources/what-is-a-sprint-review' },
+     { type: 'Article', title: 'The Sprint Review — Mike Cohn', url: 'https://www.mountaingoatsoftware.com/agile/scrum/scrum-meetings/sprint-review-meeting' },
+     { type: 'Article', title: 'Sprint Reviews are Not Demos — Scrum.org', url: 'https://www.scrum.org/resources/blog/why-sprint-review-not-just-demo' }]],
+
+  [18, 'Re', 'Retrospective',     3, 8,  'scrum',
+    'The Sprint-closing event where the team inspects how it worked and identifies improvements to enact next Sprint.',
+    [SCRUM_GUIDE,
+     { type: 'Book', title: 'Agile Retrospectives — Esther Derby & Diana Larsen', url: 'https://pragprog.com/titles/dlret/agile-retrospectives/' },
+     { type: 'Resource', title: 'Retromat — retrospective plans', url: 'https://retromat.org/' },
+     { type: 'Article', title: 'Sprint Retrospective — Scrum.org', url: 'https://www.scrum.org/resources/what-is-a-sprint-retrospective' }]],
+
+  [19, 'Pb', 'Product backlog',   3, 9,  'scrum',
+    'An ordered, ever-evolving list of everything that might be needed in the product. The single source of work for the Scrum Team.',
+    [SCRUM_GUIDE,
+     { type: 'Book', title: 'Agile Product Management with Scrum — Roman Pichler', url: 'https://www.romanpichler.com/books/agile-product-management-with-scrum/' },
+     { type: 'Article', title: 'What is a Product Backlog? — Scrum.org', url: 'https://www.scrum.org/resources/what-is-a-product-backlog' },
+     { type: 'Article', title: 'Backlog Refinement — Roman Pichler', url: 'https://www.romanpichler.com/blog/the-product-backlog-the-product-owners-most-important-artifact/' }]],
+
+  [20, 'Sb', 'Sprint backlog',    3, 10, 'scrum',
+    'The Sprint Goal plus the selected Product Backlog items and a plan for delivering them. Owned and updated by the Developers throughout the Sprint.',
+    [SCRUM_GUIDE,
+     { type: 'Article', title: 'What is a Sprint Backlog? — Scrum.org', url: 'https://www.scrum.org/resources/what-is-a-sprint-backlog' },
+     { type: 'Article', title: 'Sprint Backlog — Mike Cohn', url: 'https://www.mountaingoatsoftware.com/agile/scrum/scrum-tools/sprint-backlog' },
+     { type: 'Article', title: 'Sprint Backlog vs Product Backlog — Atlassian', url: 'https://www.atlassian.com/agile/scrum/sprint-backlog' }]],
+
+  [21, 'Ic', 'Increment',         3, 11, 'scrum',
+    'A concrete, usable step toward the Product Goal. Each Increment must meet the Definition of Done and is additive to all prior Increments.',
+    [SCRUM_GUIDE,
+     { type: 'Article', title: 'What is an Increment? — Scrum.org', url: 'https://www.scrum.org/resources/what-is-an-increment' },
+     { type: 'Article', title: 'What is "Done"? — Mike Cohn', url: 'https://www.mountaingoatsoftware.com/blog/what-is-an-increment' },
+     { type: 'Article', title: 'Many Increments per Sprint — Scrum.org', url: 'https://www.scrum.org/resources/blog/many-increments-one-sprint' }]],
+
+  [22, 'Dd', 'Done',              3, 12, 'scrum',
+    'Definition of Done: the shared agreement describing the quality bar a Product Backlog item must meet to be considered part of the Increment.',
+    [SCRUM_GUIDE,
+     { type: 'Article', title: 'Walking Through the Definition of Done — Mike Cohn', url: 'https://www.mountaingoatsoftware.com/blog/walking-through-the-definition-of-done' },
+     { type: 'Article', title: 'Definition of Done — Scrum.org', url: 'https://www.scrum.org/resources/blog/walking-through-definition-done' },
+     { type: 'Article', title: 'Definition of Done Examples — Scrum Inc', url: 'https://www.scruminc.com/definition-of-done/' }]],
+
+  [23, 'Ax', 'Acceptance',        3, 13, 'agile',
+    'Acceptance criteria: item-level conditions of satisfaction. Define what "working as expected" looks like for one Product Backlog item, distinct from the Definition of Done.',
+    [{ type: 'Article', title: 'Acceptance Criteria for User Stories — Mike Cohn', url: 'https://www.mountaingoatsoftware.com/blog/the-three-cs-of-user-stories' },
+     { type: 'Book', title: 'User Stories Applied — Mike Cohn', url: 'https://www.mountaingoatsoftware.com/books/user-stories-applied' },
+     { type: 'Article', title: 'Acceptance Criteria — Atlassian', url: 'https://www.atlassian.com/agile/project-management/user-stories' }]],
+
+  [24, 'Us', 'User story',        3, 14, 'agile',
+    'A short, customer-centric description of a need, often in the form: "As a [user], I want [goal] so that [benefit]." A placeholder for a conversation.',
+    [{ type: 'Book', title: 'User Stories Applied — Mike Cohn', url: 'https://www.mountaingoatsoftware.com/books/user-stories-applied' },
+     { type: 'Article', title: 'The 3 Cs of User Stories — Ron Jeffries', url: 'https://ronjeffries.com/xprog/articles/expcardconversationconfirmation/' },
+     { type: 'Article', title: 'INVEST in Good Stories — Bill Wake', url: 'https://xp123.com/articles/invest-in-good-stories-and-smart-tasks/' }]],
+
+  [25, 'Ep', 'Epic',              3, 15, 'agile',
+    'A large body of work that can be broken down into multiple user stories, usually delivering a significant chunk of customer value.',
+    [{ type: 'Article', title: 'Epics, Stories, Themes — Mike Cohn', url: 'https://www.mountaingoatsoftware.com/blog/stories-epics-and-themes' },
+     { type: 'Article', title: 'Epics, Stories, Themes, and Initiatives — Atlassian', url: 'https://www.atlassian.com/agile/project-management/epics-stories-themes' },
+     { type: 'Article', title: 'What is an Epic? — Atlassian', url: 'https://www.atlassian.com/agile/project-management/epics' },
+     { type: 'Article', title: 'Epics vs Features vs Stories — Scaled Agile', url: 'https://scaledagileframework.com/epic/' }]],
+
+  [26, 'Tm', 'Theme',             3, 16, 'agile',
+    'A grouping of related epics aligned to a strategic objective or capability area.',
+    [{ type: 'Article', title: 'Stories, Epics & Themes — Mike Cohn', url: 'https://www.mountaingoatsoftware.com/blog/stories-epics-and-themes' },
+     { type: 'Article', title: 'Themes vs Epics vs Stories — Atlassian', url: 'https://www.atlassian.com/agile/project-management/epics-stories-themes' },
+     { type: 'Book', title: 'Agile Estimating and Planning — Mike Cohn', url: 'https://www.mountaingoatsoftware.com/books/agile-estimating-and-planning' }]],
+
+  [27, 'Sg', 'Sprint goal',       3, 17, 'scrum',
+    'The single objective for a Sprint that gives the team coherence and a reason to work together. Lifts work above a checklist of items.',
+    [SCRUM_GUIDE,
+     { type: 'Article', title: 'The Power of the Sprint Goal — Scrum.org (Robert Pieper)', url: 'https://www.scrum.org/resources/blog/power-sprint-goal' },
+     { type: 'Article', title: 'Sprint Goal Examples — Mike Cohn', url: 'https://www.mountaingoatsoftware.com/blog/the-importance-of-sprint-goals' },
+     { type: 'Article', title: 'Sprint Goal — Roman Pichler', url: 'https://www.romanpichler.com/blog/setting-effective-sprint-goals/' }]],
+
+  [28, 'Pg', 'Product goal',      3, 18, 'scrum',
+    'A long-term objective that the Scrum Team plans against. The Product Backlog emerges to fulfill it.',
+    [SCRUM_GUIDE,
+     { type: 'Article', title: 'The Product Goal — Scrum.org', url: 'https://www.scrum.org/resources/blog/what-product-goal' },
+     { type: 'Article', title: 'Product Goal Examples — Roman Pichler', url: 'https://www.romanpichler.com/blog/from-product-vision-to-product-goal/' },
+     { type: 'Article', title: 'Product Goal Patterns — Scrum.org', url: 'https://www.scrum.org/resources/blog/product-goal-and-product-vision' }]],
+
+  [29, 'Wp', 'WIP limit',         4, 1,  'kanban',
+    'A cap on how many items can be in a workflow stage at once. Forces focus, exposes bottlenecks, and is the single most important Kanban practice.',
+    [{ type: 'Book', title: 'Kanban — David J. Anderson', url: 'https://leankanban.com/kanban-the-book/' },
+     { type: 'Article', title: 'WIP Limits — Atlassian', url: 'https://www.atlassian.com/agile/kanban/wip-limits' },
+     { type: 'Article', title: 'Stop Starting, Start Finishing — Arne Roock', url: 'https://leanpub.com/stopstartingstartfinishing' }]],
+
+  [30, 'Bo', 'Board',             4, 2,  'kanban',
+    'The visual representation of the workflow, with columns for each stage and cards for work items. Makes flow and bottlenecks visible to all.',
+    [{ type: 'Article', title: 'Kanban Boards Explained — Atlassian', url: 'https://www.atlassian.com/agile/kanban/boards' },
+     { type: 'Article', title: 'Anatomy of a Kanban Board — Kanbanize', url: 'https://kanbanize.com/kanban-resources/getting-started/what-is-kanban-board' },
+     { type: 'Book', title: 'Kanban from the Inside — Mike Burrows', url: 'https://www.amazon.com/Kanban-Inside-Mike-Burrows/dp/0985305193' }]],
+
+  [31, 'Cd', 'Cadence',           4, 3,  'kanban',
+    'A regular rhythm for events such as replenishment, delivery, and review. Kanban favors decoupled cadences chosen to fit the work.',
+    [{ type: 'Book', title: 'Kanban from the Inside — Mike Burrows', url: 'https://www.amazon.com/Kanban-Inside-Mike-Burrows/dp/0985305193' },
+     { type: 'Article', title: 'Cadences in Kanban — David Anderson', url: 'https://www.djaa.com/' },
+     { type: 'Article', title: 'Cadences in Kanban — Kanbanize', url: 'https://kanbanize.com/kanban-resources/kanban-software/kanban-cadences' }]],
+
+  [32, 'Pu', 'Pull system',       4, 4,  'lean',
+    'Work is pulled into the next stage only when there is capacity, rather than being pushed by an upstream schedule. Smooths flow and prevents overload.',
+    [{ type: 'Article', title: 'Pull Systems — Lean Enterprise Institute', url: 'https://www.lean.org/lexicon-terms/pull-system/' },
+     { type: 'Wiki', title: 'Push–pull strategy', url: 'https://en.wikipedia.org/wiki/Push%E2%80%93pull_strategy' },
+     { type: 'Book', title: 'Lean Thinking — Womack & Jones', url: 'https://www.lean.org/store/book/lean-thinking-2nd-edition/' }]],
+
+  [33, 'Fl', 'Flow',              4, 5,  'lean',
+    'The smooth, uninterrupted movement of value from idea to customer. Improving flow means reducing delays, batches, and handoffs.',
+    [{ type: 'Book', title: 'The Principles of Product Development Flow — Don Reinertsen', url: 'https://www.amazon.com/Principles-Product-Development-Flow-Generation/dp/1935401009' },
+     { type: 'Book', title: 'Lean Thinking — Womack & Jones', url: 'https://www.lean.org/store/book/lean-thinking-2nd-edition/' },
+     { type: 'Article', title: 'Flow Metrics — Daniel Vacanti', url: 'https://actionableagile.com/resources/publications/' }]],
+
+  [34, 'Bn', 'Bottleneck',        4, 6,  'metrics',
+    'The slowest step in a workflow that constrains the throughput of the entire system. Made visible by WIP limits and queues.',
+    [{ type: 'Book', title: 'The Goal — Eliyahu M. Goldratt', url: 'https://www.goldratt.com/' },
+     { type: 'Wiki', title: 'Theory of Constraints', url: 'https://en.wikipedia.org/wiki/Theory_of_constraints' },
+     { type: 'Article', title: 'Theory of Constraints — LEI', url: 'https://www.lean.org/lexicon-terms/theory-of-constraints/' }]],
+
+  [35, 'Cy', 'Cycle time',        4, 7,  'metrics',
+    'Elapsed time from when work starts on an item to when it is done. A lagging indicator of how responsive the system is.',
+    [{ type: 'Book', title: 'Actionable Agile Metrics for Predictability — Daniel Vacanti', url: 'https://actionableagile.com/resources/publications/' },
+     { type: 'Article', title: 'Cycle Time vs Lead Time — Atlassian', url: 'https://www.atlassian.com/agile/project-management/metrics' },
+     { type: 'Wiki', title: 'Little\'s Law', url: 'https://en.wikipedia.org/wiki/Little%27s_law' }]],
+
+  [36, 'Lt', 'Lead time',         4, 8,  'metrics',
+    'Elapsed time from when an item is requested to when it is delivered. Measures customer experience of responsiveness.',
+    [{ type: 'Book', title: 'Accelerate — Forsgren, Humble & Kim', url: 'https://itrevolution.com/product/accelerate/' },
+     { type: 'Book', title: 'Actionable Agile Metrics — Daniel Vacanti', url: 'https://actionableagile.com/resources/publications/' },
+     { type: 'Article', title: 'Lead Time vs Cycle Time — Atlassian', url: 'https://www.atlassian.com/agile/project-management/metrics' }]],
+
+  [37, 'Tp', 'Throughput',        4, 9,  'metrics',
+    'The number of items completed per unit of time. With WIP and lead time it forms Little\'s Law: WIP = Throughput × Lead time.',
+    [{ type: 'Book', title: 'When Will It Be Done? — Daniel Vacanti', url: 'https://actionableagile.com/resources/publications/' },
+     { type: 'Wiki', title: 'Little\'s Law', url: 'https://en.wikipedia.org/wiki/Little%27s_law' },
+     { type: 'Article', title: 'Throughput in Kanban — Kanbanize', url: 'https://kanbanize.com/kanban-resources/kanban-software/kanban-throughput' }]],
+
+  [38, 'Vy', 'Velocity',          4, 10, 'scrum',
+    'A team\'s historical average of completed work (often in story points) per Sprint. A planning aid, not a performance target.',
+    [{ type: 'Article', title: 'Velocity — Mike Cohn', url: 'https://www.mountaingoatsoftware.com/blog/why-i-dont-use-story-points-for-sprint-planning' },
+     { type: 'Article', title: 'Velocity is Killing Agility — Jim Highsmith', url: 'https://jimhighsmith.com/velocity-is-killing-agility/' },
+     { type: 'Article', title: 'Velocity is not the Goal — Scrum.org', url: 'https://www.scrum.org/resources/blog/velocity-not-goal' }]],
+
+  [39, 'Bd', 'Burndown',          4, 11, 'scrum',
+    'A chart tracking remaining work over time within a Sprint or release. Visualizes whether the team is on track to finish.',
+    [{ type: 'Article', title: 'Burndown Charts — Mike Cohn', url: 'https://www.mountaingoatsoftware.com/agile/scrum/scrum-tools/release-burndown' },
+     { type: 'Article', title: 'Burndown Chart — Atlassian', url: 'https://www.atlassian.com/agile/tutorials/burndown-charts' },
+     { type: 'Article', title: 'Burndown Charts — Scrum.org', url: 'https://www.scrum.org/resources/blog/burn-charts-product-backlog' }]],
+
+  [40, 'Bu', 'Burnup',            4, 12, 'scrum',
+    'A chart showing work completed against total scope over time. Makes scope changes visible, unlike a burndown.',
+    [{ type: 'Article', title: 'Burnup Charts — Mike Cohn', url: 'https://www.mountaingoatsoftware.com/blog/whats-the-difference-between-a-burndown-chart-and-a-burnup-chart' },
+     { type: 'Article', title: 'Burnup vs Burndown — Atlassian', url: 'https://www.atlassian.com/agile/tutorials/burndown-charts' },
+     { type: 'Article', title: 'Why I Prefer Burnup Charts — Mike Cohn', url: 'https://www.mountaingoatsoftware.com/blog/whats-the-difference-between-a-burndown-chart-and-a-burnup-chart' }]],
+
+  [41, 'Cf', 'CFD',               4, 13, 'kanban',
+    'Cumulative Flow Diagram: stacked area chart showing the count of items in each workflow state over time. Reveals WIP, lead time, and bottlenecks at a glance.',
+    [{ type: 'Book', title: 'Actionable Agile Metrics — Daniel Vacanti', url: 'https://actionableagile.com/resources/publications/' },
+     { type: 'Article', title: 'How to Read a CFD — Daniel Vacanti', url: 'https://www.actionableagile.com/cumulative-flow-diagrams/' },
+     { type: 'Article', title: 'Cumulative Flow Diagram — Kanbanize', url: 'https://kanbanize.com/kanban-resources/kanban-software/cumulative-flow-diagram' }]],
+
+  [42, 'Sx', 'Story map',         4, 14, 'agile',
+    'A two-dimensional arrangement of user stories along the user\'s journey, sliced into releases. Created by Jeff Patton.',
+    [{ type: 'Book', title: 'User Story Mapping — Jeff Patton', url: 'https://jpattonassociates.com/user-story-mapping/' },
+     { type: 'Article', title: 'The New User Story Backlog is a Map — Jeff Patton', url: 'https://jpattonassociates.com/the-new-backlog/' },
+     { type: 'Article', title: 'User Story Mapping — Atlassian', url: 'https://www.atlassian.com/agile/project-management/user-story-mapping' }]],
+
+  [43, 'Mv', 'MVP',               4, 15, 'lean',
+    'Minimum Viable Product: the smallest version of a product that lets you start the build-measure-learn loop with real users. From Eric Ries\' Lean Startup.',
+    [{ type: 'Book', title: 'The Lean Startup — Eric Ries', url: 'http://theleanstartup.com/book' },
+     { type: 'Article', title: 'Minimum Viable Product: a guide — Eric Ries', url: 'http://www.startuplessonslearned.com/2009/08/minimum-viable-product-guide.html' },
+     { type: 'Article', title: 'Making Sense of MVP — Henrik Kniberg', url: 'https://blog.crisp.se/2016/01/25/henrikkniberg/making-sense-of-mvp' }]],
+
+  [44, 'Ml', 'MLP',               4, 16, 'lean',
+    'Minimum Lovable Product: an MVP raised to the bar of being delightful to use, not merely sufficient.',
+    [{ type: 'Article', title: 'Minimum Lovable Product — Henrik Kniberg', url: 'https://blog.crisp.se/2016/01/25/henrikkniberg/making-sense-of-mvp' },
+     { type: 'Article', title: 'MVP vs MLP — Aha!', url: 'https://www.aha.io/roadmapping/guide/release-management/minimum-lovable-product' },
+     { type: 'Article', title: 'Why MLP Beats MVP — Brian de Haaff', url: 'https://www.aha.io/blog/why-the-minimum-lovable-product-beats-the-minimum-viable-product' }]],
+
+  [45, 'Hy', 'Hypothesis',        4, 17, 'lean',
+    'An explicit, testable assumption about users, value, or feasibility. Lean Startup treats every product idea as a hypothesis until validated.',
+    [{ type: 'Book', title: 'The Lean Startup — Eric Ries', url: 'http://theleanstartup.com/book' },
+     { type: 'Book', title: 'Testing Business Ideas — Bland & Osterwalder', url: 'https://www.strategyzer.com/library/testing-business-ideas' },
+     { type: 'Article', title: 'Hypothesis-Driven Development — Barry O\'Reilly', url: 'https://barryoreilly.com/explore/blog/how-to-implement-hypothesis-driven-development/' }]],
+
+  [46, 'Vd', 'Validated',         4, 18, 'lean',
+    'Validated learning: empirical evidence about what customers actually want, gained by running experiments rather than asking opinions.',
+    [{ type: 'Book', title: 'The Lean Startup — Eric Ries', url: 'http://theleanstartup.com/book' },
+     { type: 'Article', title: 'Validated Learning — Eric Ries', url: 'http://www.startuplessonslearned.com/2009/04/validated-learning-about-customers.html' },
+     { type: 'Wiki', title: 'Lean startup', url: 'https://en.wikipedia.org/wiki/Lean_startup' }]],
+
+  [47, 'Pp', 'Pair prog.',        5, 1,  'xp',
+    'Two developers working at one workstation: one drives, one navigates. An XP practice that improves quality, knowledge sharing, and design.',
+    [{ type: 'Book', title: 'Extreme Programming Explained — Kent Beck', url: 'https://www.amazon.com/Extreme-Programming-Explained-Embrace-Change/dp/0321278658' },
+     { type: 'Article', title: 'On Pair Programming — Martin Fowler', url: 'https://martinfowler.com/articles/on-pair-programming.html' },
+     { type: 'Article', title: 'Pair Programming — Atlassian', url: 'https://www.atlassian.com/agile/project-management/pair-programming' }]],
+
+  [48, 'Mb', 'Mob prog.',         5, 2,  'xp',
+    'The whole team working together on the same problem at the same computer. Extreme version of pairing for tough problems and learning.',
+    [{ type: 'Book', title: 'Mob Programming Guidebook — Woody Zuill', url: 'https://leanpub.com/mobprogramming' },
+     { type: 'Site', title: 'mobprogramming.org', url: 'https://mobprogramming.org/' },
+     { type: 'Article', title: 'Mob Programming — Martin Fowler', url: 'https://martinfowler.com/bliki/MobProgramming.html' }]],
+
+  [49, 'Td', 'TDD',               5, 3,  'xp',
+    'Test-Driven Development: write a failing test, write the minimum code to pass, then refactor. Red-Green-Refactor.',
+    [{ type: 'Book', title: 'Test-Driven Development By Example — Kent Beck', url: 'https://www.amazon.com/Test-Driven-Development-Kent-Beck/dp/0321146530' },
+     { type: 'Article', title: 'Is TDD Dead? — Martin Fowler / Kent Beck / DHH', url: 'https://martinfowler.com/articles/is-tdd-dead/' },
+     { type: 'Book', title: 'Growing Object-Oriented Software, Guided by Tests — Freeman & Pryce', url: 'http://www.growing-object-oriented-software.com/' }]],
+
+  [50, 'Bb', 'BDD',               5, 4,  'xp',
+    'Behavior-Driven Development: TDD framed in business language using Given-When-Then scenarios. Bridges product and engineering.',
+    [{ type: 'Book', title: 'The Cucumber Book — Wynne & Hellesøy', url: 'https://pragprog.com/titles/hwcuc2/the-cucumber-book-second-edition/' },
+     { type: 'Article', title: 'Introducing BDD — Dan North', url: 'https://dannorth.net/introducing-bdd/' },
+     { type: 'Book', title: 'Specification by Example — Gojko Adzic', url: 'https://gojko.net/books/specification-by-example/' }]],
+
+  [51, 'Rf', 'Refactor',          5, 5,  'xp',
+    'Improving the internal structure of code without changing its external behavior. Keeps the cost of change low over time.',
+    [{ type: 'Book', title: 'Refactoring — Martin Fowler (2nd ed.)', url: 'https://martinfowler.com/books/refactoring.html' },
+     { type: 'Site', title: 'refactoring.com', url: 'https://refactoring.com/' },
+     { type: 'Book', title: 'Working Effectively with Legacy Code — Michael Feathers', url: 'https://www.oreilly.com/library/view/working-effectively-with/0131177052/' }]],
+
+  [52, 'Ci', 'CI',                5, 6,  'xp',
+    'Continuous Integration: developers merge to a shared mainline frequently, each merge verified by an automated build and tests.',
+    [{ type: 'Article', title: 'Continuous Integration — Martin Fowler', url: 'https://martinfowler.com/articles/continuousIntegration.html' },
+     { type: 'Book', title: 'Continuous Delivery — Humble & Farley', url: 'https://continuousdelivery.com/' },
+     { type: 'Book', title: 'Continuous Delivery — Humble & Farley', url: 'https://continuousdelivery.com/' }]],
+
+  [53, 'Cl', 'CD',                5, 7,  'xp',
+    'Continuous Delivery (or Deployment): every change that passes the pipeline is releasable to production at any time, often automatically.',
+    [{ type: 'Book', title: 'Continuous Delivery — Jez Humble & Dave Farley', url: 'https://continuousdelivery.com/' },
+     { type: 'Book', title: 'Accelerate — Forsgren, Humble & Kim', url: 'https://itrevolution.com/product/accelerate/' },
+     { type: 'Article', title: 'ContinuousDelivery — Martin Fowler', url: 'https://martinfowler.com/bliki/ContinuousDelivery.html' }]],
+
+  [54, 'Tk', 'Tech debt',         5, 8,  'xp',
+    'The accumulated cost of expedient design choices that now slow down change. Must be tracked, paid down, and prevented.',
+    [{ type: 'Article', title: 'Technical Debt Quadrant — Martin Fowler', url: 'https://martinfowler.com/bliki/TechnicalDebtQuadrant.html' },
+     { type: 'Talk', title: 'Ward Cunningham — The Debt Metaphor', url: 'https://www.youtube.com/watch?v=pqeJFYwnkjE' },
+     { type: 'Article', title: 'Tech Debt — Ward Cunningham (original)', url: 'http://wiki.c2.com/?WardExplainsDebtMetaphor' }]],
+
+  [55, 'Rg', 'Refinement',        5, 9,  'scrum',
+    'Backlog refinement: the ongoing activity of adding detail, estimates, and order to Product Backlog items so they are ready for a future Sprint.',
+    [SCRUM_GUIDE,
+     { type: 'Article', title: 'Backlog Refinement — Mike Cohn', url: 'https://www.mountaingoatsoftware.com/blog/product-backlog-refinement-grooming' },
+     { type: 'Article', title: 'Backlog Refinement — Scrum.org', url: 'https://www.scrum.org/resources/blog/agile-product-backlog-refinement' },
+     { type: 'Article', title: 'Three Levels of Refinement — Roman Pichler', url: 'https://www.romanpichler.com/blog/agile-product-backlog-grooming/' }]],
+
+  [56, 'Et', 'Estimation',        5, 10, 'agile',
+    'Forecasting effort or size of work, often relative rather than absolute. Common units include story points and t-shirt sizes.',
+    [{ type: 'Book', title: 'Agile Estimating and Planning — Mike Cohn', url: 'https://www.mountaingoatsoftware.com/books/agile-estimating-and-planning' },
+     { type: 'Article', title: '#NoEstimates — Vasco Duarte', url: 'https://www.amazon.com/NoEstimates-measure-project-progress-estimating/dp/B01FZBR7C0' },
+     { type: 'Article', title: 'Estimation Techniques — Atlassian', url: 'https://www.atlassian.com/agile/project-management/estimation' }]],
+
+  [57, 'Pk', 'Poker',             5, 11, 'agile',
+    'Planning Poker: a consensus-based, gamified estimation technique using Fibonacci-like cards revealed simultaneously.',
+    [{ type: 'Article', title: 'Planning Poker — Mike Cohn', url: 'https://www.mountaingoatsoftware.com/agile/planning-poker' },
+     { type: 'Original', title: 'James Grenning — original article (2002)', url: 'https://wingman-sw.com/papers/PlanningPoker-v1.1.pdf' },
+     { type: 'Wiki', title: 'Planning poker', url: 'https://en.wikipedia.org/wiki/Planning_poker' }]],
+
+  [58, 'Pt', 'Story point',       5, 12, 'agile',
+    'A unit of relative size that bundles complexity, effort, and uncertainty. Compared to a reference story rather than to hours.',
+    [{ type: 'Article', title: 'What Are Story Points? — Mike Cohn', url: 'https://www.mountaingoatsoftware.com/blog/what-are-story-points' },
+     { type: 'Article', title: 'Story Points Revisited — Ron Jeffries', url: 'https://ronjeffries.com/articles/019-01ff/story-points/Index.html' },
+     { type: 'Article', title: 'Story Points and Velocity — Atlassian', url: 'https://www.atlassian.com/agile/project-management/estimation' }]],
+
+  [59, 'Tb', 'Time-box',          5, 13, 'agile',
+    'A fixed maximum duration for an event or activity. Forces decisions, prevents drift, and enables empirical inspection.',
+    [SCRUM_GUIDE,
+     { type: 'Wiki', title: 'Timeboxing', url: 'https://en.wikipedia.org/wiki/Timeboxing' },
+     { type: 'Article', title: 'Time-boxing in Scrum — Scrum.org', url: 'https://www.scrum.org/resources/blog/why-time-boxing-essential-scrum' },
+     { type: 'Article', title: 'Power of Time-boxing — Mike Cohn', url: 'https://www.mountaingoatsoftware.com/blog/the-power-of-time-boxing' }]],
+
+  [60, 'Wk', 'Workshop',          5, 14, 'agile',
+    'A facilitated working session with explicit purpose, outcomes, and structure. Common formats include kickoffs, retros, and design sprints.',
+    [{ type: 'Book', title: 'Sprint — Jake Knapp (Google Ventures)', url: 'https://www.thesprintbook.com/' },
+     { type: 'Book', title: 'Gamestorming — Gray, Brown & Macanufo', url: 'https://gamestorming.com/' },
+     { type: 'Book', title: 'Liberating Structures — Lipmanowicz & McCandless', url: 'https://www.liberatingstructures.com/' }]],
+
+  [61, 'Fc', 'Facilitation',      5, 15, 'agile',
+    'The discipline of designing and guiding group interactions toward a clear outcome while staying neutral on content.',
+    [{ type: 'Book', title: 'The Skilled Facilitator — Roger Schwarz', url: 'https://www.schwarzassociates.com/our-thinking/books/the-skilled-facilitator/' },
+     { type: 'Book', title: 'Training from the Back of the Room — Sharon Bowman', url: 'https://bowperson.com/' },
+     { type: 'Site', title: 'IAF — International Association of Facilitators', url: 'https://www.iaf-world.org/' }]],
+
+  [62, 'Ca', 'Coaching',          5, 16, 'agile',
+    'A partnership in which the coach helps individuals or teams unlock their own thinking and capability. Distinct from mentoring or training.',
+    [{ type: 'Book', title: 'Coaching Agile Teams — Lyssa Adkins', url: 'https://www.coachingagileteams.com/' },
+     { type: 'Book', title: 'Agile Coaching — Davies & Sedley', url: 'https://pragprog.com/titles/sdcoach/agile-coaching/' },
+     { type: 'Article', title: 'Coaching Stance — Lyssa Adkins', url: 'https://www.coachingagileteams.com/' }]],
+
+  [63, 'Sl', 'Servant lead.',     5, 17, 'agile',
+    'A leader whose first priority is to serve the team and the work. Originates from Robert Greenleaf and is central to Scrum Master and Agile coaching roles.',
+    [{ type: 'Essay', title: 'The Servant as Leader — Robert K. Greenleaf', url: 'https://www.greenleaf.org/what-is-servant-leadership/' },
+     { type: 'Org', title: 'The Greenleaf Center for Servant Leadership', url: 'https://www.greenleaf.org/' },
+     { type: 'Article', title: 'Servant Leadership — Scrum Alliance', url: 'https://resources.scrumalliance.org/Article/servant-leadership-key-scrum-master-success' }]],
+
+  [64, 'Mt', 'Mentor',            5, 18, 'agile',
+    'A more experienced practitioner who shares knowledge, advice, and perspective with someone earlier in their journey.',
+    [{ type: 'Article', title: 'Coaching vs Mentoring — Lyssa Adkins', url: 'https://www.coachingagileteams.com/' },
+     { type: 'Article', title: 'Mentoring vs Coaching — ICF', url: 'https://coachingfederation.org/blog/coaching-vs-mentoring' },
+     { type: 'Article', title: 'Coaching, Mentoring, Teaching — Lyssa Adkins', url: 'https://www.scrumalliance.org/community/articles/2014/november/the-mentor-vs-the-coach' }]],
+
+  [65, 'Sf', 'SAFe',              6, 1,  'scaling',
+    'Scaled Agile Framework: a prescriptive framework for applying Lean-Agile across large enterprises with multiple teams, programs, and portfolios.',
+    [{ type: 'Site', title: 'scaledagileframework.com', url: 'https://scaledagileframework.com/' },
+     { type: 'Book', title: 'SAFe Reference Guide', url: 'https://www.scaledagile.com/resources/safe-reference-guide/' },
+     { type: 'Critique', title: 'SAFe: A Critical View — Ron Jeffries', url: 'https://ronjeffries.com/articles/018-01ff/safe-1/' }]],
+
+  [66, 'Ls', 'LeSS',              6, 2,  'scaling',
+    'Large-Scale Scrum: an extension of Scrum to multiple teams working on one product, keeping the framework minimal and the product unified.',
+    [{ type: 'Site', title: 'less.works', url: 'https://less.works/' },
+     { type: 'Book', title: 'Large-Scale Scrum (LeSS) — Larman & Vodde', url: 'https://less.works/less/framework' },
+     { type: 'Book', title: 'Practices for Scaling Lean & Agile — Larman & Vodde', url: 'https://less.works/resources/learning-resources/books' }]],
+
+  [67, 'Nx', 'Nexus',             6, 3,  'scaling',
+    'A Scrum.org framework that connects 3–9 Scrum Teams working on a single product, adding a Nexus Integration Team and integration events.',
+    [{ type: 'Guide', title: 'The Nexus Guide — Scrum.org', url: 'https://www.scrum.org/resources/nexus-guide' },
+     { type: 'Article', title: 'Nexus Framework Overview — Scrum.org', url: 'https://www.scrum.org/resources/scaling-scrum' },
+     { type: 'Book', title: 'The Nexus Framework for Scaling Scrum — Bittner et al.', url: 'https://www.scrum.org/resources/nexus-framework-scaling-scrum' }]],
+
+  [68, 'Ss', 'Scrum@Scale',       6, 4,  'scaling',
+    'Jeff Sutherland\'s scaling framework that extends Scrum via a Scrum of Scrums and an Executive Action Team, organized as a fractal.',
+    [{ type: 'Guide', title: 'Scrum@Scale Guide', url: 'https://scrumatscale.com/scrum-at-scale-guide/' },
+     { type: 'Site', title: 'scrumatscale.com', url: 'https://scrumatscale.com/' },
+     { type: 'Article', title: 'Scrum@Scale Overview — Scrum Inc', url: 'https://scrumatscale.com/' }]],
+
+  [69, 'St', 'Spotify model',     6, 5,  'scaling',
+    'An organizational design described by Spotify featuring squads, tribes, chapters, and guilds. Often misapplied as a copy-paste blueprint.',
+    [{ type: 'Paper', title: 'Scaling Agile @ Spotify — Kniberg & Ivarsson', url: 'https://blog.crisp.se/wp-content/uploads/2012/11/SpotifyScaling.pdf' },
+     { type: 'Article', title: "Don't Copy the Spotify Model — Jeremiah Lee", url: 'https://www.jeremiahlee.com/posts/failed-squad-goals/' },
+     { type: 'Video', title: 'Spotify Engineering Culture (part 1) — Henrik Kniberg', url: 'https://blog.crisp.se/2014/03/27/henrikkniberg/spotify-engineering-culture-part-1' }]],
+
+  [70, 'Sq', 'Squad',             6, 6,  'scaling',
+    'A small, cross-functional, autonomous team aligned to a clear mission. The basic unit in the Spotify model.',
+    [{ type: 'Paper', title: 'Scaling Agile @ Spotify — Kniberg & Ivarsson', url: 'https://blog.crisp.se/wp-content/uploads/2012/11/SpotifyScaling.pdf' },
+     { type: 'Article', title: 'What Squads Are — Spotify Engineering', url: 'https://engineering.atspotify.com/' },
+     { type: 'Article', title: 'Don\'t Copy the Spotify Model — Jeremiah Lee', url: 'https://www.jeremiahlee.com/posts/failed-squad-goals/' }]],
+
+  [71, 'Tx', 'Tribe',             6, 7,  'scaling',
+    'A collection of squads working in related areas, providing alignment and shared services in the Spotify model.',
+    [{ type: 'Paper', title: 'Scaling Agile @ Spotify — Kniberg & Ivarsson', url: 'https://blog.crisp.se/wp-content/uploads/2012/11/SpotifyScaling.pdf' },
+     { type: 'Article', title: 'Don\'t Copy the Spotify Model — Jeremiah Lee', url: 'https://www.jeremiahlee.com/posts/failed-squad-goals/' },
+     { type: 'Video', title: 'Spotify Engineering Culture (part 2) — Henrik Kniberg', url: 'https://blog.crisp.se/2014/09/20/henrikkniberg/spotify-engineering-culture-part-2' }]],
+
+  [72, 'Ch', 'Chapter',           6, 8,  'scaling',
+    'A horizontal grouping of people with the same specialty across squads, supporting craft growth and consistency.',
+    [{ type: 'Paper', title: 'Scaling Agile @ Spotify — Kniberg & Ivarsson', url: 'https://blog.crisp.se/wp-content/uploads/2012/11/SpotifyScaling.pdf' },
+     { type: 'Article', title: 'Spotify Chapters Explained — Atlassian', url: 'https://www.atlassian.com/agile/agile-at-scale/spotify' },
+     { type: 'Video', title: 'Spotify Engineering Culture — Henrik Kniberg', url: 'https://blog.crisp.se/2014/03/27/henrikkniberg/spotify-engineering-culture-part-1' }]],
+
+  [73, 'Gu', 'Guild',             6, 9,  'scaling',
+    'A voluntary community of interest that crosses tribes and chapters, sharing knowledge on a topic.',
+    [{ type: 'Paper', title: 'Scaling Agile @ Spotify — Kniberg & Ivarsson', url: 'https://blog.crisp.se/wp-content/uploads/2012/11/SpotifyScaling.pdf' },
+     { type: 'Article', title: 'Communities of Practice — Etienne Wenger', url: 'https://www.wenger-trayner.com/introduction-to-communities-of-practice/' },
+     { type: 'Article', title: 'Spotify Guilds — Atlassian', url: 'https://www.atlassian.com/agile/agile-at-scale/spotify' }]],
+
+  [74, 'Pi', 'PI',                6, 10, 'scaling',
+    'Program Increment: in SAFe, a fixed cadence (typically 8–12 weeks) during which an Agile Release Train delivers value through aligned Sprints.',
+    [{ type: 'Site', title: 'PI Planning — SAFe', url: 'https://scaledagileframework.com/pi-planning/' },
+     { type: 'Article', title: 'PI Planning Guide — Atlassian', url: 'https://www.atlassian.com/agile/agile-at-scale/pi-planning' },
+     { type: 'Article', title: 'PI Objectives — SAFe', url: 'https://scaledagileframework.com/pi-objectives/' }]],
+
+  [75, 'Ar', 'ART',               6, 11, 'scaling',
+    'Agile Release Train: a long-lived team of Agile teams (50–125 people) that delivers value on a common cadence in SAFe.',
+    [{ type: 'Site', title: 'Agile Release Train — SAFe', url: 'https://scaledagileframework.com/agile-release-train/' },
+     { type: 'Article', title: 'ART Roles — SAFe', url: 'https://scaledagileframework.com/release-train-engineer/' },
+     { type: 'Article', title: 'Building an ART — Atlassian', url: 'https://www.atlassian.com/agile/agile-at-scale' }]],
+
+  [76, 'Kz', 'Kaizen',            6, 12, 'lean',
+    'Continuous, incremental improvement carried out by everyone, every day. A cornerstone of the Toyota Production System.',
+    [{ type: 'Book', title: 'Kaizen — Masaaki Imai', url: 'https://www.kaizen.com/what-is-kaizen.html' },
+     { type: 'Book', title: 'The Toyota Way — Jeffrey Liker', url: 'https://www.lean.org/store/book/toyota-way-2nd-edition/' },
+     { type: 'Reference', title: 'Kaizen — Lean Enterprise Institute', url: 'https://www.lean.org/lexicon-terms/kaizen/' }]],
+
+  [77, 'Kk', 'Kaikaku',           6, 13, 'lean',
+    'Radical, transformational change, in contrast to Kaizen\'s small steps. Used when incremental improvement is insufficient.',
+    [{ type: 'Reference', title: 'Kaikaku — Lean Enterprise Institute', url: 'https://www.lean.org/lexicon-terms/kaikaku/' },
+     { type: 'Book', title: 'Kaikaku — Norman Bodek', url: 'https://www.amazon.com/Kaikaku-Power-Path-Creating-Future/dp/0971243689' },
+     { type: 'Wiki', title: 'Kaikaku', url: 'https://en.wikipedia.org/wiki/Kaikaku' }]],
+
+  [78, 'Hn', 'Hansei',            6, 14, 'lean',
+    'Honest self-reflection, especially on what could have gone better, even when results were good. A precondition for genuine Kaizen.',
+    [{ type: 'Article', title: 'Hansei: The Heart of Kaizen — Toyota', url: 'https://global.toyota/en/company/vision-and-philosophy/production-system/' },
+     { type: 'Book', title: 'The Toyota Way — Jeffrey Liker', url: 'https://www.lean.org/store/book/toyota-way-2nd-edition/' },
+     { type: 'Article', title: 'Hansei: True Reflection — TPS', url: 'https://www.lean.org/balle/community-articles/hansei/' }]],
+
+  [79, 'Gg', 'Genchi',            6, 15, 'lean',
+    'Genchi Genbutsu: "go and see for yourself." Make decisions based on direct observation of the actual place and work, not reports.',
+    [{ type: 'Reference', title: 'Genchi Genbutsu — Lean Enterprise Institute', url: 'https://www.lean.org/lexicon-terms/genchi-genbutsu/' },
+     { type: 'Book', title: 'The Toyota Way — Jeffrey Liker', url: 'https://www.lean.org/store/book/toyota-way-2nd-edition/' },
+     { type: 'Article', title: 'Genchi Genbutsu — Toyota Global', url: 'https://global.toyota/en/company/vision-and-philosophy/' }]],
+
+  [80, 'Gw', 'Gemba',             6, 16, 'lean',
+    'A structured visit to where the work is done so leaders can observe, ask, and respect rather than direct from a distance.',
+    [{ type: 'Book', title: 'Gemba Walks — Jim Womack', url: 'https://www.lean.org/store/book/gemba-walks-expanded-2nd-edition/' },
+     { type: 'Reference', title: 'Gemba — Lean Enterprise Institute', url: 'https://www.lean.org/lexicon-terms/gemba/' },
+     { type: 'Article', title: 'Gemba Walk Guide — Kanbanize', url: 'https://kanbanize.com/lean-management/improvement/gemba-walk' }]],
+
+  [81, 'Py', 'Poka-yoke',         6, 17, 'lean',
+    'Mistake-proofing: design choices that make errors impossible or immediately obvious. E.g., USB-C, paired field validation.',
+    [{ type: 'Book', title: 'Zero Quality Control: Poka-Yoke System — Shigeo Shingo', url: 'https://www.routledge.com/Zero-Quality-Control-Source-Inspection-and-the-Poka-Yoke-System/Shingo/p/book/9780915299072' },
+     { type: 'Reference', title: 'Poka-yoke — Lean Enterprise Institute', url: 'https://www.lean.org/lexicon-terms/poka-yoke/' },
+     { type: 'Wiki', title: 'Poka-yoke', url: 'https://en.wikipedia.org/wiki/Poka-yoke' }]],
+
+  [82, 'An', 'Andon',             6, 18, 'lean',
+    'A signal (originally a cord on the Toyota line) that anyone can pull to stop work and surface a problem immediately.',
+    [{ type: 'Reference', title: 'Andon — Lean Enterprise Institute', url: 'https://www.lean.org/lexicon-terms/andon/' },
+     { type: 'Wiki', title: 'Andon (manufacturing)', url: 'https://en.wikipedia.org/wiki/Andon_(manufacturing)' },
+     { type: 'Article', title: 'Andon Cord Stories — Toyota', url: 'https://global.toyota/en/company/vision-and-philosophy/production-system/' }]],
+
+  [83, 'Jt', 'JIT',               7, 1,  'lean',
+    'Just-in-Time: producing or delivering only what is needed, when it is needed, in the amount needed. Reduces inventory and exposes problems.',
+    [{ type: 'Book', title: 'Toyota Production System — Taiichi Ohno', url: 'https://www.amazon.com/Toyota-Production-System-Beyond-Large-Scale/dp/0915299143' },
+     { type: 'Reference', title: 'Just-in-Time — Lean Enterprise Institute', url: 'https://www.lean.org/lexicon-terms/just-in-time-production/' },
+     { type: 'Wiki', title: 'Just-in-time manufacturing', url: 'https://en.wikipedia.org/wiki/Just-in-time_manufacturing' }]],
+
+  [84, 'Jd', 'Jidoka',            7, 2,  'lean',
+    'Automation with a human touch: machines and people stop work the moment a defect is detected, preventing it from flowing downstream.',
+    [{ type: 'Reference', title: 'Jidoka — Lean Enterprise Institute', url: 'https://www.lean.org/lexicon-terms/jidoka/' },
+     { type: 'Article', title: 'Jidoka — Toyota Global', url: 'https://global.toyota/en/company/vision-and-philosophy/production-system/' },
+     { type: 'Wiki', title: 'Autonomation', url: 'https://en.wikipedia.org/wiki/Autonomation' }]],
+
+  [85, 'Vs', 'VSM',               7, 3,  'lean',
+    'Value Stream Mapping: a visual technique that maps every step from request to delivery, distinguishing value-add from waste and exposing delays.',
+    [{ type: 'Book', title: 'Learning to See — Rother & Shook', url: 'https://www.lean.org/store/book/learning-to-see-version-1-4/' },
+     { type: 'Book', title: 'Value Stream Mapping — Karen Martin', url: 'https://www.amazon.com/Value-Stream-Mapping-Organizational-Transformation/dp/0071828915' },
+     { type: 'Reference', title: 'Value Stream Mapping — LEI', url: 'https://www.lean.org/lexicon-terms/value-stream-mapping/' }]],
+
+  [86, '5s', '5S',                7, 4,  'lean',
+    'A workplace organization method: Sort, Set in order, Shine, Standardize, Sustain. Creates the conditions for stable, visible work.',
+    [{ type: 'Reference', title: '5S — Lean Enterprise Institute', url: 'https://www.lean.org/lexicon-terms/5s/' },
+     { type: 'Wiki', title: '5S (methodology)', url: 'https://en.wikipedia.org/wiki/5S_(methodology)' },
+     { type: 'Book', title: '5S for Operators — Productivity Press', url: 'https://www.routledge.com/5S-for-Operators-5-Pillars-of-the-Visual-Workplace/Productivity-Press/p/book/9781563271236' }]],
+
+  [87, '3m', '3M',                7, 5,  'lean',
+    'Muda (waste), Mura (unevenness), Muri (overburden): the three enemies of flow that Lean seeks to eliminate.',
+    [{ type: 'Reference', title: 'The Three Ms — Lean Enterprise Institute', url: 'https://www.lean.org/lexicon-terms/3m/' },
+     { type: 'Book', title: 'The Toyota Way — Jeffrey Liker', url: 'https://www.lean.org/store/book/toyota-way-2nd-edition/' },
+     { type: 'Article', title: 'Muda, Mura, Muri — Kanbanize', url: 'https://kanbanize.com/lean-management/improvement/3m-muda-mura-muri' }]],
+
+  [88, 'Hj', 'Heijunka',          7, 6,  'lean',
+    'Production leveling: smoothing the type and quantity of work over time to reduce Mura and stabilize flow.',
+    [{ type: 'Reference', title: 'Heijunka — Lean Enterprise Institute', url: 'https://www.lean.org/lexicon-terms/heijunka/' },
+     { type: 'Wiki', title: 'Heijunka', url: 'https://en.wikipedia.org/wiki/Heijunka_(Lean_manufacturing)' },
+     { type: 'Article', title: 'Heijunka — Kanbanize', url: 'https://kanbanize.com/lean-management/value-waste/heijunka' }]],
+
+  [89, 'Tt', 'Takt time',         7, 7,  'lean',
+    'Customer demand rhythm: available time divided by customer demand. Sets the pace at which the system must deliver.',
+    [{ type: 'Reference', title: 'Takt Time — Lean Enterprise Institute', url: 'https://www.lean.org/lexicon-terms/takt-time/' },
+     { type: 'Wiki', title: 'Takt time', url: 'https://en.wikipedia.org/wiki/Takt_time' },
+     { type: 'Article', title: 'Calculating Takt Time — Lean Production', url: 'https://www.leanproduction.com/takt-time/' }]],
+
+  [90, 'A3', 'A3',                7, 8,  'lean',
+    'A structured one-page problem-solving and storytelling format on A3 paper, used in Toyota for thinking, alignment, and learning.',
+    [{ type: 'Book', title: 'Managing to Learn — John Shook', url: 'https://www.lean.org/store/book/managing-to-learn/' },
+     { type: 'Book', title: 'Understanding A3 Thinking — Sobek & Smalley', url: 'https://www.routledge.com/Understanding-A3-Thinking-A-Critical-Component-of-Toyotas-PDCA-Management/Sobek-II-Smalley/p/book/9781563273605' },
+     { type: 'Article', title: 'A3 Thinking — Lean Enterprise Institute', url: 'https://www.lean.org/lexicon-terms/a3-report/' }]],
+
+  [91, '5w', '5 Whys',            7, 9,  'lean',
+    'A simple root-cause analysis technique: keep asking "why?" (typically five times) until you reach a cause worth addressing.',
+    [{ type: 'Book', title: 'Toyota Production System — Taiichi Ohno', url: 'https://www.amazon.com/Toyota-Production-System-Beyond-Large-Scale/dp/0915299143' },
+     { type: 'Reference', title: '5 Whys — Lean Enterprise Institute', url: 'https://www.lean.org/lexicon-terms/5-whys/' },
+     { type: 'Article', title: '5 Whys Examples — Kanbanize', url: 'https://kanbanize.com/lean-management/improvement/5-whys-analysis-tool' }]],
+
+  [92, 'Pd', 'PDCA',              7, 10, 'lean',
+    'Plan-Do-Check-Act: Deming\'s cycle of continuous improvement. The empirical engine behind Kaizen and Scrum.',
+    [{ type: 'Book', title: 'Out of the Crisis — W. Edwards Deming', url: 'https://mitpress.mit.edu/9780262535946/out-of-the-crisis/' },
+     { type: 'Reference', title: 'PDCA — Lean Enterprise Institute', url: 'https://www.lean.org/lexicon-terms/pdca/' },
+     { type: 'Wiki', title: 'PDCA', url: 'https://en.wikipedia.org/wiki/PDCA' }]],
+
+  [93, 'Ok', 'OKR',               7, 11, 'agile',
+    'Objectives and Key Results: a goal-setting framework pairing a qualitative objective with measurable key results. Popularized by Andy Grove and John Doerr.',
+    [{ type: 'Book', title: 'Measure What Matters — John Doerr', url: 'https://www.whatmatters.com/the-book' },
+     { type: 'Site', title: 'whatmatters.com', url: 'https://www.whatmatters.com/' },
+     { type: 'Book', title: 'Radical Focus — Christina Wodtke', url: 'https://eleganthack.com/the-art-of-the-okr/' }]],
+
+  [94, 'Im', 'Impact map',        7, 12, 'agile',
+    'A planning technique linking goals → actors → impacts → deliverables, helping teams choose the right work to reach an outcome.',
+    [{ type: 'Book', title: 'Impact Mapping — Gojko Adzic', url: 'https://www.impactmapping.org/book.html' },
+     { type: 'Site', title: 'impactmapping.org', url: 'https://www.impactmapping.org/' },
+     { type: 'Article', title: 'Impact Mapping in Practice — Gojko Adzic', url: 'https://gojko.net/2012/10/22/intro-to-impact-mapping/' }]],
+
+  [95, 'Ey', 'Empathy map',       7, 13, 'agile',
+    'A canvas capturing what a user says, thinks, does, and feels. Builds shared understanding before designing solutions.',
+    [{ type: 'Article', title: 'Updated Empathy Map Canvas — Dave Gray', url: 'https://medium.com/the-xplane-collection/updated-empathy-map-canvas-46df22df3c8a' },
+     { type: 'Book', title: 'Gamestorming — Gray, Brown & Macanufo', url: 'https://gamestorming.com/empathy-map/' },
+     { type: 'Article', title: 'Empathy Mapping — NN/g', url: 'https://www.nngroup.com/articles/empathy-mapping/' }]],
+
+  [96, 'Pn', 'Persona',           7, 14, 'agile',
+    'A fictional but evidence-based character representing a user segment. Helps teams design for specific people, not "users" in the abstract.',
+    [{ type: 'Book', title: 'The Inmates Are Running the Asylum — Alan Cooper', url: 'https://www.cooper.com/journal/2003/8/the_origin_of_personas' },
+     { type: 'Article', title: 'Personas — Nielsen Norman Group', url: 'https://www.nngroup.com/articles/persona/' },
+     { type: 'Article', title: 'Personas: Practice & Theory — Cooper', url: 'https://www.cooper.com/journal/2003/8/the_origin_of_personas' }]],
+
+  [97, 'Dr', 'Def. ready',        7, 15, 'agile',
+    'Definition of Ready: an agreement on the conditions a Product Backlog item should meet before being pulled into a Sprint. Optional but common.',
+    [{ type: 'Article', title: 'Definition of Ready — Roman Pichler', url: 'https://www.romanpichler.com/blog/the-definition-of-ready/' },
+     { type: 'Article', title: 'On Definition of Ready — Scrum.org', url: 'https://www.scrum.org/resources/blog/walking-through-definition-ready' },
+     { type: 'Article', title: 'DoR Considered Harmful? — Allen Holub', url: 'https://holub.com/' }]],
+
+  [98, 'Sw', 'Swarming',          7, 16, 'agile',
+    'The team collectively focusing on finishing one item before starting another. A behavior that lowers WIP and increases throughput.',
+    [{ type: 'Article', title: 'Swarming: A Way to Get Things Done — Mike Cohn', url: 'https://www.mountaingoatsoftware.com/blog/can-an-agile-team-have-a-better-burndown-chart' },
+     { type: 'Article', title: 'Swarming on Stories — Scrum.org', url: 'https://www.scrum.org/resources/blog/swarming-team-behavior' },
+     { type: 'Article', title: 'Why Swarming Works — Mike Cohn', url: 'https://www.mountaingoatsoftware.com/blog/swarming-as-a-team-strategy' }]],
+
+  [99, 'Sk', 'Spike',             7, 17, 'xp',
+    'A time-boxed investigation to reduce uncertainty about a story, technology, or design. Output is knowledge, not shippable code.',
+    [{ type: 'Wiki', title: 'Spike (software development)', url: 'https://en.wikipedia.org/wiki/Spike_(software_development)' },
+     { type: 'Article', title: 'Spike Solutions — XP', url: 'http://www.extremeprogramming.org/rules/spike.html' },
+     { type: 'Book', title: 'Extreme Programming Explained — Kent Beck', url: 'https://www.amazon.com/Extreme-Programming-Explained-Embrace-Change/dp/0321278658' }]],
+
+  [100,'Ps', 'Psych. safety',     7, 18, 'agile',
+    'A shared belief that the team is safe for interpersonal risk-taking. Identified by Amy Edmondson as the strongest predictor of team performance.',
+    [{ type: 'Book', title: 'The Fearless Organization — Amy Edmondson', url: 'https://fearlessorganization.com/the-fearless-organization' },
+     { type: 'Research', title: 'Project Aristotle — Google re:Work', url: 'https://rework.withgoogle.com/print/guides/5721312655835136/' },
+     { type: 'TED', title: 'Building a psychologically safe workplace — Amy Edmondson', url: 'https://www.ted.com/talks/amy_edmondson_how_to_turn_a_group_of_strangers_into_a_team' }]]
+];
+
+let currentFilter = 'all';
+let currentSearch = '';
+let elementNodes = [];
+
+function buildTable() {
+  const table = document.getElementById('table');
+  table.innerHTML = '';
+  elementNodes = [];
+
+  const grid = {};
+  elements.forEach(item => {
+    const [num, sym, name, row, col, cat, desc, refs] = item;
+    grid[row + '-' + col] = { num, sym, name, row, col, cat, desc, refs };
+  });
+
+  for (let row = 1; row <= 7; row++) {
+    for (let col = 1; col <= 18; col++) {
+      const data = grid[row + '-' + col];
+      const div = document.createElement('div');
+
+      if (!data) {
+        div.className = 'element empty';
+        table.appendChild(div);
+        continue;
+      }
+
+      const color = colors[data.cat];
+      div.className = 'element';
+      div.style.background = color.bg;
+      div.style.borderColor = color.border;
+      div.style.color = color.text;
+      div.dataset.category = data.cat;
+      div.dataset.search = (data.sym + ' ' + data.name + ' ' + data.desc).toLowerCase();
+
+      div.innerHTML =
+        '<div class="element-number">' + data.num + '</div>' +
+        '<div class="element-symbol">' + data.sym + '</div>' +
+        '<div class="element-name">' + data.name + '</div>';
+
+      div.addEventListener('click', function() { openModal(data, color); });
+      table.appendChild(div);
+      elementNodes.push(div);
+    }
+  }
+}
+
+function applyFilters() {
+  const search = currentSearch.trim().toLowerCase();
+  elementNodes.forEach(function(node) {
+    const matchesCat = currentFilter === 'all' || node.dataset.category === currentFilter;
+    const matchesSearch = !search || node.dataset.search.indexOf(search) !== -1;
+    if (matchesCat && matchesSearch) {
+      node.classList.remove('dim');
+    } else {
+      node.classList.add('dim');
+    }
+  });
+}
+
+function escapeHtml(s) {
+  return String(s)
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#39;');
+}
+
+function openModal(data, color) {
+  const refsHtml = (data.refs || []).map(function(r) {
+    return '<li><span class="ref-type">' + escapeHtml(r.type) + '</span>' +
+           '<a href="' + escapeHtml(r.url) + '" target="_blank" rel="noopener noreferrer">' +
+           escapeHtml(r.title) + '</a></li>';
+  }).join('');
+
+  const refsBlock = refsHtml
+    ? '<div class="modal-refs"><h3>Dig deeper</h3><ul>' + refsHtml + '</ul></div>'
+    : '';
+
+  const modalBody = document.getElementById('modal-body');
+  modalBody.innerHTML =
+    '<div class="modal-header">' +
+      '<div class="modal-symbol-box" style="background:' + color.bg + '; border-color:' + color.border + '; color:' + color.text + ';">' +
+        '<div class="modal-num">' + data.num + '</div>' +
+        '<div class="modal-sym">' + escapeHtml(data.sym) + '</div>' +
+      '</div>' +
+      '<div class="modal-title">' +
+        '<h2>' + escapeHtml(data.name) + '</h2>' +
+        '<span class="category-badge" style="background:' + color.bg + '; color:' + color.text + '; border-color:' + color.border + ';">' + color.label + '</span>' +
+      '</div>' +
+    '</div>' +
+    '<div class="modal-body">' + escapeHtml(data.desc) + '</div>' +
+    refsBlock;
+
+  document.getElementById('modal').classList.add('active');
+}
+
+function closeModal() {
+  document.getElementById('modal').classList.remove('active');
+}
+
+document.getElementById('search').addEventListener('input', function(e) {
+  currentSearch = e.target.value;
+  applyFilters();
+});
+
+document.querySelectorAll('.filter-btn').forEach(function(btn) {
+  btn.addEventListener('click', function() {
+    document.querySelectorAll('.filter-btn').forEach(function(b) { b.classList.remove('active'); });
+    btn.classList.add('active');
+    currentFilter = btn.dataset.filter;
+    applyFilters();
+  });
+});
+
+document.getElementById('modal-close').addEventListener('click', closeModal);
+
+document.getElementById('modal').addEventListener('click', function(e) {
+  if (e.target.id === 'modal') closeModal();
+});
+
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') closeModal();
+});
+
+buildTable();
+applyFilters();
 </script>
 </body>
 </html>
