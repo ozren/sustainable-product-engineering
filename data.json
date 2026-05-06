@@ -1,0 +1,2788 @@
+{
+  "colors": {
+    "agile": {
+      "bg": "#EEEDFE",
+      "border": "#7F77DD",
+      "text": "#3C3489",
+      "label": "Agile core"
+    },
+    "scrum": {
+      "bg": "#E1F5EE",
+      "border": "#1D9E75",
+      "text": "#085041",
+      "label": "Scrum"
+    },
+    "kanban": {
+      "bg": "#E6F1FB",
+      "border": "#378ADD",
+      "text": "#0C447C",
+      "label": "Kanban"
+    },
+    "lean": {
+      "bg": "#FAECE7",
+      "border": "#D85A30",
+      "text": "#712B13",
+      "label": "Lean"
+    },
+    "xp": {
+      "bg": "#FBEAF0",
+      "border": "#D4537E",
+      "text": "#72243E",
+      "label": "XP / Engineering"
+    },
+    "scaling": {
+      "bg": "#FAEEDA",
+      "border": "#BA7517",
+      "text": "#633806",
+      "label": "Scaling"
+    },
+    "metrics": {
+      "bg": "#F1EFE8",
+      "border": "#888780",
+      "text": "#444441",
+      "label": "Metrics / Flow"
+    }
+  },
+  "elements": [
+    {
+      "num": 1,
+      "sym": "Ag",
+      "name": "Agile",
+      "row": 1,
+      "col": 1,
+      "cat": "agile",
+      "desc": "A mindset for delivering value through iterative, incremental work, continuous feedback, and responding to change over following a fixed plan. Codified in the 2001 Agile Manifesto.",
+      "refs": [
+        {
+          "type": "Source",
+          "title": "agilemanifesto.org",
+          "url": "https://agilemanifesto.org/"
+        },
+        {
+          "type": "Source",
+          "title": "12 Principles behind the Manifesto",
+          "url": "https://agilemanifesto.org/principles.html"
+        },
+        {
+          "type": "Book",
+          "title": "Agile Software Development with Scrum — Schwaber & Beedle",
+          "url": "https://www.goodreads.com/book/show/903.Agile_Software_Development_with_Scrum"
+        },
+        {
+          "type": "History",
+          "title": "A Brief History of the Agile Movement (Atlassian)",
+          "url": "https://www.atlassian.com/agile/manifesto"
+        },
+        {
+          "type": "Article",
+          "title": "The State of Agile — Martin Fowler",
+          "url": "https://martinfowler.com/articles/agile-aus-2018.html"
+        }
+      ]
+    },
+    {
+      "num": 2,
+      "sym": "Mn",
+      "name": "Manifesto",
+      "row": 1,
+      "col": 18,
+      "cat": "agile",
+      "desc": "The Agile Manifesto: four values and twelve principles signed by 17 practitioners in 2001. Prioritizes individuals, working software, customer collaboration, and responsiveness to change.",
+      "refs": [
+        {
+          "type": "Source",
+          "title": "agilemanifesto.org",
+          "url": "https://agilemanifesto.org/"
+        },
+        {
+          "type": "Source",
+          "title": "12 Principles behind the Manifesto",
+          "url": "https://agilemanifesto.org/principles.html"
+        },
+        {
+          "type": "Authors",
+          "title": "The 17 signatories",
+          "url": "https://agilemanifesto.org/authors.html"
+        },
+        {
+          "type": "Reflection",
+          "title": "History: The Agile Manifesto — Jim Highsmith",
+          "url": "https://agilemanifesto.org/history.html"
+        },
+        {
+          "type": "Book",
+          "title": "Agile Software Development: The Cooperative Game — Alistair Cockburn",
+          "url": "https://www.amazon.com/Agile-Software-Development-Cooperative-2nd/dp/0321482751"
+        }
+      ]
+    },
+    {
+      "num": 3,
+      "sym": "Sc",
+      "name": "Scrum",
+      "row": 2,
+      "col": 1,
+      "cat": "scrum",
+      "desc": "A lightweight framework for delivering complex products via short, time-boxed Sprints. Defines three accountabilities, three artifacts, and five events.",
+      "refs": [
+        {
+          "type": "Guide",
+          "title": "Scrum Guide 2020 (Schwaber & Sutherland)",
+          "url": "https://scrumguides.org/scrum-guide.html"
+        },
+        {
+          "type": "Book",
+          "title": "Scrum: The Art of Doing Twice the Work in Half the Time — Jeff Sutherland",
+          "url": "https://www.scruminc.com/scrum-art-doing-twice-work-half-time/"
+        },
+        {
+          "type": "Org",
+          "title": "Scrum.org — What is Scrum?",
+          "url": "https://www.scrum.org/resources/what-is-scrum"
+        },
+        {
+          "type": "Org",
+          "title": "Scrum Alliance — Learn About Scrum",
+          "url": "https://www.scrumalliance.org/about-scrum"
+        }
+      ]
+    },
+    {
+      "num": 4,
+      "sym": "Kb",
+      "name": "Kanban",
+      "row": 2,
+      "col": 2,
+      "cat": "kanban",
+      "desc": "A flow-based method that visualizes work, limits work in progress (WIP), and improves continuously. Originated from Toyota and adapted to knowledge work by David Anderson.",
+      "refs": [
+        {
+          "type": "Book",
+          "title": "Kanban — David J. Anderson (the \"Blue Book\")",
+          "url": "https://leankanban.com/kanban-the-book/"
+        },
+        {
+          "type": "Guide",
+          "title": "Kanban Guide — Kanban University",
+          "url": "https://kanban.university/kanban-guide/"
+        },
+        {
+          "type": "Guide",
+          "title": "The Kanban Guide — Scrum.org / ProKanban",
+          "url": "https://kanbanguides.org/"
+        },
+        {
+          "type": "Article",
+          "title": "What is Kanban? — Atlassian",
+          "url": "https://www.atlassian.com/agile/kanban"
+        }
+      ]
+    },
+    {
+      "num": 5,
+      "sym": "Em",
+      "name": "Empiricism",
+      "row": 2,
+      "col": 13,
+      "cat": "agile",
+      "desc": "The pillar of Scrum: knowledge comes from experience and decisions are based on what is observed. Built on transparency, inspection, and adaptation.",
+      "refs": [
+        {
+          "type": "Guide",
+          "title": "Scrum Guide 2020 (Schwaber & Sutherland)",
+          "url": "https://scrumguides.org/scrum-guide.html"
+        },
+        {
+          "type": "Article",
+          "title": "Empiricism: The Foundation of Scrum — Scrum.org",
+          "url": "https://www.scrum.org/resources/blog/three-pillars-empiricism-scrum"
+        },
+        {
+          "type": "Book",
+          "title": "Software in 30 Days — Schwaber & Sutherland",
+          "url": "https://www.scrum.org/resources/software-in-30-days"
+        },
+        {
+          "type": "Article",
+          "title": "Empirical Process Control — Schwaber",
+          "url": "https://kenschwaber.wordpress.com/2011/05/14/empirical-process-control/"
+        }
+      ]
+    },
+    {
+      "num": 6,
+      "sym": "Tr",
+      "name": "Transparency",
+      "row": 2,
+      "col": 14,
+      "cat": "agile",
+      "desc": "Making work, progress, and impediments visible to everyone involved so decisions can be based on shared, accurate information.",
+      "refs": [
+        {
+          "type": "Guide",
+          "title": "Scrum Guide 2020 (Schwaber & Sutherland)",
+          "url": "https://scrumguides.org/scrum-guide.html"
+        },
+        {
+          "type": "Article",
+          "title": "Transparency in Scrum — Scrum.org",
+          "url": "https://www.scrum.org/resources/blog/scrums-three-pillars-transparency-inspection-and-adaptation"
+        },
+        {
+          "type": "Book",
+          "title": "Software in 30 Days — Schwaber & Sutherland",
+          "url": "https://www.scrum.org/resources/software-in-30-days"
+        },
+        {
+          "type": "Article",
+          "title": "Why Transparency Matters — Scrum.org",
+          "url": "https://www.scrum.org/resources/blog/why-transparency-matters-scrum"
+        }
+      ]
+    },
+    {
+      "num": 7,
+      "sym": "Ip",
+      "name": "Inspection",
+      "row": 2,
+      "col": 15,
+      "cat": "agile",
+      "desc": "Frequently examining artifacts and progress toward goals to detect undesirable variances or problems early.",
+      "refs": [
+        {
+          "type": "Guide",
+          "title": "Scrum Guide 2020 (Schwaber & Sutherland)",
+          "url": "https://scrumguides.org/scrum-guide.html"
+        },
+        {
+          "type": "Article",
+          "title": "Inspection in Scrum — Scrum.org",
+          "url": "https://www.scrum.org/resources/blog/scrums-three-pillars-transparency-inspection-and-adaptation"
+        },
+        {
+          "type": "Article",
+          "title": "Inspect & Adapt — Mike Cohn",
+          "url": "https://www.mountaingoatsoftware.com/blog/the-three-pillars-of-empirical-process-control"
+        },
+        {
+          "type": "Book",
+          "title": "Software in 30 Days — Schwaber & Sutherland",
+          "url": "https://www.scrum.org/resources/software-in-30-days"
+        }
+      ]
+    },
+    {
+      "num": 8,
+      "sym": "Ad",
+      "name": "Adaptation",
+      "row": 2,
+      "col": 16,
+      "cat": "agile",
+      "desc": "Adjusting process or product as soon as inspection reveals deviation. Makes change cheap rather than catastrophic.",
+      "refs": [
+        {
+          "type": "Guide",
+          "title": "Scrum Guide 2020 (Schwaber & Sutherland)",
+          "url": "https://scrumguides.org/scrum-guide.html"
+        },
+        {
+          "type": "Article",
+          "title": "Adaptation in Scrum — Scrum.org",
+          "url": "https://www.scrum.org/resources/blog/scrums-three-pillars-transparency-inspection-and-adaptation"
+        },
+        {
+          "type": "Article",
+          "title": "Adapting in Scrum — Mike Cohn",
+          "url": "https://www.mountaingoatsoftware.com/blog/the-three-pillars-of-empirical-process-control"
+        },
+        {
+          "type": "Book",
+          "title": "Scrum: The Art of Doing Twice the Work — Sutherland",
+          "url": "https://www.scruminc.com/scrum-art-doing-twice-work-half-time/"
+        }
+      ]
+    },
+    {
+      "num": 9,
+      "sym": "Vl",
+      "name": "Value",
+      "row": 2,
+      "col": 17,
+      "cat": "lean",
+      "desc": "Anything the customer is willing to pay for. In Lean, everything else is waste and a candidate for elimination.",
+      "refs": [
+        {
+          "type": "Book",
+          "title": "Lean Thinking — Womack & Jones",
+          "url": "https://www.lean.org/store/book/lean-thinking-2nd-edition/"
+        },
+        {
+          "type": "Article",
+          "title": "The Five Principles of Lean — Lean Enterprise Institute",
+          "url": "https://www.lean.org/explore-lean/what-is-lean/"
+        },
+        {
+          "type": "Wiki",
+          "title": "Lean manufacturing",
+          "url": "https://en.wikipedia.org/wiki/Lean_manufacturing"
+        },
+        {
+          "type": "Book",
+          "title": "The Toyota Way — Jeffrey Liker",
+          "url": "https://www.lean.org/store/book/toyota-way-2nd-edition/"
+        }
+      ]
+    },
+    {
+      "num": 10,
+      "sym": "Ws",
+      "name": "Waste",
+      "row": 2,
+      "col": 18,
+      "cat": "lean",
+      "desc": "Muda: any activity that consumes resources without creating customer value. Lean identifies seven (or eight) classic forms including overproduction, waiting, and defects.",
+      "refs": [
+        {
+          "type": "Book",
+          "title": "Lean Software Development — Mary & Tom Poppendieck",
+          "url": "https://www.poppendieck.com/"
+        },
+        {
+          "type": "Reference",
+          "title": "The 7 Wastes of Lean — Lean Enterprise Institute",
+          "url": "https://www.lean.org/lexicon-terms/seven-wastes/"
+        },
+        {
+          "type": "Wiki",
+          "title": "Muda (Japanese term)",
+          "url": "https://en.wikipedia.org/wiki/Muda_(Japanese_term)"
+        }
+      ]
+    },
+    {
+      "num": 11,
+      "sym": "Po",
+      "name": "Product owner",
+      "row": 3,
+      "col": 1,
+      "cat": "scrum",
+      "desc": "The Scrum accountability for maximizing product value. Owns the Product Backlog, decides priority, and is the single voice of stakeholders to the team.",
+      "refs": [
+        {
+          "type": "Guide",
+          "title": "Scrum Guide 2020 (Schwaber & Sutherland)",
+          "url": "https://scrumguides.org/scrum-guide.html"
+        },
+        {
+          "type": "Book",
+          "title": "EMPOWERED & INSPIRED — Marty Cagan (SVPG)",
+          "url": "https://www.svpg.com/books/"
+        },
+        {
+          "type": "Article",
+          "title": "What is a Product Owner? — Scrum.org",
+          "url": "https://www.scrum.org/resources/what-is-a-product-owner"
+        },
+        {
+          "type": "Book",
+          "title": "The Professional Product Owner — Don McGreal & Ralph Jocham",
+          "url": "https://www.scrum.org/resources/professional-product-owner-leveraging-scrum-business-results"
+        }
+      ]
+    },
+    {
+      "num": 12,
+      "sym": "Sm",
+      "name": "Scrum master",
+      "row": 3,
+      "col": 2,
+      "cat": "scrum",
+      "desc": "A servant-leader accountable for the team's effectiveness. Coaches, removes impediments, and ensures Scrum is understood and enacted.",
+      "refs": [
+        {
+          "type": "Guide",
+          "title": "Scrum Guide 2020 (Schwaber & Sutherland)",
+          "url": "https://scrumguides.org/scrum-guide.html"
+        },
+        {
+          "type": "Book",
+          "title": "Scrum Mastery — Geoff Watts",
+          "url": "https://www.amazon.com/Scrum-Mastery-Good-Great-Servant-Leader/dp/0957587406"
+        },
+        {
+          "type": "Book",
+          "title": "The Great ScrumMaster — Zuzana Šochová",
+          "url": "https://soch.cz/great-scrummaster/"
+        },
+        {
+          "type": "Article",
+          "title": "What is a Scrum Master? — Scrum.org",
+          "url": "https://www.scrum.org/resources/what-is-a-scrum-master"
+        }
+      ]
+    },
+    {
+      "num": 13,
+      "sym": "Dv",
+      "name": "Developers",
+      "row": 3,
+      "col": 3,
+      "cat": "scrum",
+      "desc": "The cross-functional people who create the Increment each Sprint. Self-managing and collectively accountable for the Sprint Goal.",
+      "refs": [
+        {
+          "type": "Guide",
+          "title": "Scrum Guide 2020 (Schwaber & Sutherland)",
+          "url": "https://scrumguides.org/scrum-guide.html"
+        },
+        {
+          "type": "Article",
+          "title": "The Scrum Team — Scrum.org",
+          "url": "https://www.scrum.org/resources/what-is-a-scrum-team"
+        },
+        {
+          "type": "Article",
+          "title": "Self-Managing Teams — Mike Cohn",
+          "url": "https://www.mountaingoatsoftware.com/blog/what-do-developers-do-during-sprint-planning"
+        },
+        {
+          "type": "Book",
+          "title": "Scrum: A Pocket Guide — Gunther Verheyen",
+          "url": "https://www.amazon.com/Scrum-Pocket-Companion-Scrum/dp/9401800731"
+        }
+      ]
+    },
+    {
+      "num": 14,
+      "sym": "Sp",
+      "name": "Sprint",
+      "row": 3,
+      "col": 4,
+      "cat": "scrum",
+      "desc": "A fixed time-box of one month or less during which a usable, valuable Increment is produced. The container event for all other Scrum events.",
+      "refs": [
+        {
+          "type": "Guide",
+          "title": "Scrum Guide 2020 (Schwaber & Sutherland)",
+          "url": "https://scrumguides.org/scrum-guide.html"
+        },
+        {
+          "type": "Article",
+          "title": "The Sprint — Scrum.org",
+          "url": "https://www.scrum.org/resources/what-is-a-sprint-in-scrum"
+        },
+        {
+          "type": "Article",
+          "title": "What is a Sprint in Scrum? — Atlassian",
+          "url": "https://www.atlassian.com/agile/scrum/sprints"
+        },
+        {
+          "type": "Book",
+          "title": "Scrum: A Pocket Guide — Gunther Verheyen",
+          "url": "https://www.amazon.com/Scrum-Pocket-Companion-Scrum/dp/9401800731"
+        }
+      ]
+    },
+    {
+      "num": 15,
+      "sym": "Pl",
+      "name": "Planning",
+      "row": 3,
+      "col": 5,
+      "cat": "scrum",
+      "desc": "The Sprint event where the team forecasts what to deliver, defines the Sprint Goal, and creates the Sprint Backlog.",
+      "refs": [
+        {
+          "type": "Guide",
+          "title": "Scrum Guide 2020 (Schwaber & Sutherland)",
+          "url": "https://scrumguides.org/scrum-guide.html"
+        },
+        {
+          "type": "Article",
+          "title": "Sprint Planning — Scrum.org",
+          "url": "https://www.scrum.org/resources/what-is-sprint-planning"
+        },
+        {
+          "type": "Book",
+          "title": "Agile Estimating and Planning — Mike Cohn",
+          "url": "https://www.mountaingoatsoftware.com/books/agile-estimating-and-planning"
+        },
+        {
+          "type": "Article",
+          "title": "Sprint Planning Meeting — Mike Cohn",
+          "url": "https://www.mountaingoatsoftware.com/agile/scrum/scrum-meetings/sprint-planning-meeting"
+        }
+      ]
+    },
+    {
+      "num": 16,
+      "sym": "Ds",
+      "name": "Daily scrum",
+      "row": 3,
+      "col": 6,
+      "cat": "scrum",
+      "desc": "A 15-minute event for Developers to inspect progress toward the Sprint Goal and adapt the plan for the next 24 hours.",
+      "refs": [
+        {
+          "type": "Guide",
+          "title": "Scrum Guide 2020 (Schwaber & Sutherland)",
+          "url": "https://scrumguides.org/scrum-guide.html"
+        },
+        {
+          "type": "Article",
+          "title": "The Daily Scrum — Scrum.org",
+          "url": "https://www.scrum.org/resources/what-is-a-daily-scrum"
+        },
+        {
+          "type": "Article",
+          "title": "It's Not Just Standing Up — Jason Yip",
+          "url": "https://martinfowler.com/articles/itsNotJustStandingUp.html"
+        },
+        {
+          "type": "Article",
+          "title": "Daily Standup Patterns — Atlassian",
+          "url": "https://www.atlassian.com/agile/scrum/standups"
+        }
+      ]
+    },
+    {
+      "num": 17,
+      "sym": "Rv",
+      "name": "Review",
+      "row": 3,
+      "col": 7,
+      "cat": "scrum",
+      "desc": "The Sprint event where the team and stakeholders inspect the Increment, gather feedback, and adapt the Product Backlog.",
+      "refs": [
+        {
+          "type": "Guide",
+          "title": "Scrum Guide 2020 (Schwaber & Sutherland)",
+          "url": "https://scrumguides.org/scrum-guide.html"
+        },
+        {
+          "type": "Article",
+          "title": "Sprint Review — Scrum.org",
+          "url": "https://www.scrum.org/resources/what-is-a-sprint-review"
+        },
+        {
+          "type": "Article",
+          "title": "The Sprint Review — Mike Cohn",
+          "url": "https://www.mountaingoatsoftware.com/agile/scrum/scrum-meetings/sprint-review-meeting"
+        },
+        {
+          "type": "Article",
+          "title": "Sprint Reviews are Not Demos — Scrum.org",
+          "url": "https://www.scrum.org/resources/blog/why-sprint-review-not-just-demo"
+        }
+      ]
+    },
+    {
+      "num": 18,
+      "sym": "Re",
+      "name": "Retrospective",
+      "row": 3,
+      "col": 8,
+      "cat": "scrum",
+      "desc": "The Sprint-closing event where the team inspects how it worked and identifies improvements to enact next Sprint.",
+      "refs": [
+        {
+          "type": "Guide",
+          "title": "Scrum Guide 2020 (Schwaber & Sutherland)",
+          "url": "https://scrumguides.org/scrum-guide.html"
+        },
+        {
+          "type": "Book",
+          "title": "Agile Retrospectives — Esther Derby & Diana Larsen",
+          "url": "https://pragprog.com/titles/dlret/agile-retrospectives/"
+        },
+        {
+          "type": "Resource",
+          "title": "Retromat — retrospective plans",
+          "url": "https://retromat.org/"
+        },
+        {
+          "type": "Article",
+          "title": "Sprint Retrospective — Scrum.org",
+          "url": "https://www.scrum.org/resources/what-is-a-sprint-retrospective"
+        }
+      ]
+    },
+    {
+      "num": 19,
+      "sym": "Pb",
+      "name": "Product backlog",
+      "row": 3,
+      "col": 9,
+      "cat": "scrum",
+      "desc": "An ordered, ever-evolving list of everything that might be needed in the product. The single source of work for the Scrum Team.",
+      "refs": [
+        {
+          "type": "Guide",
+          "title": "Scrum Guide 2020 (Schwaber & Sutherland)",
+          "url": "https://scrumguides.org/scrum-guide.html"
+        },
+        {
+          "type": "Book",
+          "title": "Agile Product Management with Scrum — Roman Pichler",
+          "url": "https://www.romanpichler.com/books/agile-product-management-with-scrum/"
+        },
+        {
+          "type": "Article",
+          "title": "What is a Product Backlog? — Scrum.org",
+          "url": "https://www.scrum.org/resources/what-is-a-product-backlog"
+        },
+        {
+          "type": "Article",
+          "title": "Backlog Refinement — Roman Pichler",
+          "url": "https://www.romanpichler.com/blog/the-product-backlog-the-product-owners-most-important-artifact/"
+        }
+      ]
+    },
+    {
+      "num": 20,
+      "sym": "Sb",
+      "name": "Sprint backlog",
+      "row": 3,
+      "col": 10,
+      "cat": "scrum",
+      "desc": "The Sprint Goal plus the selected Product Backlog items and a plan for delivering them. Owned and updated by the Developers throughout the Sprint.",
+      "refs": [
+        {
+          "type": "Guide",
+          "title": "Scrum Guide 2020 (Schwaber & Sutherland)",
+          "url": "https://scrumguides.org/scrum-guide.html"
+        },
+        {
+          "type": "Article",
+          "title": "What is a Sprint Backlog? — Scrum.org",
+          "url": "https://www.scrum.org/resources/what-is-a-sprint-backlog"
+        },
+        {
+          "type": "Article",
+          "title": "Sprint Backlog — Mike Cohn",
+          "url": "https://www.mountaingoatsoftware.com/agile/scrum/scrum-tools/sprint-backlog"
+        },
+        {
+          "type": "Article",
+          "title": "Sprint Backlog vs Product Backlog — Atlassian",
+          "url": "https://www.atlassian.com/agile/scrum/sprint-backlog"
+        }
+      ]
+    },
+    {
+      "num": 21,
+      "sym": "Ic",
+      "name": "Increment",
+      "row": 3,
+      "col": 11,
+      "cat": "scrum",
+      "desc": "A concrete, usable step toward the Product Goal. Each Increment must meet the Definition of Done and is additive to all prior Increments.",
+      "refs": [
+        {
+          "type": "Guide",
+          "title": "Scrum Guide 2020 (Schwaber & Sutherland)",
+          "url": "https://scrumguides.org/scrum-guide.html"
+        },
+        {
+          "type": "Article",
+          "title": "What is an Increment? — Scrum.org",
+          "url": "https://www.scrum.org/resources/what-is-an-increment"
+        },
+        {
+          "type": "Article",
+          "title": "What is \"Done\"? — Mike Cohn",
+          "url": "https://www.mountaingoatsoftware.com/blog/what-is-an-increment"
+        },
+        {
+          "type": "Article",
+          "title": "Many Increments per Sprint — Scrum.org",
+          "url": "https://www.scrum.org/resources/blog/many-increments-one-sprint"
+        }
+      ]
+    },
+    {
+      "num": 22,
+      "sym": "Dd",
+      "name": "Done",
+      "row": 3,
+      "col": 12,
+      "cat": "scrum",
+      "desc": "Definition of Done: the shared agreement describing the quality bar a Product Backlog item must meet to be considered part of the Increment.",
+      "refs": [
+        {
+          "type": "Guide",
+          "title": "Scrum Guide 2020 (Schwaber & Sutherland)",
+          "url": "https://scrumguides.org/scrum-guide.html"
+        },
+        {
+          "type": "Article",
+          "title": "Walking Through the Definition of Done — Mike Cohn",
+          "url": "https://www.mountaingoatsoftware.com/blog/walking-through-the-definition-of-done"
+        },
+        {
+          "type": "Article",
+          "title": "Definition of Done — Scrum.org",
+          "url": "https://www.scrum.org/resources/blog/walking-through-definition-done"
+        },
+        {
+          "type": "Article",
+          "title": "Definition of Done Examples — Scrum Inc",
+          "url": "https://www.scruminc.com/definition-of-done/"
+        }
+      ]
+    },
+    {
+      "num": 23,
+      "sym": "Ax",
+      "name": "Acceptance",
+      "row": 3,
+      "col": 13,
+      "cat": "agile",
+      "desc": "Acceptance criteria: item-level conditions of satisfaction. Define what \"working as expected\" looks like for one Product Backlog item, distinct from the Definition of Done.",
+      "refs": [
+        {
+          "type": "Article",
+          "title": "Acceptance Criteria for User Stories — Mike Cohn",
+          "url": "https://www.mountaingoatsoftware.com/blog/the-three-cs-of-user-stories"
+        },
+        {
+          "type": "Book",
+          "title": "User Stories Applied — Mike Cohn",
+          "url": "https://www.mountaingoatsoftware.com/books/user-stories-applied"
+        },
+        {
+          "type": "Article",
+          "title": "Acceptance Criteria — Atlassian",
+          "url": "https://www.atlassian.com/agile/project-management/user-stories"
+        }
+      ]
+    },
+    {
+      "num": 24,
+      "sym": "Us",
+      "name": "User story",
+      "row": 3,
+      "col": 14,
+      "cat": "agile",
+      "desc": "A short, customer-centric description of a need, often in the form: \"As a [user], I want [goal] so that [benefit].\" A placeholder for a conversation.",
+      "refs": [
+        {
+          "type": "Book",
+          "title": "User Stories Applied — Mike Cohn",
+          "url": "https://www.mountaingoatsoftware.com/books/user-stories-applied"
+        },
+        {
+          "type": "Article",
+          "title": "The 3 Cs of User Stories — Ron Jeffries",
+          "url": "https://ronjeffries.com/xprog/articles/expcardconversationconfirmation/"
+        },
+        {
+          "type": "Article",
+          "title": "INVEST in Good Stories — Bill Wake",
+          "url": "https://xp123.com/articles/invest-in-good-stories-and-smart-tasks/"
+        }
+      ]
+    },
+    {
+      "num": 25,
+      "sym": "Ep",
+      "name": "Epic",
+      "row": 3,
+      "col": 15,
+      "cat": "agile",
+      "desc": "A large body of work that can be broken down into multiple user stories, usually delivering a significant chunk of customer value.",
+      "refs": [
+        {
+          "type": "Article",
+          "title": "Epics, Stories, Themes — Mike Cohn",
+          "url": "https://www.mountaingoatsoftware.com/blog/stories-epics-and-themes"
+        },
+        {
+          "type": "Article",
+          "title": "Epics, Stories, Themes, and Initiatives — Atlassian",
+          "url": "https://www.atlassian.com/agile/project-management/epics-stories-themes"
+        },
+        {
+          "type": "Article",
+          "title": "What is an Epic? — Atlassian",
+          "url": "https://www.atlassian.com/agile/project-management/epics"
+        },
+        {
+          "type": "Article",
+          "title": "Epics vs Features vs Stories — Scaled Agile",
+          "url": "https://scaledagileframework.com/epic/"
+        }
+      ]
+    },
+    {
+      "num": 26,
+      "sym": "Tm",
+      "name": "Theme",
+      "row": 3,
+      "col": 16,
+      "cat": "agile",
+      "desc": "A grouping of related epics aligned to a strategic objective or capability area.",
+      "refs": [
+        {
+          "type": "Article",
+          "title": "Stories, Epics & Themes — Mike Cohn",
+          "url": "https://www.mountaingoatsoftware.com/blog/stories-epics-and-themes"
+        },
+        {
+          "type": "Article",
+          "title": "Themes vs Epics vs Stories — Atlassian",
+          "url": "https://www.atlassian.com/agile/project-management/epics-stories-themes"
+        },
+        {
+          "type": "Book",
+          "title": "Agile Estimating and Planning — Mike Cohn",
+          "url": "https://www.mountaingoatsoftware.com/books/agile-estimating-and-planning"
+        }
+      ]
+    },
+    {
+      "num": 27,
+      "sym": "Sg",
+      "name": "Sprint goal",
+      "row": 3,
+      "col": 17,
+      "cat": "scrum",
+      "desc": "The single objective for a Sprint that gives the team coherence and a reason to work together. Lifts work above a checklist of items.",
+      "refs": [
+        {
+          "type": "Guide",
+          "title": "Scrum Guide 2020 (Schwaber & Sutherland)",
+          "url": "https://scrumguides.org/scrum-guide.html"
+        },
+        {
+          "type": "Article",
+          "title": "The Power of the Sprint Goal — Scrum.org (Robert Pieper)",
+          "url": "https://www.scrum.org/resources/blog/power-sprint-goal"
+        },
+        {
+          "type": "Article",
+          "title": "Sprint Goal Examples — Mike Cohn",
+          "url": "https://www.mountaingoatsoftware.com/blog/the-importance-of-sprint-goals"
+        },
+        {
+          "type": "Article",
+          "title": "Sprint Goal — Roman Pichler",
+          "url": "https://www.romanpichler.com/blog/setting-effective-sprint-goals/"
+        }
+      ]
+    },
+    {
+      "num": 28,
+      "sym": "Pg",
+      "name": "Product goal",
+      "row": 3,
+      "col": 18,
+      "cat": "scrum",
+      "desc": "A long-term objective that the Scrum Team plans against. The Product Backlog emerges to fulfill it.",
+      "refs": [
+        {
+          "type": "Guide",
+          "title": "Scrum Guide 2020 (Schwaber & Sutherland)",
+          "url": "https://scrumguides.org/scrum-guide.html"
+        },
+        {
+          "type": "Article",
+          "title": "The Product Goal — Scrum.org",
+          "url": "https://www.scrum.org/resources/blog/what-product-goal"
+        },
+        {
+          "type": "Article",
+          "title": "Product Goal Examples — Roman Pichler",
+          "url": "https://www.romanpichler.com/blog/from-product-vision-to-product-goal/"
+        },
+        {
+          "type": "Article",
+          "title": "Product Goal Patterns — Scrum.org",
+          "url": "https://www.scrum.org/resources/blog/product-goal-and-product-vision"
+        }
+      ]
+    },
+    {
+      "num": 29,
+      "sym": "Wp",
+      "name": "WIP limit",
+      "row": 4,
+      "col": 1,
+      "cat": "kanban",
+      "desc": "A cap on how many items can be in a workflow stage at once. Forces focus, exposes bottlenecks, and is the single most important Kanban practice.",
+      "refs": [
+        {
+          "type": "Book",
+          "title": "Kanban — David J. Anderson",
+          "url": "https://leankanban.com/kanban-the-book/"
+        },
+        {
+          "type": "Article",
+          "title": "WIP Limits — Atlassian",
+          "url": "https://www.atlassian.com/agile/kanban/wip-limits"
+        },
+        {
+          "type": "Article",
+          "title": "Stop Starting, Start Finishing — Arne Roock",
+          "url": "https://leanpub.com/stopstartingstartfinishing"
+        }
+      ]
+    },
+    {
+      "num": 30,
+      "sym": "Bo",
+      "name": "Board",
+      "row": 4,
+      "col": 2,
+      "cat": "kanban",
+      "desc": "The visual representation of the workflow, with columns for each stage and cards for work items. Makes flow and bottlenecks visible to all.",
+      "refs": [
+        {
+          "type": "Article",
+          "title": "Kanban Boards Explained — Atlassian",
+          "url": "https://www.atlassian.com/agile/kanban/boards"
+        },
+        {
+          "type": "Article",
+          "title": "Anatomy of a Kanban Board — Kanbanize",
+          "url": "https://kanbanize.com/kanban-resources/getting-started/what-is-kanban-board"
+        },
+        {
+          "type": "Book",
+          "title": "Kanban from the Inside — Mike Burrows",
+          "url": "https://www.amazon.com/Kanban-Inside-Mike-Burrows/dp/0985305193"
+        }
+      ]
+    },
+    {
+      "num": 31,
+      "sym": "Cd",
+      "name": "Cadence",
+      "row": 4,
+      "col": 3,
+      "cat": "kanban",
+      "desc": "A regular rhythm for events such as replenishment, delivery, and review. Kanban favors decoupled cadences chosen to fit the work.",
+      "refs": [
+        {
+          "type": "Book",
+          "title": "Kanban from the Inside — Mike Burrows",
+          "url": "https://www.amazon.com/Kanban-Inside-Mike-Burrows/dp/0985305193"
+        },
+        {
+          "type": "Article",
+          "title": "Cadences in Kanban — David Anderson",
+          "url": "https://www.djaa.com/"
+        },
+        {
+          "type": "Article",
+          "title": "Cadences in Kanban — Kanbanize",
+          "url": "https://kanbanize.com/kanban-resources/kanban-software/kanban-cadences"
+        }
+      ]
+    },
+    {
+      "num": 32,
+      "sym": "Pu",
+      "name": "Pull system",
+      "row": 4,
+      "col": 4,
+      "cat": "lean",
+      "desc": "Work is pulled into the next stage only when there is capacity, rather than being pushed by an upstream schedule. Smooths flow and prevents overload.",
+      "refs": [
+        {
+          "type": "Article",
+          "title": "Pull Systems — Lean Enterprise Institute",
+          "url": "https://www.lean.org/lexicon-terms/pull-system/"
+        },
+        {
+          "type": "Wiki",
+          "title": "Push–pull strategy",
+          "url": "https://en.wikipedia.org/wiki/Push%E2%80%93pull_strategy"
+        },
+        {
+          "type": "Book",
+          "title": "Lean Thinking — Womack & Jones",
+          "url": "https://www.lean.org/store/book/lean-thinking-2nd-edition/"
+        }
+      ]
+    },
+    {
+      "num": 33,
+      "sym": "Fl",
+      "name": "Flow",
+      "row": 4,
+      "col": 5,
+      "cat": "lean",
+      "desc": "The smooth, uninterrupted movement of value from idea to customer. Improving flow means reducing delays, batches, and handoffs.",
+      "refs": [
+        {
+          "type": "Book",
+          "title": "The Principles of Product Development Flow — Don Reinertsen",
+          "url": "https://www.amazon.com/Principles-Product-Development-Flow-Generation/dp/1935401009"
+        },
+        {
+          "type": "Book",
+          "title": "Lean Thinking — Womack & Jones",
+          "url": "https://www.lean.org/store/book/lean-thinking-2nd-edition/"
+        },
+        {
+          "type": "Article",
+          "title": "Flow Metrics — Daniel Vacanti",
+          "url": "https://actionableagile.com/resources/publications/"
+        }
+      ]
+    },
+    {
+      "num": 34,
+      "sym": "Bn",
+      "name": "Bottleneck",
+      "row": 4,
+      "col": 6,
+      "cat": "metrics",
+      "desc": "The slowest step in a workflow that constrains the throughput of the entire system. Made visible by WIP limits and queues.",
+      "refs": [
+        {
+          "type": "Book",
+          "title": "The Goal — Eliyahu M. Goldratt",
+          "url": "https://www.goldratt.com/"
+        },
+        {
+          "type": "Wiki",
+          "title": "Theory of Constraints",
+          "url": "https://en.wikipedia.org/wiki/Theory_of_constraints"
+        },
+        {
+          "type": "Article",
+          "title": "Theory of Constraints — LEI",
+          "url": "https://www.lean.org/lexicon-terms/theory-of-constraints/"
+        }
+      ]
+    },
+    {
+      "num": 35,
+      "sym": "Cy",
+      "name": "Cycle time",
+      "row": 4,
+      "col": 7,
+      "cat": "metrics",
+      "desc": "Elapsed time from when work starts on an item to when it is done. A lagging indicator of how responsive the system is.",
+      "refs": [
+        {
+          "type": "Book",
+          "title": "Actionable Agile Metrics for Predictability — Daniel Vacanti",
+          "url": "https://actionableagile.com/resources/publications/"
+        },
+        {
+          "type": "Article",
+          "title": "Cycle Time vs Lead Time — Atlassian",
+          "url": "https://www.atlassian.com/agile/project-management/metrics"
+        },
+        {
+          "type": "Wiki",
+          "title": "Little's Law",
+          "url": "https://en.wikipedia.org/wiki/Little%27s_law"
+        }
+      ]
+    },
+    {
+      "num": 36,
+      "sym": "Lt",
+      "name": "Lead time",
+      "row": 4,
+      "col": 8,
+      "cat": "metrics",
+      "desc": "Elapsed time from when an item is requested to when it is delivered. Measures customer experience of responsiveness.",
+      "refs": [
+        {
+          "type": "Book",
+          "title": "Accelerate — Forsgren, Humble & Kim",
+          "url": "https://itrevolution.com/product/accelerate/"
+        },
+        {
+          "type": "Book",
+          "title": "Actionable Agile Metrics — Daniel Vacanti",
+          "url": "https://actionableagile.com/resources/publications/"
+        },
+        {
+          "type": "Article",
+          "title": "Lead Time vs Cycle Time — Atlassian",
+          "url": "https://www.atlassian.com/agile/project-management/metrics"
+        }
+      ]
+    },
+    {
+      "num": 37,
+      "sym": "Tp",
+      "name": "Throughput",
+      "row": 4,
+      "col": 9,
+      "cat": "metrics",
+      "desc": "The number of items completed per unit of time. With WIP and lead time it forms Little's Law: WIP = Throughput × Lead time.",
+      "refs": [
+        {
+          "type": "Book",
+          "title": "When Will It Be Done? — Daniel Vacanti",
+          "url": "https://actionableagile.com/resources/publications/"
+        },
+        {
+          "type": "Wiki",
+          "title": "Little's Law",
+          "url": "https://en.wikipedia.org/wiki/Little%27s_law"
+        },
+        {
+          "type": "Article",
+          "title": "Throughput in Kanban — Kanbanize",
+          "url": "https://kanbanize.com/kanban-resources/kanban-software/kanban-throughput"
+        }
+      ]
+    },
+    {
+      "num": 38,
+      "sym": "Vy",
+      "name": "Velocity",
+      "row": 4,
+      "col": 10,
+      "cat": "scrum",
+      "desc": "A team's historical average of completed work (often in story points) per Sprint. A planning aid, not a performance target.",
+      "refs": [
+        {
+          "type": "Article",
+          "title": "Velocity — Mike Cohn",
+          "url": "https://www.mountaingoatsoftware.com/blog/why-i-dont-use-story-points-for-sprint-planning"
+        },
+        {
+          "type": "Article",
+          "title": "Velocity is Killing Agility — Jim Highsmith",
+          "url": "https://jimhighsmith.com/velocity-is-killing-agility/"
+        },
+        {
+          "type": "Article",
+          "title": "Velocity is not the Goal — Scrum.org",
+          "url": "https://www.scrum.org/resources/blog/velocity-not-goal"
+        }
+      ]
+    },
+    {
+      "num": 39,
+      "sym": "Bd",
+      "name": "Burndown",
+      "row": 4,
+      "col": 11,
+      "cat": "scrum",
+      "desc": "A chart tracking remaining work over time within a Sprint or release. Visualizes whether the team is on track to finish.",
+      "refs": [
+        {
+          "type": "Article",
+          "title": "Burndown Charts — Mike Cohn",
+          "url": "https://www.mountaingoatsoftware.com/agile/scrum/scrum-tools/release-burndown"
+        },
+        {
+          "type": "Article",
+          "title": "Burndown Chart — Atlassian",
+          "url": "https://www.atlassian.com/agile/tutorials/burndown-charts"
+        },
+        {
+          "type": "Article",
+          "title": "Burndown Charts — Scrum.org",
+          "url": "https://www.scrum.org/resources/blog/burn-charts-product-backlog"
+        }
+      ]
+    },
+    {
+      "num": 40,
+      "sym": "Bu",
+      "name": "Burnup",
+      "row": 4,
+      "col": 12,
+      "cat": "scrum",
+      "desc": "A chart showing work completed against total scope over time. Makes scope changes visible, unlike a burndown.",
+      "refs": [
+        {
+          "type": "Article",
+          "title": "Burnup Charts — Mike Cohn",
+          "url": "https://www.mountaingoatsoftware.com/blog/whats-the-difference-between-a-burndown-chart-and-a-burnup-chart"
+        },
+        {
+          "type": "Article",
+          "title": "Burnup vs Burndown — Atlassian",
+          "url": "https://www.atlassian.com/agile/tutorials/burndown-charts"
+        },
+        {
+          "type": "Article",
+          "title": "Why I Prefer Burnup Charts — Mike Cohn",
+          "url": "https://www.mountaingoatsoftware.com/blog/whats-the-difference-between-a-burndown-chart-and-a-burnup-chart"
+        }
+      ]
+    },
+    {
+      "num": 41,
+      "sym": "Cf",
+      "name": "CFD",
+      "row": 4,
+      "col": 13,
+      "cat": "kanban",
+      "desc": "Cumulative Flow Diagram: stacked area chart showing the count of items in each workflow state over time. Reveals WIP, lead time, and bottlenecks at a glance.",
+      "refs": [
+        {
+          "type": "Book",
+          "title": "Actionable Agile Metrics — Daniel Vacanti",
+          "url": "https://actionableagile.com/resources/publications/"
+        },
+        {
+          "type": "Article",
+          "title": "How to Read a CFD — Daniel Vacanti",
+          "url": "https://www.actionableagile.com/cumulative-flow-diagrams/"
+        },
+        {
+          "type": "Article",
+          "title": "Cumulative Flow Diagram — Kanbanize",
+          "url": "https://kanbanize.com/kanban-resources/kanban-software/cumulative-flow-diagram"
+        }
+      ]
+    },
+    {
+      "num": 42,
+      "sym": "Sx",
+      "name": "Story map",
+      "row": 4,
+      "col": 14,
+      "cat": "agile",
+      "desc": "A two-dimensional arrangement of user stories along the user's journey, sliced into releases. Created by Jeff Patton.",
+      "refs": [
+        {
+          "type": "Book",
+          "title": "User Story Mapping — Jeff Patton",
+          "url": "https://jpattonassociates.com/user-story-mapping/"
+        },
+        {
+          "type": "Article",
+          "title": "The New User Story Backlog is a Map — Jeff Patton",
+          "url": "https://jpattonassociates.com/the-new-backlog/"
+        },
+        {
+          "type": "Article",
+          "title": "User Story Mapping — Atlassian",
+          "url": "https://www.atlassian.com/agile/project-management/user-story-mapping"
+        }
+      ]
+    },
+    {
+      "num": 43,
+      "sym": "Mv",
+      "name": "MVP",
+      "row": 4,
+      "col": 15,
+      "cat": "lean",
+      "desc": "Minimum Viable Product: the smallest version of a product that lets you start the build-measure-learn loop with real users. From Eric Ries' Lean Startup.",
+      "refs": [
+        {
+          "type": "Book",
+          "title": "The Lean Startup — Eric Ries",
+          "url": "http://theleanstartup.com/book"
+        },
+        {
+          "type": "Article",
+          "title": "Minimum Viable Product: a guide — Eric Ries",
+          "url": "http://www.startuplessonslearned.com/2009/08/minimum-viable-product-guide.html"
+        },
+        {
+          "type": "Article",
+          "title": "Making Sense of MVP — Henrik Kniberg",
+          "url": "https://blog.crisp.se/2016/01/25/henrikkniberg/making-sense-of-mvp"
+        }
+      ]
+    },
+    {
+      "num": 44,
+      "sym": "Ml",
+      "name": "MLP",
+      "row": 4,
+      "col": 16,
+      "cat": "lean",
+      "desc": "Minimum Lovable Product: an MVP raised to the bar of being delightful to use, not merely sufficient.",
+      "refs": [
+        {
+          "type": "Article",
+          "title": "Minimum Lovable Product — Henrik Kniberg",
+          "url": "https://blog.crisp.se/2016/01/25/henrikkniberg/making-sense-of-mvp"
+        },
+        {
+          "type": "Article",
+          "title": "MVP vs MLP — Aha!",
+          "url": "https://www.aha.io/roadmapping/guide/release-management/minimum-lovable-product"
+        },
+        {
+          "type": "Article",
+          "title": "Why MLP Beats MVP — Brian de Haaff",
+          "url": "https://www.aha.io/blog/why-the-minimum-lovable-product-beats-the-minimum-viable-product"
+        }
+      ]
+    },
+    {
+      "num": 45,
+      "sym": "Hy",
+      "name": "Hypothesis",
+      "row": 4,
+      "col": 17,
+      "cat": "lean",
+      "desc": "An explicit, testable assumption about users, value, or feasibility. Lean Startup treats every product idea as a hypothesis until validated.",
+      "refs": [
+        {
+          "type": "Book",
+          "title": "The Lean Startup — Eric Ries",
+          "url": "http://theleanstartup.com/book"
+        },
+        {
+          "type": "Book",
+          "title": "Testing Business Ideas — Bland & Osterwalder",
+          "url": "https://www.strategyzer.com/library/testing-business-ideas"
+        },
+        {
+          "type": "Article",
+          "title": "Hypothesis-Driven Development — Barry O'Reilly",
+          "url": "https://barryoreilly.com/explore/blog/how-to-implement-hypothesis-driven-development/"
+        }
+      ]
+    },
+    {
+      "num": 46,
+      "sym": "Vd",
+      "name": "Validated",
+      "row": 4,
+      "col": 18,
+      "cat": "lean",
+      "desc": "Validated learning: empirical evidence about what customers actually want, gained by running experiments rather than asking opinions.",
+      "refs": [
+        {
+          "type": "Book",
+          "title": "The Lean Startup — Eric Ries",
+          "url": "http://theleanstartup.com/book"
+        },
+        {
+          "type": "Article",
+          "title": "Validated Learning — Eric Ries",
+          "url": "http://www.startuplessonslearned.com/2009/04/validated-learning-about-customers.html"
+        },
+        {
+          "type": "Wiki",
+          "title": "Lean startup",
+          "url": "https://en.wikipedia.org/wiki/Lean_startup"
+        }
+      ]
+    },
+    {
+      "num": 47,
+      "sym": "Pp",
+      "name": "Pair prog.",
+      "row": 5,
+      "col": 1,
+      "cat": "xp",
+      "desc": "Two developers working at one workstation: one drives, one navigates. An XP practice that improves quality, knowledge sharing, and design.",
+      "refs": [
+        {
+          "type": "Book",
+          "title": "Extreme Programming Explained — Kent Beck",
+          "url": "https://www.amazon.com/Extreme-Programming-Explained-Embrace-Change/dp/0321278658"
+        },
+        {
+          "type": "Article",
+          "title": "On Pair Programming — Martin Fowler",
+          "url": "https://martinfowler.com/articles/on-pair-programming.html"
+        },
+        {
+          "type": "Article",
+          "title": "Pair Programming — Atlassian",
+          "url": "https://www.atlassian.com/agile/project-management/pair-programming"
+        }
+      ]
+    },
+    {
+      "num": 48,
+      "sym": "Mb",
+      "name": "Mob prog.",
+      "row": 5,
+      "col": 2,
+      "cat": "xp",
+      "desc": "The whole team working together on the same problem at the same computer. Extreme version of pairing for tough problems and learning.",
+      "refs": [
+        {
+          "type": "Book",
+          "title": "Mob Programming Guidebook — Woody Zuill",
+          "url": "https://leanpub.com/mobprogramming"
+        },
+        {
+          "type": "Site",
+          "title": "mobprogramming.org",
+          "url": "https://mobprogramming.org/"
+        },
+        {
+          "type": "Article",
+          "title": "Mob Programming — Martin Fowler",
+          "url": "https://martinfowler.com/bliki/MobProgramming.html"
+        }
+      ]
+    },
+    {
+      "num": 49,
+      "sym": "Td",
+      "name": "TDD",
+      "row": 5,
+      "col": 3,
+      "cat": "xp",
+      "desc": "Test-Driven Development: write a failing test, write the minimum code to pass, then refactor. Red-Green-Refactor.",
+      "refs": [
+        {
+          "type": "Book",
+          "title": "Test-Driven Development By Example — Kent Beck",
+          "url": "https://www.amazon.com/Test-Driven-Development-Kent-Beck/dp/0321146530"
+        },
+        {
+          "type": "Article",
+          "title": "Is TDD Dead? — Martin Fowler / Kent Beck / DHH",
+          "url": "https://martinfowler.com/articles/is-tdd-dead/"
+        },
+        {
+          "type": "Book",
+          "title": "Growing Object-Oriented Software, Guided by Tests — Freeman & Pryce",
+          "url": "http://www.growing-object-oriented-software.com/"
+        }
+      ]
+    },
+    {
+      "num": 50,
+      "sym": "Bb",
+      "name": "BDD",
+      "row": 5,
+      "col": 4,
+      "cat": "xp",
+      "desc": "Behavior-Driven Development: TDD framed in business language using Given-When-Then scenarios. Bridges product and engineering.",
+      "refs": [
+        {
+          "type": "Book",
+          "title": "The Cucumber Book — Wynne & Hellesøy",
+          "url": "https://pragprog.com/titles/hwcuc2/the-cucumber-book-second-edition/"
+        },
+        {
+          "type": "Article",
+          "title": "Introducing BDD — Dan North",
+          "url": "https://dannorth.net/introducing-bdd/"
+        },
+        {
+          "type": "Book",
+          "title": "Specification by Example — Gojko Adzic",
+          "url": "https://gojko.net/books/specification-by-example/"
+        }
+      ]
+    },
+    {
+      "num": 51,
+      "sym": "Rf",
+      "name": "Refactor",
+      "row": 5,
+      "col": 5,
+      "cat": "xp",
+      "desc": "Improving the internal structure of code without changing its external behavior. Keeps the cost of change low over time.",
+      "refs": [
+        {
+          "type": "Book",
+          "title": "Refactoring — Martin Fowler (2nd ed.)",
+          "url": "https://martinfowler.com/books/refactoring.html"
+        },
+        {
+          "type": "Site",
+          "title": "refactoring.com",
+          "url": "https://refactoring.com/"
+        },
+        {
+          "type": "Book",
+          "title": "Working Effectively with Legacy Code — Michael Feathers",
+          "url": "https://www.oreilly.com/library/view/working-effectively-with/0131177052/"
+        }
+      ]
+    },
+    {
+      "num": 52,
+      "sym": "Ci",
+      "name": "CI",
+      "row": 5,
+      "col": 6,
+      "cat": "xp",
+      "desc": "Continuous Integration: developers merge to a shared mainline frequently, each merge verified by an automated build and tests.",
+      "refs": [
+        {
+          "type": "Article",
+          "title": "Continuous Integration — Martin Fowler",
+          "url": "https://martinfowler.com/articles/continuousIntegration.html"
+        },
+        {
+          "type": "Book",
+          "title": "Continuous Delivery — Humble & Farley",
+          "url": "https://continuousdelivery.com/"
+        },
+        {
+          "type": "Book",
+          "title": "Continuous Delivery — Humble & Farley",
+          "url": "https://continuousdelivery.com/"
+        }
+      ]
+    },
+    {
+      "num": 53,
+      "sym": "Cl",
+      "name": "CD",
+      "row": 5,
+      "col": 7,
+      "cat": "xp",
+      "desc": "Continuous Delivery (or Deployment): every change that passes the pipeline is releasable to production at any time, often automatically.",
+      "refs": [
+        {
+          "type": "Book",
+          "title": "Continuous Delivery — Jez Humble & Dave Farley",
+          "url": "https://continuousdelivery.com/"
+        },
+        {
+          "type": "Book",
+          "title": "Accelerate — Forsgren, Humble & Kim",
+          "url": "https://itrevolution.com/product/accelerate/"
+        },
+        {
+          "type": "Article",
+          "title": "ContinuousDelivery — Martin Fowler",
+          "url": "https://martinfowler.com/bliki/ContinuousDelivery.html"
+        }
+      ]
+    },
+    {
+      "num": 54,
+      "sym": "Tk",
+      "name": "Tech debt",
+      "row": 5,
+      "col": 8,
+      "cat": "xp",
+      "desc": "The accumulated cost of expedient design choices that now slow down change. Must be tracked, paid down, and prevented.",
+      "refs": [
+        {
+          "type": "Article",
+          "title": "Technical Debt Quadrant — Martin Fowler",
+          "url": "https://martinfowler.com/bliki/TechnicalDebtQuadrant.html"
+        },
+        {
+          "type": "Talk",
+          "title": "Ward Cunningham — The Debt Metaphor",
+          "url": "https://www.youtube.com/watch?v=pqeJFYwnkjE"
+        },
+        {
+          "type": "Article",
+          "title": "Tech Debt — Ward Cunningham (original)",
+          "url": "http://wiki.c2.com/?WardExplainsDebtMetaphor"
+        }
+      ]
+    },
+    {
+      "num": 55,
+      "sym": "Rg",
+      "name": "Refinement",
+      "row": 5,
+      "col": 9,
+      "cat": "scrum",
+      "desc": "Backlog refinement: the ongoing activity of adding detail, estimates, and order to Product Backlog items so they are ready for a future Sprint.",
+      "refs": [
+        {
+          "type": "Guide",
+          "title": "Scrum Guide 2020 (Schwaber & Sutherland)",
+          "url": "https://scrumguides.org/scrum-guide.html"
+        },
+        {
+          "type": "Article",
+          "title": "Backlog Refinement — Mike Cohn",
+          "url": "https://www.mountaingoatsoftware.com/blog/product-backlog-refinement-grooming"
+        },
+        {
+          "type": "Article",
+          "title": "Backlog Refinement — Scrum.org",
+          "url": "https://www.scrum.org/resources/blog/agile-product-backlog-refinement"
+        },
+        {
+          "type": "Article",
+          "title": "Three Levels of Refinement — Roman Pichler",
+          "url": "https://www.romanpichler.com/blog/agile-product-backlog-grooming/"
+        }
+      ]
+    },
+    {
+      "num": 56,
+      "sym": "Et",
+      "name": "Estimation",
+      "row": 5,
+      "col": 10,
+      "cat": "agile",
+      "desc": "Forecasting effort or size of work, often relative rather than absolute. Common units include story points and t-shirt sizes.",
+      "refs": [
+        {
+          "type": "Book",
+          "title": "Agile Estimating and Planning — Mike Cohn",
+          "url": "https://www.mountaingoatsoftware.com/books/agile-estimating-and-planning"
+        },
+        {
+          "type": "Article",
+          "title": "#NoEstimates — Vasco Duarte",
+          "url": "https://www.amazon.com/NoEstimates-measure-project-progress-estimating/dp/B01FZBR7C0"
+        },
+        {
+          "type": "Article",
+          "title": "Estimation Techniques — Atlassian",
+          "url": "https://www.atlassian.com/agile/project-management/estimation"
+        }
+      ]
+    },
+    {
+      "num": 57,
+      "sym": "Pk",
+      "name": "Poker",
+      "row": 5,
+      "col": 11,
+      "cat": "agile",
+      "desc": "Planning Poker: a consensus-based, gamified estimation technique using Fibonacci-like cards revealed simultaneously.",
+      "refs": [
+        {
+          "type": "Article",
+          "title": "Planning Poker — Mike Cohn",
+          "url": "https://www.mountaingoatsoftware.com/agile/planning-poker"
+        },
+        {
+          "type": "Original",
+          "title": "James Grenning — original article (2002)",
+          "url": "https://wingman-sw.com/papers/PlanningPoker-v1.1.pdf"
+        },
+        {
+          "type": "Wiki",
+          "title": "Planning poker",
+          "url": "https://en.wikipedia.org/wiki/Planning_poker"
+        }
+      ]
+    },
+    {
+      "num": 58,
+      "sym": "Pt",
+      "name": "Story point",
+      "row": 5,
+      "col": 12,
+      "cat": "agile",
+      "desc": "A unit of relative size that bundles complexity, effort, and uncertainty. Compared to a reference story rather than to hours.",
+      "refs": [
+        {
+          "type": "Article",
+          "title": "What Are Story Points? — Mike Cohn",
+          "url": "https://www.mountaingoatsoftware.com/blog/what-are-story-points"
+        },
+        {
+          "type": "Article",
+          "title": "Story Points Revisited — Ron Jeffries",
+          "url": "https://ronjeffries.com/articles/019-01ff/story-points/Index.html"
+        },
+        {
+          "type": "Article",
+          "title": "Story Points and Velocity — Atlassian",
+          "url": "https://www.atlassian.com/agile/project-management/estimation"
+        }
+      ]
+    },
+    {
+      "num": 59,
+      "sym": "Tb",
+      "name": "Time-box",
+      "row": 5,
+      "col": 13,
+      "cat": "agile",
+      "desc": "A fixed maximum duration for an event or activity. Forces decisions, prevents drift, and enables empirical inspection.",
+      "refs": [
+        {
+          "type": "Guide",
+          "title": "Scrum Guide 2020 (Schwaber & Sutherland)",
+          "url": "https://scrumguides.org/scrum-guide.html"
+        },
+        {
+          "type": "Wiki",
+          "title": "Timeboxing",
+          "url": "https://en.wikipedia.org/wiki/Timeboxing"
+        },
+        {
+          "type": "Article",
+          "title": "Time-boxing in Scrum — Scrum.org",
+          "url": "https://www.scrum.org/resources/blog/why-time-boxing-essential-scrum"
+        },
+        {
+          "type": "Article",
+          "title": "Power of Time-boxing — Mike Cohn",
+          "url": "https://www.mountaingoatsoftware.com/blog/the-power-of-time-boxing"
+        }
+      ]
+    },
+    {
+      "num": 60,
+      "sym": "Wk",
+      "name": "Workshop",
+      "row": 5,
+      "col": 14,
+      "cat": "agile",
+      "desc": "A facilitated working session with explicit purpose, outcomes, and structure. Common formats include kickoffs, retros, and design sprints.",
+      "refs": [
+        {
+          "type": "Book",
+          "title": "Sprint — Jake Knapp (Google Ventures)",
+          "url": "https://www.thesprintbook.com/"
+        },
+        {
+          "type": "Book",
+          "title": "Gamestorming — Gray, Brown & Macanufo",
+          "url": "https://gamestorming.com/"
+        },
+        {
+          "type": "Book",
+          "title": "Liberating Structures — Lipmanowicz & McCandless",
+          "url": "https://www.liberatingstructures.com/"
+        }
+      ]
+    },
+    {
+      "num": 61,
+      "sym": "Fc",
+      "name": "Facilitation",
+      "row": 5,
+      "col": 15,
+      "cat": "agile",
+      "desc": "The discipline of designing and guiding group interactions toward a clear outcome while staying neutral on content.",
+      "refs": [
+        {
+          "type": "Book",
+          "title": "The Skilled Facilitator — Roger Schwarz",
+          "url": "https://www.schwarzassociates.com/our-thinking/books/the-skilled-facilitator/"
+        },
+        {
+          "type": "Book",
+          "title": "Training from the Back of the Room — Sharon Bowman",
+          "url": "https://bowperson.com/"
+        },
+        {
+          "type": "Site",
+          "title": "IAF — International Association of Facilitators",
+          "url": "https://www.iaf-world.org/"
+        }
+      ]
+    },
+    {
+      "num": 62,
+      "sym": "Ca",
+      "name": "Coaching",
+      "row": 5,
+      "col": 16,
+      "cat": "agile",
+      "desc": "A partnership in which the coach helps individuals or teams unlock their own thinking and capability. Distinct from mentoring or training.",
+      "refs": [
+        {
+          "type": "Book",
+          "title": "Coaching Agile Teams — Lyssa Adkins",
+          "url": "https://www.coachingagileteams.com/"
+        },
+        {
+          "type": "Book",
+          "title": "Agile Coaching — Davies & Sedley",
+          "url": "https://pragprog.com/titles/sdcoach/agile-coaching/"
+        },
+        {
+          "type": "Article",
+          "title": "Coaching Stance — Lyssa Adkins",
+          "url": "https://www.coachingagileteams.com/"
+        }
+      ]
+    },
+    {
+      "num": 63,
+      "sym": "Sl",
+      "name": "Servant lead.",
+      "row": 5,
+      "col": 17,
+      "cat": "agile",
+      "desc": "A leader whose first priority is to serve the team and the work. Originates from Robert Greenleaf and is central to Scrum Master and Agile coaching roles.",
+      "refs": [
+        {
+          "type": "Essay",
+          "title": "The Servant as Leader — Robert K. Greenleaf",
+          "url": "https://www.greenleaf.org/what-is-servant-leadership/"
+        },
+        {
+          "type": "Org",
+          "title": "The Greenleaf Center for Servant Leadership",
+          "url": "https://www.greenleaf.org/"
+        },
+        {
+          "type": "Article",
+          "title": "Servant Leadership — Scrum Alliance",
+          "url": "https://resources.scrumalliance.org/Article/servant-leadership-key-scrum-master-success"
+        }
+      ]
+    },
+    {
+      "num": 64,
+      "sym": "Mt",
+      "name": "Mentor",
+      "row": 5,
+      "col": 18,
+      "cat": "agile",
+      "desc": "A more experienced practitioner who shares knowledge, advice, and perspective with someone earlier in their journey.",
+      "refs": [
+        {
+          "type": "Article",
+          "title": "Coaching vs Mentoring — Lyssa Adkins",
+          "url": "https://www.coachingagileteams.com/"
+        },
+        {
+          "type": "Article",
+          "title": "Mentoring vs Coaching — ICF",
+          "url": "https://coachingfederation.org/blog/coaching-vs-mentoring"
+        },
+        {
+          "type": "Article",
+          "title": "Coaching, Mentoring, Teaching — Lyssa Adkins",
+          "url": "https://www.scrumalliance.org/community/articles/2014/november/the-mentor-vs-the-coach"
+        }
+      ]
+    },
+    {
+      "num": 65,
+      "sym": "Sf",
+      "name": "SAFe",
+      "row": 6,
+      "col": 1,
+      "cat": "scaling",
+      "desc": "Scaled Agile Framework: a prescriptive framework for applying Lean-Agile across large enterprises with multiple teams, programs, and portfolios.",
+      "refs": [
+        {
+          "type": "Site",
+          "title": "scaledagileframework.com",
+          "url": "https://scaledagileframework.com/"
+        },
+        {
+          "type": "Book",
+          "title": "SAFe Reference Guide",
+          "url": "https://www.scaledagile.com/resources/safe-reference-guide/"
+        },
+        {
+          "type": "Critique",
+          "title": "SAFe: A Critical View — Ron Jeffries",
+          "url": "https://ronjeffries.com/articles/018-01ff/safe-1/"
+        }
+      ]
+    },
+    {
+      "num": 66,
+      "sym": "Ls",
+      "name": "LeSS",
+      "row": 6,
+      "col": 2,
+      "cat": "scaling",
+      "desc": "Large-Scale Scrum: an extension of Scrum to multiple teams working on one product, keeping the framework minimal and the product unified.",
+      "refs": [
+        {
+          "type": "Site",
+          "title": "less.works",
+          "url": "https://less.works/"
+        },
+        {
+          "type": "Book",
+          "title": "Large-Scale Scrum (LeSS) — Larman & Vodde",
+          "url": "https://less.works/less/framework"
+        },
+        {
+          "type": "Book",
+          "title": "Practices for Scaling Lean & Agile — Larman & Vodde",
+          "url": "https://less.works/resources/learning-resources/books"
+        }
+      ]
+    },
+    {
+      "num": 67,
+      "sym": "Nx",
+      "name": "Nexus",
+      "row": 6,
+      "col": 3,
+      "cat": "scaling",
+      "desc": "A Scrum.org framework that connects 3–9 Scrum Teams working on a single product, adding a Nexus Integration Team and integration events.",
+      "refs": [
+        {
+          "type": "Guide",
+          "title": "The Nexus Guide — Scrum.org",
+          "url": "https://www.scrum.org/resources/nexus-guide"
+        },
+        {
+          "type": "Article",
+          "title": "Nexus Framework Overview — Scrum.org",
+          "url": "https://www.scrum.org/resources/scaling-scrum"
+        },
+        {
+          "type": "Book",
+          "title": "The Nexus Framework for Scaling Scrum — Bittner et al.",
+          "url": "https://www.scrum.org/resources/nexus-framework-scaling-scrum"
+        }
+      ]
+    },
+    {
+      "num": 68,
+      "sym": "Ss",
+      "name": "Scrum@Scale",
+      "row": 6,
+      "col": 4,
+      "cat": "scaling",
+      "desc": "Jeff Sutherland's scaling framework that extends Scrum via a Scrum of Scrums and an Executive Action Team, organized as a fractal.",
+      "refs": [
+        {
+          "type": "Guide",
+          "title": "Scrum@Scale Guide",
+          "url": "https://scrumatscale.com/scrum-at-scale-guide/"
+        },
+        {
+          "type": "Site",
+          "title": "scrumatscale.com",
+          "url": "https://scrumatscale.com/"
+        },
+        {
+          "type": "Article",
+          "title": "Scrum@Scale Overview — Scrum Inc",
+          "url": "https://scrumatscale.com/"
+        }
+      ]
+    },
+    {
+      "num": 69,
+      "sym": "St",
+      "name": "Spotify model",
+      "row": 6,
+      "col": 5,
+      "cat": "scaling",
+      "desc": "An organizational design described by Spotify featuring squads, tribes, chapters, and guilds. Often misapplied as a copy-paste blueprint.",
+      "refs": [
+        {
+          "type": "Paper",
+          "title": "Scaling Agile @ Spotify — Kniberg & Ivarsson",
+          "url": "https://blog.crisp.se/wp-content/uploads/2012/11/SpotifyScaling.pdf"
+        },
+        {
+          "type": "Article",
+          "title": "Don't Copy the Spotify Model — Jeremiah Lee",
+          "url": "https://www.jeremiahlee.com/posts/failed-squad-goals/"
+        },
+        {
+          "type": "Video",
+          "title": "Spotify Engineering Culture (part 1) — Henrik Kniberg",
+          "url": "https://blog.crisp.se/2014/03/27/henrikkniberg/spotify-engineering-culture-part-1"
+        }
+      ]
+    },
+    {
+      "num": 70,
+      "sym": "Sq",
+      "name": "Squad",
+      "row": 6,
+      "col": 6,
+      "cat": "scaling",
+      "desc": "A small, cross-functional, autonomous team aligned to a clear mission. The basic unit in the Spotify model.",
+      "refs": [
+        {
+          "type": "Paper",
+          "title": "Scaling Agile @ Spotify — Kniberg & Ivarsson",
+          "url": "https://blog.crisp.se/wp-content/uploads/2012/11/SpotifyScaling.pdf"
+        },
+        {
+          "type": "Article",
+          "title": "What Squads Are — Spotify Engineering",
+          "url": "https://engineering.atspotify.com/"
+        },
+        {
+          "type": "Article",
+          "title": "Don't Copy the Spotify Model — Jeremiah Lee",
+          "url": "https://www.jeremiahlee.com/posts/failed-squad-goals/"
+        }
+      ]
+    },
+    {
+      "num": 71,
+      "sym": "Tx",
+      "name": "Tribe",
+      "row": 6,
+      "col": 7,
+      "cat": "scaling",
+      "desc": "A collection of squads working in related areas, providing alignment and shared services in the Spotify model.",
+      "refs": [
+        {
+          "type": "Paper",
+          "title": "Scaling Agile @ Spotify — Kniberg & Ivarsson",
+          "url": "https://blog.crisp.se/wp-content/uploads/2012/11/SpotifyScaling.pdf"
+        },
+        {
+          "type": "Article",
+          "title": "Don't Copy the Spotify Model — Jeremiah Lee",
+          "url": "https://www.jeremiahlee.com/posts/failed-squad-goals/"
+        },
+        {
+          "type": "Video",
+          "title": "Spotify Engineering Culture (part 2) — Henrik Kniberg",
+          "url": "https://blog.crisp.se/2014/09/20/henrikkniberg/spotify-engineering-culture-part-2"
+        }
+      ]
+    },
+    {
+      "num": 72,
+      "sym": "Ch",
+      "name": "Chapter",
+      "row": 6,
+      "col": 8,
+      "cat": "scaling",
+      "desc": "A horizontal grouping of people with the same specialty across squads, supporting craft growth and consistency.",
+      "refs": [
+        {
+          "type": "Paper",
+          "title": "Scaling Agile @ Spotify — Kniberg & Ivarsson",
+          "url": "https://blog.crisp.se/wp-content/uploads/2012/11/SpotifyScaling.pdf"
+        },
+        {
+          "type": "Article",
+          "title": "Spotify Chapters Explained — Atlassian",
+          "url": "https://www.atlassian.com/agile/agile-at-scale/spotify"
+        },
+        {
+          "type": "Video",
+          "title": "Spotify Engineering Culture — Henrik Kniberg",
+          "url": "https://blog.crisp.se/2014/03/27/henrikkniberg/spotify-engineering-culture-part-1"
+        }
+      ]
+    },
+    {
+      "num": 73,
+      "sym": "Gu",
+      "name": "Guild",
+      "row": 6,
+      "col": 9,
+      "cat": "scaling",
+      "desc": "A voluntary community of interest that crosses tribes and chapters, sharing knowledge on a topic.",
+      "refs": [
+        {
+          "type": "Paper",
+          "title": "Scaling Agile @ Spotify — Kniberg & Ivarsson",
+          "url": "https://blog.crisp.se/wp-content/uploads/2012/11/SpotifyScaling.pdf"
+        },
+        {
+          "type": "Article",
+          "title": "Communities of Practice — Etienne Wenger",
+          "url": "https://www.wenger-trayner.com/introduction-to-communities-of-practice/"
+        },
+        {
+          "type": "Article",
+          "title": "Spotify Guilds — Atlassian",
+          "url": "https://www.atlassian.com/agile/agile-at-scale/spotify"
+        }
+      ]
+    },
+    {
+      "num": 74,
+      "sym": "Pi",
+      "name": "PI",
+      "row": 6,
+      "col": 10,
+      "cat": "scaling",
+      "desc": "Program Increment: in SAFe, a fixed cadence (typically 8–12 weeks) during which an Agile Release Train delivers value through aligned Sprints.",
+      "refs": [
+        {
+          "type": "Site",
+          "title": "PI Planning — SAFe",
+          "url": "https://scaledagileframework.com/pi-planning/"
+        },
+        {
+          "type": "Article",
+          "title": "PI Planning Guide — Atlassian",
+          "url": "https://www.atlassian.com/agile/agile-at-scale/pi-planning"
+        },
+        {
+          "type": "Article",
+          "title": "PI Objectives — SAFe",
+          "url": "https://scaledagileframework.com/pi-objectives/"
+        }
+      ]
+    },
+    {
+      "num": 75,
+      "sym": "Ar",
+      "name": "ART",
+      "row": 6,
+      "col": 11,
+      "cat": "scaling",
+      "desc": "Agile Release Train: a long-lived team of Agile teams (50–125 people) that delivers value on a common cadence in SAFe.",
+      "refs": [
+        {
+          "type": "Site",
+          "title": "Agile Release Train — SAFe",
+          "url": "https://scaledagileframework.com/agile-release-train/"
+        },
+        {
+          "type": "Article",
+          "title": "ART Roles — SAFe",
+          "url": "https://scaledagileframework.com/release-train-engineer/"
+        },
+        {
+          "type": "Article",
+          "title": "Building an ART — Atlassian",
+          "url": "https://www.atlassian.com/agile/agile-at-scale"
+        }
+      ]
+    },
+    {
+      "num": 76,
+      "sym": "Kz",
+      "name": "Kaizen",
+      "row": 6,
+      "col": 12,
+      "cat": "lean",
+      "desc": "Continuous, incremental improvement carried out by everyone, every day. A cornerstone of the Toyota Production System.",
+      "refs": [
+        {
+          "type": "Book",
+          "title": "Kaizen — Masaaki Imai",
+          "url": "https://www.kaizen.com/what-is-kaizen.html"
+        },
+        {
+          "type": "Book",
+          "title": "The Toyota Way — Jeffrey Liker",
+          "url": "https://www.lean.org/store/book/toyota-way-2nd-edition/"
+        },
+        {
+          "type": "Reference",
+          "title": "Kaizen — Lean Enterprise Institute",
+          "url": "https://www.lean.org/lexicon-terms/kaizen/"
+        }
+      ]
+    },
+    {
+      "num": 77,
+      "sym": "Kk",
+      "name": "Kaikaku",
+      "row": 6,
+      "col": 13,
+      "cat": "lean",
+      "desc": "Radical, transformational change, in contrast to Kaizen's small steps. Used when incremental improvement is insufficient.",
+      "refs": [
+        {
+          "type": "Reference",
+          "title": "Kaikaku — Lean Enterprise Institute",
+          "url": "https://www.lean.org/lexicon-terms/kaikaku/"
+        },
+        {
+          "type": "Book",
+          "title": "Kaikaku — Norman Bodek",
+          "url": "https://www.amazon.com/Kaikaku-Power-Path-Creating-Future/dp/0971243689"
+        },
+        {
+          "type": "Wiki",
+          "title": "Kaikaku",
+          "url": "https://en.wikipedia.org/wiki/Kaikaku"
+        }
+      ]
+    },
+    {
+      "num": 78,
+      "sym": "Hn",
+      "name": "Hansei",
+      "row": 6,
+      "col": 14,
+      "cat": "lean",
+      "desc": "Honest self-reflection, especially on what could have gone better, even when results were good. A precondition for genuine Kaizen.",
+      "refs": [
+        {
+          "type": "Article",
+          "title": "Hansei: The Heart of Kaizen — Toyota",
+          "url": "https://global.toyota/en/company/vision-and-philosophy/production-system/"
+        },
+        {
+          "type": "Book",
+          "title": "The Toyota Way — Jeffrey Liker",
+          "url": "https://www.lean.org/store/book/toyota-way-2nd-edition/"
+        },
+        {
+          "type": "Article",
+          "title": "Hansei: True Reflection — TPS",
+          "url": "https://www.lean.org/balle/community-articles/hansei/"
+        }
+      ]
+    },
+    {
+      "num": 79,
+      "sym": "Gg",
+      "name": "Genchi",
+      "row": 6,
+      "col": 15,
+      "cat": "lean",
+      "desc": "Genchi Genbutsu: \"go and see for yourself.\" Make decisions based on direct observation of the actual place and work, not reports.",
+      "refs": [
+        {
+          "type": "Reference",
+          "title": "Genchi Genbutsu — Lean Enterprise Institute",
+          "url": "https://www.lean.org/lexicon-terms/genchi-genbutsu/"
+        },
+        {
+          "type": "Book",
+          "title": "The Toyota Way — Jeffrey Liker",
+          "url": "https://www.lean.org/store/book/toyota-way-2nd-edition/"
+        },
+        {
+          "type": "Article",
+          "title": "Genchi Genbutsu — Toyota Global",
+          "url": "https://global.toyota/en/company/vision-and-philosophy/"
+        }
+      ]
+    },
+    {
+      "num": 80,
+      "sym": "Gw",
+      "name": "Gemba",
+      "row": 6,
+      "col": 16,
+      "cat": "lean",
+      "desc": "A structured visit to where the work is done so leaders can observe, ask, and respect rather than direct from a distance.",
+      "refs": [
+        {
+          "type": "Book",
+          "title": "Gemba Walks — Jim Womack",
+          "url": "https://www.lean.org/store/book/gemba-walks-expanded-2nd-edition/"
+        },
+        {
+          "type": "Reference",
+          "title": "Gemba — Lean Enterprise Institute",
+          "url": "https://www.lean.org/lexicon-terms/gemba/"
+        },
+        {
+          "type": "Article",
+          "title": "Gemba Walk Guide — Kanbanize",
+          "url": "https://kanbanize.com/lean-management/improvement/gemba-walk"
+        }
+      ]
+    },
+    {
+      "num": 81,
+      "sym": "Py",
+      "name": "Poka-yoke",
+      "row": 6,
+      "col": 17,
+      "cat": "lean",
+      "desc": "Mistake-proofing: design choices that make errors impossible or immediately obvious. E.g., USB-C, paired field validation.",
+      "refs": [
+        {
+          "type": "Book",
+          "title": "Zero Quality Control: Poka-Yoke System — Shigeo Shingo",
+          "url": "https://www.routledge.com/Zero-Quality-Control-Source-Inspection-and-the-Poka-Yoke-System/Shingo/p/book/9780915299072"
+        },
+        {
+          "type": "Reference",
+          "title": "Poka-yoke — Lean Enterprise Institute",
+          "url": "https://www.lean.org/lexicon-terms/poka-yoke/"
+        },
+        {
+          "type": "Wiki",
+          "title": "Poka-yoke",
+          "url": "https://en.wikipedia.org/wiki/Poka-yoke"
+        }
+      ]
+    },
+    {
+      "num": 82,
+      "sym": "An",
+      "name": "Andon",
+      "row": 6,
+      "col": 18,
+      "cat": "lean",
+      "desc": "A signal (originally a cord on the Toyota line) that anyone can pull to stop work and surface a problem immediately.",
+      "refs": [
+        {
+          "type": "Reference",
+          "title": "Andon — Lean Enterprise Institute",
+          "url": "https://www.lean.org/lexicon-terms/andon/"
+        },
+        {
+          "type": "Wiki",
+          "title": "Andon (manufacturing)",
+          "url": "https://en.wikipedia.org/wiki/Andon_(manufacturing)"
+        },
+        {
+          "type": "Article",
+          "title": "Andon Cord Stories — Toyota",
+          "url": "https://global.toyota/en/company/vision-and-philosophy/production-system/"
+        }
+      ]
+    },
+    {
+      "num": 83,
+      "sym": "Jt",
+      "name": "JIT",
+      "row": 7,
+      "col": 1,
+      "cat": "lean",
+      "desc": "Just-in-Time: producing or delivering only what is needed, when it is needed, in the amount needed. Reduces inventory and exposes problems.",
+      "refs": [
+        {
+          "type": "Book",
+          "title": "Toyota Production System — Taiichi Ohno",
+          "url": "https://www.amazon.com/Toyota-Production-System-Beyond-Large-Scale/dp/0915299143"
+        },
+        {
+          "type": "Reference",
+          "title": "Just-in-Time — Lean Enterprise Institute",
+          "url": "https://www.lean.org/lexicon-terms/just-in-time-production/"
+        },
+        {
+          "type": "Wiki",
+          "title": "Just-in-time manufacturing",
+          "url": "https://en.wikipedia.org/wiki/Just-in-time_manufacturing"
+        }
+      ]
+    },
+    {
+      "num": 84,
+      "sym": "Jd",
+      "name": "Jidoka",
+      "row": 7,
+      "col": 2,
+      "cat": "lean",
+      "desc": "Automation with a human touch: machines and people stop work the moment a defect is detected, preventing it from flowing downstream.",
+      "refs": [
+        {
+          "type": "Reference",
+          "title": "Jidoka — Lean Enterprise Institute",
+          "url": "https://www.lean.org/lexicon-terms/jidoka/"
+        },
+        {
+          "type": "Article",
+          "title": "Jidoka — Toyota Global",
+          "url": "https://global.toyota/en/company/vision-and-philosophy/production-system/"
+        },
+        {
+          "type": "Wiki",
+          "title": "Autonomation",
+          "url": "https://en.wikipedia.org/wiki/Autonomation"
+        }
+      ]
+    },
+    {
+      "num": 85,
+      "sym": "Vs",
+      "name": "VSM",
+      "row": 7,
+      "col": 3,
+      "cat": "lean",
+      "desc": "Value Stream Mapping: a visual technique that maps every step from request to delivery, distinguishing value-add from waste and exposing delays.",
+      "refs": [
+        {
+          "type": "Book",
+          "title": "Learning to See — Rother & Shook",
+          "url": "https://www.lean.org/store/book/learning-to-see-version-1-4/"
+        },
+        {
+          "type": "Book",
+          "title": "Value Stream Mapping — Karen Martin",
+          "url": "https://www.amazon.com/Value-Stream-Mapping-Organizational-Transformation/dp/0071828915"
+        },
+        {
+          "type": "Reference",
+          "title": "Value Stream Mapping — LEI",
+          "url": "https://www.lean.org/lexicon-terms/value-stream-mapping/"
+        }
+      ]
+    },
+    {
+      "num": 86,
+      "sym": "5s",
+      "name": "5S",
+      "row": 7,
+      "col": 4,
+      "cat": "lean",
+      "desc": "A workplace organization method: Sort, Set in order, Shine, Standardize, Sustain. Creates the conditions for stable, visible work.",
+      "refs": [
+        {
+          "type": "Reference",
+          "title": "5S — Lean Enterprise Institute",
+          "url": "https://www.lean.org/lexicon-terms/5s/"
+        },
+        {
+          "type": "Wiki",
+          "title": "5S (methodology)",
+          "url": "https://en.wikipedia.org/wiki/5S_(methodology)"
+        },
+        {
+          "type": "Book",
+          "title": "5S for Operators — Productivity Press",
+          "url": "https://www.routledge.com/5S-for-Operators-5-Pillars-of-the-Visual-Workplace/Productivity-Press/p/book/9781563271236"
+        }
+      ]
+    },
+    {
+      "num": 87,
+      "sym": "3m",
+      "name": "3M",
+      "row": 7,
+      "col": 5,
+      "cat": "lean",
+      "desc": "Muda (waste), Mura (unevenness), Muri (overburden): the three enemies of flow that Lean seeks to eliminate.",
+      "refs": [
+        {
+          "type": "Reference",
+          "title": "The Three Ms — Lean Enterprise Institute",
+          "url": "https://www.lean.org/lexicon-terms/3m/"
+        },
+        {
+          "type": "Book",
+          "title": "The Toyota Way — Jeffrey Liker",
+          "url": "https://www.lean.org/store/book/toyota-way-2nd-edition/"
+        },
+        {
+          "type": "Article",
+          "title": "Muda, Mura, Muri — Kanbanize",
+          "url": "https://kanbanize.com/lean-management/improvement/3m-muda-mura-muri"
+        }
+      ]
+    },
+    {
+      "num": 88,
+      "sym": "Hj",
+      "name": "Heijunka",
+      "row": 7,
+      "col": 6,
+      "cat": "lean",
+      "desc": "Production leveling: smoothing the type and quantity of work over time to reduce Mura and stabilize flow.",
+      "refs": [
+        {
+          "type": "Reference",
+          "title": "Heijunka — Lean Enterprise Institute",
+          "url": "https://www.lean.org/lexicon-terms/heijunka/"
+        },
+        {
+          "type": "Wiki",
+          "title": "Heijunka",
+          "url": "https://en.wikipedia.org/wiki/Heijunka_(Lean_manufacturing)"
+        },
+        {
+          "type": "Article",
+          "title": "Heijunka — Kanbanize",
+          "url": "https://kanbanize.com/lean-management/value-waste/heijunka"
+        }
+      ]
+    },
+    {
+      "num": 89,
+      "sym": "Tt",
+      "name": "Takt time",
+      "row": 7,
+      "col": 7,
+      "cat": "lean",
+      "desc": "Customer demand rhythm: available time divided by customer demand. Sets the pace at which the system must deliver.",
+      "refs": [
+        {
+          "type": "Reference",
+          "title": "Takt Time — Lean Enterprise Institute",
+          "url": "https://www.lean.org/lexicon-terms/takt-time/"
+        },
+        {
+          "type": "Wiki",
+          "title": "Takt time",
+          "url": "https://en.wikipedia.org/wiki/Takt_time"
+        },
+        {
+          "type": "Article",
+          "title": "Calculating Takt Time — Lean Production",
+          "url": "https://www.leanproduction.com/takt-time/"
+        }
+      ]
+    },
+    {
+      "num": 90,
+      "sym": "A3",
+      "name": "A3",
+      "row": 7,
+      "col": 8,
+      "cat": "lean",
+      "desc": "A structured one-page problem-solving and storytelling format on A3 paper, used in Toyota for thinking, alignment, and learning.",
+      "refs": [
+        {
+          "type": "Book",
+          "title": "Managing to Learn — John Shook",
+          "url": "https://www.lean.org/store/book/managing-to-learn/"
+        },
+        {
+          "type": "Book",
+          "title": "Understanding A3 Thinking — Sobek & Smalley",
+          "url": "https://www.routledge.com/Understanding-A3-Thinking-A-Critical-Component-of-Toyotas-PDCA-Management/Sobek-II-Smalley/p/book/9781563273605"
+        },
+        {
+          "type": "Article",
+          "title": "A3 Thinking — Lean Enterprise Institute",
+          "url": "https://www.lean.org/lexicon-terms/a3-report/"
+        }
+      ]
+    },
+    {
+      "num": 91,
+      "sym": "5w",
+      "name": "5 Whys",
+      "row": 7,
+      "col": 9,
+      "cat": "lean",
+      "desc": "A simple root-cause analysis technique: keep asking \"why?\" (typically five times) until you reach a cause worth addressing.",
+      "refs": [
+        {
+          "type": "Book",
+          "title": "Toyota Production System — Taiichi Ohno",
+          "url": "https://www.amazon.com/Toyota-Production-System-Beyond-Large-Scale/dp/0915299143"
+        },
+        {
+          "type": "Reference",
+          "title": "5 Whys — Lean Enterprise Institute",
+          "url": "https://www.lean.org/lexicon-terms/5-whys/"
+        },
+        {
+          "type": "Article",
+          "title": "5 Whys Examples — Kanbanize",
+          "url": "https://kanbanize.com/lean-management/improvement/5-whys-analysis-tool"
+        }
+      ]
+    },
+    {
+      "num": 92,
+      "sym": "Pd",
+      "name": "PDCA",
+      "row": 7,
+      "col": 10,
+      "cat": "lean",
+      "desc": "Plan-Do-Check-Act: Deming's cycle of continuous improvement. The empirical engine behind Kaizen and Scrum.",
+      "refs": [
+        {
+          "type": "Book",
+          "title": "Out of the Crisis — W. Edwards Deming",
+          "url": "https://mitpress.mit.edu/9780262535946/out-of-the-crisis/"
+        },
+        {
+          "type": "Reference",
+          "title": "PDCA — Lean Enterprise Institute",
+          "url": "https://www.lean.org/lexicon-terms/pdca/"
+        },
+        {
+          "type": "Wiki",
+          "title": "PDCA",
+          "url": "https://en.wikipedia.org/wiki/PDCA"
+        }
+      ]
+    },
+    {
+      "num": 93,
+      "sym": "Ok",
+      "name": "OKR",
+      "row": 7,
+      "col": 11,
+      "cat": "agile",
+      "desc": "Objectives and Key Results: a goal-setting framework pairing a qualitative objective with measurable key results. Popularized by Andy Grove and John Doerr.",
+      "refs": [
+        {
+          "type": "Book",
+          "title": "Measure What Matters — John Doerr",
+          "url": "https://www.whatmatters.com/the-book"
+        },
+        {
+          "type": "Site",
+          "title": "whatmatters.com",
+          "url": "https://www.whatmatters.com/"
+        },
+        {
+          "type": "Book",
+          "title": "Radical Focus — Christina Wodtke",
+          "url": "https://eleganthack.com/the-art-of-the-okr/"
+        }
+      ]
+    },
+    {
+      "num": 94,
+      "sym": "Im",
+      "name": "Impact map",
+      "row": 7,
+      "col": 12,
+      "cat": "agile",
+      "desc": "A planning technique linking goals → actors → impacts → deliverables, helping teams choose the right work to reach an outcome.",
+      "refs": [
+        {
+          "type": "Book",
+          "title": "Impact Mapping — Gojko Adzic",
+          "url": "https://www.impactmapping.org/book.html"
+        },
+        {
+          "type": "Site",
+          "title": "impactmapping.org",
+          "url": "https://www.impactmapping.org/"
+        },
+        {
+          "type": "Article",
+          "title": "Impact Mapping in Practice — Gojko Adzic",
+          "url": "https://gojko.net/2012/10/22/intro-to-impact-mapping/"
+        }
+      ]
+    },
+    {
+      "num": 95,
+      "sym": "Ey",
+      "name": "Empathy map",
+      "row": 7,
+      "col": 13,
+      "cat": "agile",
+      "desc": "A canvas capturing what a user says, thinks, does, and feels. Builds shared understanding before designing solutions.",
+      "refs": [
+        {
+          "type": "Article",
+          "title": "Updated Empathy Map Canvas — Dave Gray",
+          "url": "https://medium.com/the-xplane-collection/updated-empathy-map-canvas-46df22df3c8a"
+        },
+        {
+          "type": "Book",
+          "title": "Gamestorming — Gray, Brown & Macanufo",
+          "url": "https://gamestorming.com/empathy-map/"
+        },
+        {
+          "type": "Article",
+          "title": "Empathy Mapping — NN/g",
+          "url": "https://www.nngroup.com/articles/empathy-mapping/"
+        }
+      ]
+    },
+    {
+      "num": 96,
+      "sym": "Pn",
+      "name": "Persona",
+      "row": 7,
+      "col": 14,
+      "cat": "agile",
+      "desc": "A fictional but evidence-based character representing a user segment. Helps teams design for specific people, not \"users\" in the abstract.",
+      "refs": [
+        {
+          "type": "Book",
+          "title": "The Inmates Are Running the Asylum — Alan Cooper",
+          "url": "https://www.cooper.com/journal/2003/8/the_origin_of_personas"
+        },
+        {
+          "type": "Article",
+          "title": "Personas — Nielsen Norman Group",
+          "url": "https://www.nngroup.com/articles/persona/"
+        },
+        {
+          "type": "Article",
+          "title": "Personas: Practice & Theory — Cooper",
+          "url": "https://www.cooper.com/journal/2003/8/the_origin_of_personas"
+        }
+      ]
+    },
+    {
+      "num": 97,
+      "sym": "Dr",
+      "name": "Def. ready",
+      "row": 7,
+      "col": 15,
+      "cat": "agile",
+      "desc": "Definition of Ready: an agreement on the conditions a Product Backlog item should meet before being pulled into a Sprint. Optional but common.",
+      "refs": [
+        {
+          "type": "Article",
+          "title": "Definition of Ready — Roman Pichler",
+          "url": "https://www.romanpichler.com/blog/the-definition-of-ready/"
+        },
+        {
+          "type": "Article",
+          "title": "On Definition of Ready — Scrum.org",
+          "url": "https://www.scrum.org/resources/blog/walking-through-definition-ready"
+        },
+        {
+          "type": "Article",
+          "title": "DoR Considered Harmful? — Allen Holub",
+          "url": "https://holub.com/"
+        }
+      ]
+    },
+    {
+      "num": 98,
+      "sym": "Sw",
+      "name": "Swarming",
+      "row": 7,
+      "col": 16,
+      "cat": "agile",
+      "desc": "The team collectively focusing on finishing one item before starting another. A behavior that lowers WIP and increases throughput.",
+      "refs": [
+        {
+          "type": "Article",
+          "title": "Swarming: A Way to Get Things Done — Mike Cohn",
+          "url": "https://www.mountaingoatsoftware.com/blog/can-an-agile-team-have-a-better-burndown-chart"
+        },
+        {
+          "type": "Article",
+          "title": "Swarming on Stories — Scrum.org",
+          "url": "https://www.scrum.org/resources/blog/swarming-team-behavior"
+        },
+        {
+          "type": "Article",
+          "title": "Why Swarming Works — Mike Cohn",
+          "url": "https://www.mountaingoatsoftware.com/blog/swarming-as-a-team-strategy"
+        }
+      ]
+    },
+    {
+      "num": 99,
+      "sym": "Sk",
+      "name": "Spike",
+      "row": 7,
+      "col": 17,
+      "cat": "xp",
+      "desc": "A time-boxed investigation to reduce uncertainty about a story, technology, or design. Output is knowledge, not shippable code.",
+      "refs": [
+        {
+          "type": "Wiki",
+          "title": "Spike (software development)",
+          "url": "https://en.wikipedia.org/wiki/Spike_(software_development)"
+        },
+        {
+          "type": "Article",
+          "title": "Spike Solutions — XP",
+          "url": "http://www.extremeprogramming.org/rules/spike.html"
+        },
+        {
+          "type": "Book",
+          "title": "Extreme Programming Explained — Kent Beck",
+          "url": "https://www.amazon.com/Extreme-Programming-Explained-Embrace-Change/dp/0321278658"
+        }
+      ]
+    },
+    {
+      "num": 100,
+      "sym": "Ps",
+      "name": "Psych. safety",
+      "row": 7,
+      "col": 18,
+      "cat": "agile",
+      "desc": "A shared belief that the team is safe for interpersonal risk-taking. Identified by Amy Edmondson as the strongest predictor of team performance.",
+      "refs": [
+        {
+          "type": "Book",
+          "title": "The Fearless Organization — Amy Edmondson",
+          "url": "https://fearlessorganization.com/the-fearless-organization"
+        },
+        {
+          "type": "Research",
+          "title": "Project Aristotle — Google re:Work",
+          "url": "https://rework.withgoogle.com/print/guides/5721312655835136/"
+        },
+        {
+          "type": "TED",
+          "title": "Building a psychologically safe workplace — Amy Edmondson",
+          "url": "https://www.ted.com/talks/amy_edmondson_how_to_turn_a_group_of_strangers_into_a_team"
+        }
+      ]
+    }
+  ]
+}
