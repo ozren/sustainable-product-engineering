@@ -1,0 +1,1246 @@
+colors:
+  product:
+    bg: '#e6f4ea'
+    border: '#34a853'
+    text: '#0b3d1f'
+    label: Green Product Thinking
+  drive:
+    bg: '#fff3e0'
+    border: '#fb8c00'
+    text: '#8a4b00'
+    label: Drive (Purpose / Autonomy / Mastery)
+  metrics:
+    bg: '#ede7f6'
+    border: '#673ab7'
+    text: '#311b92'
+    label: Metrics & Feedback
+  less:
+    bg: '#e3f2fd'
+    border: '#1976d2'
+    text: '#0d47a1'
+    label: LeSS / Systems Thinking
+  greendev:
+    bg: '#f0f7da'
+    border: '#7cb342'
+    text: '#33691e'
+    label: Green Dev Practices
+  architecture:
+    bg: '#dde7d7'
+    border: '#33691e'
+    text: '#1b3a0e'
+    label: Sustainable Architecture
+  greenops:
+    bg: '#e0f2f1'
+    border: '#00897b'
+    text: '#004d40'
+    label: GreenOps
+elements:
+- num: 1
+  sym: Pt
+  name: Product Thinking
+  row: 1
+  col: 1
+  cat: product
+  desc: Treats the product as a long-lived sociotechnical system, not a feature pipeline. Sustainability decisions enter at
+    discovery — not after deploy.
+  refs:
+  - type: Internal
+    title: Sustainable Product Engineering
+    url: docs/sustainable_product_engineering.md
+- num: 2
+  sym: Lc
+  name: Lifecycle Mindset
+  row: 1
+  col: 2
+  cat: product
+  desc: Considers full product lifecycle from concept to sunset, accounting for energy and resource use at every stage.
+  refs:
+  - type: Internal
+    title: Sustainable Product Engineering
+    url: docs/sustainable_product_engineering.md
+  - type: Org
+    title: Principles of Green Software Engineering
+    url: https://principles.green/
+- num: 3
+  sym: Du
+  name: Digital Sufficiency
+  row: 1
+  col: 3
+  cat: product
+  desc: Builds only what users need. Avoids feature bloat and digital waste — the most efficient feature is the one not built.
+  refs:
+  - type: Internal
+    title: Sustainable Product Engineering
+    url: docs/sustainable_product_engineering.md
+  - type: Org
+    title: Green Software Foundation
+    url: https://greensoftware.foundation/
+- num: 4
+  sym: Fw
+  name: Feature Waste
+  row: 1
+  col: 4
+  cat: product
+  desc: Identifies and removes features delivering no user value. Feature waste compounds into infra waste downstream.
+  refs:
+  - type: Internal
+    title: Sustainable Product Engineering
+    url: docs/sustainable_product_engineering.md
+- num: 5
+  sym: Vp
+  name: Value-First Prioritization
+  row: 1
+  col: 5
+  cat: product
+  desc: Prioritizes work by user value and environmental cost together, not value alone.
+  refs:
+  - type: Internal
+    title: Sustainable Product Engineering
+    url: docs/sustainable_product_engineering.md
+- num: 6
+  sym: Cd
+  name: Carbon-aware Discovery
+  row: 1
+  col: 6
+  cat: product
+  desc: Brings carbon and energy impact into product discovery alongside feasibility, viability, and desirability.
+  refs:
+  - type: Internal
+    title: Sustainable Product Engineering
+    url: docs/sustainable_product_engineering.md
+  - type: Org
+    title: Green Software Foundation
+    url: https://greensoftware.foundation/
+- num: 7
+  sym: Pr
+  name: Purposeful Roadmap
+  row: 1
+  col: 7
+  cat: product
+  desc: Aligns roadmap with sustainability goals, not just revenue and growth.
+  refs:
+  - type: Internal
+    title: Sustainable Product Engineering
+    url: docs/sustainable_product_engineering.md
+- num: 8
+  sym: Rr
+  name: Reduce, Reuse, Refactor
+  row: 1
+  col: 8
+  cat: product
+  desc: Reuse before build. Refactor before rewrite. Removes before adds.
+  refs:
+  - type: Internal
+    title: Sustainable Product Engineering
+    url: docs/sustainable_product_engineering.md
+- num: 9
+  sym: So
+  name: Sustainable OKRs
+  row: 1
+  col: 9
+  cat: product
+  desc: Sets objectives that include energy, carbon, or efficiency outcomes — not only growth metrics.
+  refs:
+  - type: Internal
+    title: Sustainable Product Engineering
+    url: docs/sustainable_product_engineering.md
+- num: 10
+  sym: Ed
+  name: Ethical Defaults
+  row: 1
+  col: 10
+  cat: product
+  desc: Default settings nudge users toward lower-impact behavior (lower video quality, dark mode, fewer notifications).
+  refs:
+  - type: Internal
+    title: Sustainable Product Engineering
+    url: docs/sustainable_product_engineering.md
+- num: 11
+  sym: Lt
+  name: Long-Term Thinking
+  row: 1
+  col: 11
+  cat: product
+  desc: Optimizes for years of operation, not the next quarter. Maintainable systems consume less over time.
+  refs:
+  - type: Internal
+    title: Sustainable Product Engineering
+    url: docs/sustainable_product_engineering.md
+  - type: Site
+    title: LeSS — Large-Scale Scrum
+    url: https://less.works/
+- num: 12
+  sym: Lo
+  name: Low-impact UX
+  row: 1
+  col: 12
+  cat: product
+  desc: Designs interactions that minimize compute, network, and battery on the client.
+  refs:
+  - type: Internal
+    title: Sustainable Product Engineering
+    url: docs/sustainable_product_engineering.md
+  - type: Org
+    title: Principles of Green Software Engineering
+    url: https://principles.green/
+- num: 13
+  sym: Ac
+  name: Accessibility
+  row: 1
+  col: 13
+  cat: product
+  desc: Accessible products waste less effort and reach more users with the same energy footprint.
+  refs:
+  - type: Internal
+    title: Sustainable Product Engineering
+    url: docs/sustainable_product_engineering.md
+- num: 14
+  sym: Ck
+  name: Concept Kill
+  row: 1
+  col: 14
+  cat: product
+  desc: Disciplined sunsetting of dead features and unused services. Removal is a release.
+  refs:
+  - type: Internal
+    title: Sustainable Product Engineering
+    url: docs/sustainable_product_engineering.md
+- num: 15
+  sym: Pu
+  name: Purpose
+  row: 2
+  col: 1
+  cat: drive
+  desc: Developers who understand environmental impact engage more deeply with efficiency work.
+  refs:
+  - type: Internal
+    title: Sustainable Product Engineering
+    url: docs/sustainable_product_engineering.md
+  - type: Book
+    title: Drive — Daniel H. Pink
+    url: https://www.danpink.com/books/drive/
+- num: 16
+  sym: Au
+  name: Autonomy
+  row: 2
+  col: 2
+  cat: drive
+  desc: Teams empowered to choose greener tools, regions, and architectures act faster than top-down mandates.
+  refs:
+  - type: Internal
+    title: Sustainable Product Engineering
+    url: docs/sustainable_product_engineering.md
+  - type: Book
+    title: Drive — Daniel H. Pink
+    url: https://www.danpink.com/books/drive/
+- num: 17
+  sym: Ma
+  name: Mastery
+  row: 2
+  col: 3
+  cat: drive
+  desc: Treats efficiency as engineering craftsmanship, not chore.
+  refs:
+  - type: Internal
+    title: Sustainable Product Engineering
+    url: docs/sustainable_product_engineering.md
+  - type: Book
+    title: Drive — Daniel H. Pink
+    url: https://www.danpink.com/books/drive/
+- num: 18
+  sym: Cf
+  name: Craftsmanship
+  row: 2
+  col: 4
+  cat: drive
+  desc: Code quality, clean architecture, and efficiency are the same discipline seen from different angles.
+  refs:
+  - type: Internal
+    title: Sustainable Product Engineering
+    url: docs/sustainable_product_engineering.md
+- num: 19
+  sym: Lr
+  name: Learning Time
+  row: 2
+  col: 5
+  cat: drive
+  desc: Protected time for engineers to learn green-engineering practices and apply them.
+  refs:
+  - type: Internal
+    title: Sustainable Product Engineering
+    url: docs/sustainable_product_engineering.md
+  - type: Book
+    title: Drive — Daniel H. Pink
+    url: https://www.danpink.com/books/drive/
+- num: 20
+  sym: Xp
+  name: Experimentation
+  row: 2
+  col: 6
+  cat: drive
+  desc: Safe-to-try experiments with greener stacks, regions, and patterns.
+  refs:
+  - type: Internal
+    title: Sustainable Product Engineering
+    url: docs/sustainable_product_engineering.md
+- num: 21
+  sym: Ow
+  name: Ownership
+  row: 2
+  col: 7
+  cat: drive
+  desc: Teams own their service end-to-end including its energy and cost profile.
+  refs:
+  - type: Internal
+    title: Sustainable Product Engineering
+    url: docs/sustainable_product_engineering.md
+  - type: Site
+    title: LeSS — Large-Scale Scrum
+    url: https://less.works/
+- num: 22
+  sym: Ps
+  name: Psychological Safety
+  row: 2
+  col: 8
+  cat: drive
+  desc: Without safety, engineers won't raise inefficiency concerns or push back on wasteful asks.
+  refs:
+  - type: Internal
+    title: Sustainable Product Engineering
+    url: docs/sustainable_product_engineering.md
+- num: 23
+  sym: Cm
+  name: Communities of Practice
+  row: 2
+  col: 9
+  cat: drive
+  desc: Cross-team forums share green-engineering lessons and standards.
+  refs:
+  - type: Internal
+    title: Sustainable Product Engineering
+    url: docs/sustainable_product_engineering.md
+  - type: Site
+    title: LeSS — Large-Scale Scrum
+    url: https://less.works/
+- num: 24
+  sym: Mn
+  name: Mentorship
+  row: 2
+  col: 10
+  cat: drive
+  desc: Senior engineers transfer efficiency intuition to juniors — culture scales by mentorship.
+  refs:
+  - type: Internal
+    title: Sustainable Product Engineering
+    url: docs/sustainable_product_engineering.md
+- num: 25
+  sym: Re
+  name: Reflection
+  row: 2
+  col: 11
+  cat: drive
+  desc: Retrospectives that include resource and waste lenses, not only delivery flow.
+  refs:
+  - type: Internal
+    title: Sustainable Product Engineering
+    url: docs/sustainable_product_engineering.md
+  - type: Site
+    title: LeSS — Large-Scale Scrum
+    url: https://less.works/
+- num: 26
+  sym: Sp
+  name: Sustainable Pace
+  row: 2
+  col: 12
+  cat: drive
+  desc: Burnt-out teams cut corners. Sustainable pace is a precondition for sustainable systems.
+  refs:
+  - type: Internal
+    title: Sustainable Product Engineering
+    url: docs/sustainable_product_engineering.md
+  - type: Site
+    title: LeSS — Large-Scale Scrum
+    url: https://less.works/
+- num: 27
+  sym: Ce
+  name: Carbon Emissions
+  row: 2
+  col: 13
+  cat: metrics
+  desc: Measure operational carbon emissions in CO2e per request, per user, or per feature.
+  refs:
+  - type: Internal
+    title: Sustainable Product Engineering
+    url: docs/sustainable_product_engineering.md
+  - type: Spec
+    title: Software Carbon Intensity (SCI) Specification
+    url: https://sci.greensoftware.foundation/
+  - type: Tool
+    title: Cloud Carbon Footprint
+    url: https://www.cloudcarbonfootprint.org/
+- num: 28
+  sym: Pe
+  name: PUE
+  row: 2
+  col: 14
+  cat: metrics
+  desc: Power Usage Effectiveness — ratio of total facility energy to compute energy. Lower is better.
+  refs:
+  - type: Org
+    title: Green Software Foundation
+    url: https://greensoftware.foundation/
+- num: 29
+  sym: En
+  name: Energy/Request
+  row: 3
+  col: 1
+  cat: metrics
+  desc: Energy consumed per request as a primary efficiency metric for services.
+  refs:
+  - type: Internal
+    title: Sustainable Product Engineering
+    url: docs/sustainable_product_engineering.md
+  - type: Spec
+    title: Software Carbon Intensity (SCI) Specification
+    url: https://sci.greensoftware.foundation/
+- num: 30
+  sym: Sc
+  name: SCI Score
+  row: 3
+  col: 2
+  cat: metrics
+  desc: Software Carbon Intensity — emissions per unit of work, the standard SPE metric.
+  refs:
+  - type: Spec
+    title: Software Carbon Intensity (SCI) Specification
+    url: https://sci.greensoftware.foundation/
+  - type: Org
+    title: Green Software Foundation
+    url: https://greensoftware.foundation/
+- num: 31
+  sym: Cp
+  name: Carbon Footprint
+  row: 3
+  col: 3
+  cat: metrics
+  desc: Total emissions across compute, storage, network, and embodied hardware.
+  refs:
+  - type: Tool
+    title: Cloud Carbon Footprint
+    url: https://www.cloudcarbonfootprint.org/
+  - type: Org
+    title: Green Software Foundation
+    url: https://greensoftware.foundation/
+- num: 32
+  sym: Ru
+  name: Resource Utilization
+  row: 3
+  col: 4
+  cat: metrics
+  desc: CPU, memory, network actually used vs provisioned. Under-utilization is waste.
+  refs:
+  - type: Internal
+    title: Sustainable Product Engineering
+    url: docs/sustainable_product_engineering.md
+- num: 33
+  sym: Cy
+  name: Cycle Time
+  row: 3
+  col: 5
+  cat: metrics
+  desc: Shorter cycles cut idle infra and rework. DORA cycle time correlates with leanness.
+  refs:
+  - type: Site
+    title: DORA
+    url: https://dora.dev/
+- num: 34
+  sym: Ld
+  name: Lead Time
+  row: 3
+  col: 6
+  cat: metrics
+  desc: Time from idea to production — shorter means less in-flight WIP and less waste.
+  refs:
+  - type: Site
+    title: DORA
+    url: https://dora.dev/
+  - type: Site
+    title: LeSS — Large-Scale Scrum
+    url: https://less.works/
+- num: 35
+  sym: Dg
+  name: DORA-Green
+  row: 3
+  col: 7
+  cat: metrics
+  desc: DORA metrics extended with carbon/energy per deploy or per change.
+  refs:
+  - type: Site
+    title: DORA
+    url: https://dora.dev/
+  - type: Spec
+    title: Software Carbon Intensity (SCI) Specification
+    url: https://sci.greensoftware.foundation/
+- num: 36
+  sym: Fe
+  name: Flow Efficiency
+  row: 3
+  col: 8
+  cat: metrics
+  desc: Ratio of value-add time to total elapsed time. Low flow efficiency = hidden waste.
+  refs:
+  - type: Site
+    title: LeSS — Large-Scale Scrum
+    url: https://less.works/
+- num: 37
+  sym: Ws
+  name: Whole-System View
+  row: 3
+  col: 9
+  cat: less
+  desc: Sustainability spans product, dev, ops, and org. Optimizing parts in isolation creates global waste.
+  refs:
+  - type: Internal
+    title: Sustainable Product Engineering
+    url: docs/sustainable_product_engineering.md
+  - type: Site
+    title: LeSS — Large-Scale Scrum
+    url: https://less.works/
+- num: 38
+  sym: Op
+  name: Optimize the Whole
+  row: 3
+  col: 10
+  cat: less
+  desc: 'Lean principle: optimize end-to-end flow, not local efficiency.'
+  refs:
+  - type: Site
+    title: LeSS — Large-Scale Scrum
+    url: https://less.works/
+  - type: Internal
+    title: Sustainable Product Engineering
+    url: docs/sustainable_product_engineering.md
+- num: 39
+  sym: Sb
+  name: Single Backlog
+  row: 3
+  col: 11
+  cat: less
+  desc: One product backlog instead of fragmented team backlogs reduces coordination waste.
+  refs:
+  - type: Site
+    title: LeSS — Large-Scale Scrum
+    url: https://less.works/
+- num: 40
+  sym: Ft
+  name: Feature Teams
+  row: 3
+  col: 12
+  cat: less
+  desc: Cross-functional teams own end-to-end value, eliminating handoff waste.
+  refs:
+  - type: Site
+    title: LeSS — Large-Scale Scrum
+    url: https://less.works/
+- num: 41
+  sym: Si
+  name: System Improvement
+  row: 3
+  col: 13
+  cat: less
+  desc: Continuous improvement of the system, not just team velocity.
+  refs:
+  - type: Site
+    title: LeSS — Large-Scale Scrum
+    url: https://less.works/
+- num: 42
+  sym: Or
+  name: Overall Retro
+  row: 3
+  col: 14
+  cat: less
+  desc: Retrospective at system level surfaces cross-team and architectural waste.
+  refs:
+  - type: Site
+    title: LeSS — Large-Scale Scrum
+    url: https://less.works/
+- num: 43
+  sym: Cl
+  name: Causal Loops
+  row: 4
+  col: 1
+  cat: less
+  desc: Systems thinking tool. Maps reinforcing/balancing loops behind waste and inefficiency.
+  refs:
+  - type: Site
+    title: LeSS — Large-Scale Scrum
+    url: https://less.works/
+- num: 44
+  sym: Sd
+  name: Systems Dynamics
+  row: 4
+  col: 2
+  cat: less
+  desc: Studies feedback delays and stocks/flows that drive long-term resource use.
+  refs:
+  - type: Site
+    title: LeSS — Large-Scale Scrum
+    url: https://less.works/
+- num: 45
+  sym: Tr
+  name: Transparency
+  row: 4
+  col: 3
+  cat: less
+  desc: Open metrics, costs, and emissions. Hidden numbers don't get optimized.
+  refs:
+  - type: Internal
+    title: Sustainable Product Engineering
+    url: docs/sustainable_product_engineering.md
+  - type: Site
+    title: LeSS — Large-Scale Scrum
+    url: https://less.works/
+- num: 46
+  sym: Lh
+  name: Long-horizon Thinking
+  row: 4
+  col: 4
+  cat: less
+  desc: Decisions evaluated over years, not sprints. Aligns with maintainability and efficiency.
+  refs:
+  - type: Internal
+    title: Sustainable Product Engineering
+    url: docs/sustainable_product_engineering.md
+  - type: Site
+    title: LeSS — Large-Scale Scrum
+    url: https://less.works/
+- num: 47
+  sym: Wl
+  name: Waste-everywhere Lens
+  row: 4
+  col: 5
+  cat: less
+  desc: Waste is not only infra. Includes feature waste, cognitive load, coordination, tech debt.
+  refs:
+  - type: Internal
+    title: Sustainable Product Engineering
+    url: docs/sustainable_product_engineering.md
+  - type: Site
+    title: LeSS — Large-Scale Scrum
+    url: https://less.works/
+- num: 48
+  sym: Co
+  name: Coordination Cost
+  row: 4
+  col: 6
+  cat: less
+  desc: Coordination is a primary scaling tax. LeSS reduces it via feature teams and shared backlog.
+  refs:
+  - type: Site
+    title: LeSS — Large-Scale Scrum
+    url: https://less.works/
+- num: 49
+  sym: Hr
+  name: Handoff Reduction
+  row: 4
+  col: 7
+  cat: less
+  desc: Each handoff adds delay, defects, and waste. Eliminate or absorb.
+  refs:
+  - type: Site
+    title: LeSS — Large-Scale Scrum
+    url: https://less.works/
+- num: 50
+  sym: Lg
+  name: Learning Organization
+  row: 4
+  col: 8
+  cat: less
+  desc: Org structures that learn beat ones that follow process. Sustainability is a learning capability.
+  refs:
+  - type: Site
+    title: LeSS — Large-Scale Scrum
+    url: https://less.works/
+  - type: Internal
+    title: Sustainable Product Engineering
+    url: docs/sustainable_product_engineering.md
+- num: 51
+  sym: Ea
+  name: Efficient Algorithms
+  row: 4
+  col: 9
+  cat: greendev
+  desc: Lower complexity = less compute = less energy. Big-O directly maps to carbon at scale.
+  refs:
+  - type: Internal
+    title: Sustainable Product Engineering
+    url: docs/sustainable_product_engineering.md
+  - type: Org
+    title: Principles of Green Software Engineering
+    url: https://principles.green/
+- num: 52
+  sym: Lk
+  name: Low-Carbon Code
+  row: 4
+  col: 10
+  cat: greendev
+  desc: 'Code written with energy in mind: avoid hot loops, reduce allocations, mind GC pressure.'
+  refs:
+  - type: Org
+    title: Green Software Foundation
+    url: https://greensoftware.foundation/
+  - type: Org
+    title: Principles of Green Software Engineering
+    url: https://principles.green/
+- num: 53
+  sym: Ca
+  name: Caching
+  row: 4
+  col: 11
+  cat: greendev
+  desc: Reuse expensive results. Cache hits replace compute, network, and storage I/O.
+  refs:
+  - type: Internal
+    title: Sustainable Product Engineering
+    url: docs/sustainable_product_engineering.md
+  - type: Org
+    title: Principles of Green Software Engineering
+    url: https://principles.green/
+- num: 54
+  sym: Cr
+  name: Compression
+  row: 4
+  col: 12
+  cat: greendev
+  desc: Compressed payloads cut bandwidth, storage, and transfer energy.
+  refs:
+  - type: Org
+    title: Principles of Green Software Engineering
+    url: https://principles.green/
+- num: 55
+  sym: Bs
+  name: Batch over Stream
+  row: 4
+  col: 13
+  cat: greendev
+  desc: Batch processing is often greener than always-on streaming when latency permits.
+  refs:
+  - type: Org
+    title: Green Software Foundation
+    url: https://greensoftware.foundation/
+- num: 56
+  sym: Lz
+  name: Lazy Loading
+  row: 4
+  col: 14
+  cat: greendev
+  desc: Defer work until needed. Most pre-computed work is wasted.
+  refs:
+  - type: Org
+    title: Principles of Green Software Engineering
+    url: https://principles.green/
+- num: 57
+  sym: Oq
+  name: Optimized Queries
+  row: 5
+  col: 1
+  cat: greendev
+  desc: Indexed, projected, and selective queries. Full scans are carbon scans.
+  refs:
+  - type: Internal
+    title: Sustainable Product Engineering
+    url: docs/sustainable_product_engineering.md
+- num: 58
+  sym: Pf
+  name: Prefetch Discipline
+  row: 5
+  col: 2
+  cat: greendev
+  desc: Prefetch only when hit-rate justifies cost. Speculative prefetch is often net waste.
+  refs:
+  - type: Org
+    title: Principles of Green Software Engineering
+    url: https://principles.green/
+- num: 59
+  sym: Cc
+  name: Clean Code
+  row: 5
+  col: 3
+  cat: greendev
+  desc: Readable code is refactorable, refactorable code becomes efficient code.
+  refs:
+  - type: Internal
+    title: Sustainable Product Engineering
+    url: docs/sustainable_product_engineering.md
+- num: 60
+  sym: Tt
+  name: Test Tightness
+  row: 5
+  col: 4
+  cat: greendev
+  desc: Fast, focused tests use less CI energy. Tight test suites unblock greener builds.
+  refs:
+  - type: Site
+    title: DORA
+    url: https://dora.dev/
+  - type: Org
+    title: Principles of Green Software Engineering
+    url: https://principles.green/
+- num: 61
+  sym: Mr
+  name: Memory Reuse
+  row: 5
+  col: 5
+  cat: greendev
+  desc: Pooling and reuse over allocate-and-discard. Garbage is energy.
+  refs:
+  - type: Org
+    title: Principles of Green Software Engineering
+    url: https://principles.green/
+- num: 62
+  sym: Cx
+  name: Cold-path Removal
+  row: 5
+  col: 6
+  cat: greendev
+  desc: Delete unused code paths. Dead code still ships, builds, and audits.
+  refs:
+  - type: Internal
+    title: Sustainable Product Engineering
+    url: docs/sustainable_product_engineering.md
+- num: 63
+  sym: Dp
+  name: Dependency Pruning
+  row: 5
+  col: 7
+  cat: greendev
+  desc: Each dep adds bytes, build time, and supply-chain risk. Prune ruthlessly.
+  refs:
+  - type: Org
+    title: Principles of Green Software Engineering
+    url: https://principles.green/
+- num: 64
+  sym: Ai
+  name: AI Energy Awareness
+  row: 5
+  col: 8
+  cat: greendev
+  desc: LLM/ML calls are expensive. Cache, downsize, batch, and prefer smaller models when sufficient.
+  refs:
+  - type: Org
+    title: Green Software Foundation
+    url: https://greensoftware.foundation/
+  - type: Spec
+    title: Software Carbon Intensity (SCI) Specification
+    url: https://sci.greensoftware.foundation/
+- num: 65
+  sym: Bc
+  name: Build Cache
+  row: 5
+  col: 9
+  cat: greendev
+  desc: Incremental and remote build caches save massive CI energy.
+  refs:
+  - type: Org
+    title: Principles of Green Software Engineering
+    url: https://principles.green/
+- num: 66
+  sym: Bd
+  name: Bundle Diet
+  row: 5
+  col: 10
+  cat: greendev
+  desc: Smaller JS bundles = less parse, less transfer, less device energy.
+  refs:
+  - type: Org
+    title: Principles of Green Software Engineering
+    url: https://principles.green/
+- num: 67
+  sym: Im
+  name: Image Diet
+  row: 5
+  col: 11
+  cat: greendev
+  desc: Right format, right size, right compression. Images are most pages' biggest payload.
+  refs:
+  - type: Org
+    title: Principles of Green Software Engineering
+    url: https://principles.green/
+- num: 68
+  sym: Et
+  name: Event Throttling
+  row: 5
+  col: 12
+  cat: greendev
+  desc: Debounce and throttle. Most events on the wire are duplicates.
+  refs:
+  - type: Org
+    title: Principles of Green Software Engineering
+    url: https://principles.green/
+- num: 69
+  sym: Sf
+  name: Static-first
+  row: 5
+  col: 13
+  cat: greendev
+  desc: Static rendering beats dynamic when content allows. Cache at the edge.
+  refs:
+  - type: Org
+    title: Principles of Green Software Engineering
+    url: https://principles.green/
+- num: 70
+  sym: Ef
+  name: Edge-first
+  row: 5
+  col: 14
+  cat: greendev
+  desc: Compute close to users to cut backbone transfer and origin load.
+  refs:
+  - type: Org
+    title: Principles of Green Software Engineering
+    url: https://principles.green/
+- num: 71
+  sym: Ev
+  name: Event-driven
+  row: 6
+  col: 1
+  cat: architecture
+  desc: Decoupled, async architectures handle bursty load without over-provisioning.
+  refs:
+  - type: Org
+    title: Principles of Green Software Engineering
+    url: https://principles.green/
+- num: 72
+  sym: Ms
+  name: Microservices (judicious)
+  row: 6
+  col: 2
+  cat: architecture
+  desc: Microservices fit only when org and load justify them. Otherwise pure overhead.
+  refs:
+  - type: Internal
+    title: Sustainable Product Engineering
+    url: docs/sustainable_product_engineering.md
+- num: 73
+  sym: Mm
+  name: Modular Monolith
+  row: 6
+  col: 3
+  cat: architecture
+  desc: Often the greener default. One process, clear modules, low coordination tax.
+  refs:
+  - type: Internal
+    title: Sustainable Product Engineering
+    url: docs/sustainable_product_engineering.md
+- num: 74
+  sym: Ad
+  name: API Diet
+  row: 6
+  col: 4
+  cat: architecture
+  desc: Minimal, intentional APIs over sprawling endpoints. Less surface = less waste.
+  refs:
+  - type: Org
+    title: Principles of Green Software Engineering
+    url: https://principles.green/
+- num: 75
+  sym: Cq
+  name: Chatty→Quiet APIs
+  row: 6
+  col: 5
+  cat: architecture
+  desc: Coalesce calls, return what's needed, avoid N+1. Network is carbon.
+  refs:
+  - type: Org
+    title: Principles of Green Software Engineering
+    url: https://principles.green/
+- num: 76
+  sym: Bp
+  name: Backpressure
+  row: 6
+  col: 6
+  cat: architecture
+  desc: Apply backpressure to prevent runaway resource use under stress.
+  refs:
+  - type: Org
+    title: Principles of Green Software Engineering
+    url: https://principles.green/
+- num: 77
+  sym: Qf
+  name: Queue-first
+  row: 6
+  col: 7
+  cat: architecture
+  desc: Buffer with queues to smooth load and right-size workers.
+  refs:
+  - type: Org
+    title: Principles of Green Software Engineering
+    url: https://principles.green/
+- num: 78
+  sym: Sk
+  name: Schema Care
+  row: 6
+  col: 8
+  cat: architecture
+  desc: Right-typed, right-sized schemas reduce storage, indexes, and read amplification.
+  refs:
+  - type: Internal
+    title: Sustainable Product Engineering
+    url: docs/sustainable_product_engineering.md
+- num: 79
+  sym: Ix
+  name: Index Discipline
+  row: 6
+  col: 9
+  cat: architecture
+  desc: Indexes that are used; drop those that aren't. Indexes are stored, written, and updated.
+  refs:
+  - type: Internal
+    title: Sustainable Product Engineering
+    url: docs/sustainable_product_engineering.md
+- num: 80
+  sym: Cn
+  name: Compaction
+  row: 6
+  col: 10
+  cat: architecture
+  desc: Compact storage. Old uncompacted data wastes IOPS and bytes.
+  refs:
+  - type: Org
+    title: Principles of Green Software Engineering
+    url: https://principles.green/
+- num: 81
+  sym: Pn
+  name: Partitioning
+  row: 6
+  col: 11
+  cat: architecture
+  desc: Partition by access pattern. Wrong partitioning = full scans = carbon.
+  refs:
+  - type: Org
+    title: Principles of Green Software Engineering
+    url: https://principles.green/
+- num: 82
+  sym: Ts
+  name: Tiered Storage
+  row: 6
+  col: 12
+  cat: architecture
+  desc: Hot/warm/cold tiers match access cost to access frequency.
+  refs:
+  - type: Org
+    title: Principles of Green Software Engineering
+    url: https://principles.green/
+  - type: Org
+    title: Green Software Foundation
+    url: https://greensoftware.foundation/
+- num: 83
+  sym: De
+  name: Decoupling
+  row: 6
+  col: 13
+  cat: architecture
+  desc: Loosely coupled services let each part scale and sleep independently.
+  refs:
+  - type: Internal
+    title: Sustainable Product Engineering
+    url: docs/sustainable_product_engineering.md
+- num: 84
+  sym: Cb
+  name: Circuit Breakers
+  row: 6
+  col: 14
+  cat: architecture
+  desc: Fail fast under stress to avoid cascading retries that burn capacity.
+  refs:
+  - type: Org
+    title: Principles of Green Software Engineering
+    url: https://principles.green/
+- num: 85
+  sym: Gs
+  name: Graceful Shutdown
+  row: 6
+  col: 15
+  cat: architecture
+  desc: Drain, persist, release. Crash-on-shutdown wastes work and triggers retries.
+  refs:
+  - type: Org
+    title: Principles of Green Software Engineering
+    url: https://principles.green/
+- num: 86
+  sym: Ar
+  name: Architecture Reviews
+  row: 6
+  col: 16
+  cat: architecture
+  desc: Reviews include energy, carbon, and operational sustainability — not only correctness.
+  refs:
+  - type: Internal
+    title: Sustainable Product Engineering
+    url: docs/sustainable_product_engineering.md
+  - type: Org
+    title: Green Software Foundation
+    url: https://greensoftware.foundation/
+- num: 87
+  sym: Rs
+  name: Right-sizing
+  row: 7
+  col: 1
+  cat: greenops
+  desc: Match instance size to actual load. Over-provisioning is the most common cloud waste.
+  refs:
+  - type: Tool
+    title: Cloud Carbon Footprint
+    url: https://www.cloudcarbonfootprint.org/
+  - type: Org
+    title: Green Software Foundation
+    url: https://greensoftware.foundation/
+- num: 88
+  sym: As
+  name: Autoscaling
+  row: 7
+  col: 2
+  cat: greenops
+  desc: Scale with demand. Idle capacity is paid carbon.
+  refs:
+  - type: Tool
+    title: Cloud Carbon Footprint
+    url: https://www.cloudcarbonfootprint.org/
+- num: 89
+  sym: Is
+  name: Idle Shutdown
+  row: 7
+  col: 3
+  cat: greenops
+  desc: Auto-stop dev, staging, and CI when unused.
+  refs:
+  - type: Tool
+    title: Cloud Carbon Footprint
+    url: https://www.cloudcarbonfootprint.org/
+- num: 90
+  sym: Sn
+  name: Spot/Preemptible
+  row: 7
+  col: 4
+  cat: greenops
+  desc: Use spot capacity to absorb otherwise-wasted hyperscaler supply.
+  refs:
+  - type: Org
+    title: Green Software Foundation
+    url: https://greensoftware.foundation/
+- num: 91
+  sym: Cz
+  name: Carbon-aware Region
+  row: 7
+  col: 5
+  cat: greenops
+  desc: Choose regions and times with lower-carbon energy mix.
+  refs:
+  - type: Org
+    title: Green Software Foundation
+    url: https://greensoftware.foundation/
+  - type: Spec
+    title: Software Carbon Intensity (SCI) Specification
+    url: https://sci.greensoftware.foundation/
+- num: 92
+  sym: Sl
+  name: Serverless
+  row: 7
+  col: 6
+  cat: greenops
+  desc: Scale-to-zero for spiky workloads. No requests = no compute = no carbon.
+  refs:
+  - type: Org
+    title: Green Software Foundation
+    url: https://greensoftware.foundation/
+- num: 93
+  sym: Cu
+  name: CDN Use
+  row: 7
+  col: 7
+  cat: greenops
+  desc: Edge caching cuts origin energy and backbone transfer.
+  refs:
+  - type: Org
+    title: Principles of Green Software Engineering
+    url: https://principles.green/
+- num: 94
+  sym: Lp
+  name: Log Pruning
+  row: 7
+  col: 8
+  cat: greenops
+  desc: Sample, rotate, and tier logs. Verbose logging is hidden cost.
+  refs:
+  - type: Org
+    title: Principles of Green Software Engineering
+    url: https://principles.green/
+- num: 95
+  sym: Dr
+  name: Data Retention
+  row: 7
+  col: 9
+  cat: greenops
+  desc: Delete what nobody reads. Cold data still consumes storage and replication energy.
+  refs:
+  - type: Org
+    title: Principles of Green Software Engineering
+    url: https://principles.green/
+- num: 96
+  sym: Bk
+  name: Backup Pruning
+  row: 7
+  col: 10
+  cat: greenops
+  desc: Right-frequency, right-retention backups. Daily forever is rarely the answer.
+  refs:
+  - type: Org
+    title: Principles of Green Software Engineering
+    url: https://principles.green/
+- num: 97
+  sym: Cv
+  name: Carbon Visibility
+  row: 7
+  col: 11
+  cat: greenops
+  desc: Dashboards expose per-team, per-service carbon to drive autonomy.
+  refs:
+  - type: Tool
+    title: Cloud Carbon Footprint
+    url: https://www.cloudcarbonfootprint.org/
+  - type: Spec
+    title: Software Carbon Intensity (SCI) Specification
+    url: https://sci.greensoftware.foundation/
+- num: 98
+  sym: Ci
+  name: CI Green Defaults
+  row: 7
+  col: 12
+  cat: greenops
+  desc: Cache builds, parallelize, fail fast, skip unneeded jobs. CI is a carbon hotspot.
+  refs:
+  - type: Org
+    title: Green Software Foundation
+    url: https://greensoftware.foundation/
+- num: 99
+  sym: Tb
+  name: Telemetry Budget
+  row: 7
+  col: 13
+  cat: greenops
+  desc: Cap metrics/traces/logs cardinality. Observability eats real resources.
+  refs:
+  - type: Org
+    title: Principles of Green Software Engineering
+    url: https://principles.green/
+- num: 100
+  sym: Tw
+  name: Thermal Awareness
+  row: 7
+  col: 14
+  cat: greenops
+  desc: Workload placement aware of datacenter thermal and PUE state.
+  refs:
+  - type: Org
+    title: Green Software Foundation
+    url: https://greensoftware.foundation/
